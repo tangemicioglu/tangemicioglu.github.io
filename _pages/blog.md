@@ -1,7 +1,17 @@
 ---
 layout: page
-title: About
+title: Blog
+permalink: /[page]/
 ---
 
-Hello and welcome! I'm Tan Gemicioglu, currently a second year Computer Science student at Georgia Tech.
-TODO
+<ul>
+{% for category in site.categories %}
+  <li><a name="{{ category | first }}">{{ category | first }}</a>
+    <ul>
+    {% for post in category.last %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
