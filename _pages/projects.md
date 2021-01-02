@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-permalink: /[page]/
+permalink: /projects/
 ---
 
 Under construction
