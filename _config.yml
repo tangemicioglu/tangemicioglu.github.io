@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tan Gemicioglu"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Tan Gemicioglu"
 description              : &description "Personal website containing my portfolio & blog"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tan Gemicioglu"
   avatar           : "profile.png"
-  bio              : "<b>Undergraduate Student</b> Georgia Institute of Technology"
+  bio              : "<b>Undergraduate Research Assistant</b> Georgia Institute of Technology"
   location         :
   employer         :
   pubmed           : 
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/tangemicioglu/"
+  github           : "tangemicioglu"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/tangemicioglu/"
+  linkedin         : "tangemicioglu"
   orcid            :
   pinterest        :
   soundcloud       :
@@ -176,7 +176,7 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
@@ -185,7 +185,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 
@@ -199,8 +199,8 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
+      # comments: true
+      # share: true
       related: true
   # _pages
   - scope:
@@ -208,42 +208,30 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
   # _teaching
-  # - scope:
-      # path: ""
-      # type: teaching
-    # values:
-      # layout: single
-      # author_profile: true
-      # share: true
-      # comments: true
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
   # _publications
   - scope:
       path: ""
       type: publications
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
       layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
-  # - scope:
-      # path: ""
-      # type: talks
-    # values:
-      # layout: talk
-      # author_profile: true
-      # share: true
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
 
 # Sass/SCSS
 sass:
