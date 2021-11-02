@@ -80,7 +80,8 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tan Gemicioglu <i> they/them </i>"
+  name             : "Tan Gemicioglu"
+  pronouns         : "they/them"
   avatar           : "profile.png"
   bio              : "<b>Undergraduate Researcher</b> Georgia Institute of Technology"
   location         :

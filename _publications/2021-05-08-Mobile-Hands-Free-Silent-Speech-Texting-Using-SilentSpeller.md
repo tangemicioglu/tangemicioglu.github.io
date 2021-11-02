@@ -1,7 +1,6 @@
 ---
 title: "Mobile, Hands-Free, Silent Speech Texting Using SilentSpeller"
 collection: publications
-permalink: 'https://doi.org/10.1145/3411763.3451552'
 date: 2021-05-08
 venue: 'Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems'
 paperurl: 'https://doi.org/10.1145/3411763.3451552'
