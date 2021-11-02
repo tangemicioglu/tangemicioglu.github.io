@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Tan Gemicioglu"
   avatar           : "profile.png"
-  bio              : "<b>Undergraduate Research Assistant</b> Georgia Institute of Technology"
+  bio              : "<b>Undergraduate Student</b> Georgia Institute of Technology"
   location         :
   employer         :
   pubmed           : 
@@ -176,7 +176,7 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: false
+    output: true
     permalink: /:collection/:path/
   publications:
     output: true
@@ -185,7 +185,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: false
+    output: true
     permalink: /:collection/:path/
 
 
