@@ -101,6 +101,8 @@
   @include breakpoint($x-large) {
     padding-right: $right-sidebar-width-wide;
   }
+  
+  display: inline-block;
 
   .page__meta {
     margin: 0 0 4px;
