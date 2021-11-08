@@ -14,9 +14,9 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if (include.type == "grid" or post.collection== 'portfolio') and teaser %}
+    {% if post.collection == 'portfolio' %}
       <div class="archive__item-teaser">
-        <img src= "{{ teaser }}" alt="">
+        <img src= "{{ post.teaser }}" alt="">
       </div>
     {% endif %}
 
