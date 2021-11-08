@@ -13,6 +13,6 @@ author_profile: false
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  ![image]( {{ post.teaser | markdownify }} ){: style="float: left"}
+  ![image]( {{ post.teaser }} ){: style="width: 50%; float: left"}
   {% include archive-single.html %}
 {% endfor %}
