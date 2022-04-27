@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Home"
+title                    : "Tan Gemicioglu"
 title_separator          : "-"
 name                     : &name "Tan Gemicioglu"
 description              : &description "Personal website containing my portfolio & blog"
@@ -104,7 +104,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "tangemicioglu"
-  orcid            :
+  orcid            : "0000-0001-9324-4431"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
