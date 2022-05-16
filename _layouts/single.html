@@ -63,6 +63,10 @@ layout: default
         {% endif %}
         {% include page__taxonomy.html %}
       </footer>
+      
+      {% if page.news %}
+        {% include news.html %}
+      {% endif %}
 
       {% if page.share %}{% include social-share.html %}{% endif %}
 

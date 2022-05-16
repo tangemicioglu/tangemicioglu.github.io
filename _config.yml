@@ -188,6 +188,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  mews:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
@@ -198,7 +201,6 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
       read_time: true
       # comments: true
       # share: true
@@ -233,6 +235,8 @@ defaults:
       type: talks
     values:
       layout: talk
+
+news_limit: 10
 
 # Sass/SCSS
 sass:
