@@ -176,7 +176,7 @@ kramdown:
 
 # Collections
 collections:
-  mews:
+  news:
     output: true
     permalink: /:collection/:path/
   teaching:
@@ -217,6 +217,7 @@ defaults:
       type: news
     values:
       layout: single
+      inline: true
   # _teaching
   - scope:
       path: ""
