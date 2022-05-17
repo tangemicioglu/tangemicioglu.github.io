@@ -1,5 +1,5 @@
 ---
-date: "2022-01-04"
+date: 2022-01-04
 inline: true
 collection: news
 ---
