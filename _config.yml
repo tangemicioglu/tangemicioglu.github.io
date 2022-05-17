@@ -176,6 +176,9 @@ kramdown:
 
 # Collections
 collections:
+  mews:
+    output: true
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -186,9 +189,6 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
-    permalink: /:collection/:path/
-  mews:
     output: true
     permalink: /:collection/:path/
 
@@ -209,6 +209,12 @@ defaults:
   - scope:
       path: ""
       type: pages
+    values:
+      layout: single
+  # _news
+  - scope:
+      path: ""
+      type: news
     values:
       layout: single
   # _teaching
@@ -235,12 +241,6 @@ defaults:
       type: talks
     values:
       layout: talk
-  # _news
-  - scope:
-      path: ""
-      type: news
-    values:
-      layout: single
    
 
 news_limit: 10
