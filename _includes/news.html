@@ -1,8 +1,10 @@
+{% include base_path %}
+
 <div class="news">
     <h2>News</h2>
         <div class="table-responsive">
             <table class="table table-sm table-borderless">
-                {% assign news = site.news | reverse %}
+                {% assign news = (site.news | sort: 'date') | reverse %}
                 {% for item in news limit: site.news_limit %}
                     <tr>
                         <th scope="row">{{ item.date | date: "%b %d, %Y" }}</th>
