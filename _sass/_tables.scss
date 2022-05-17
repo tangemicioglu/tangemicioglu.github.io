@@ -41,12 +41,13 @@ tr, td, th {
    News
    ========================================================================== */
    
-.news table, tr, td {
+.news table, tr, td, th {
     border: none;
 }
    
 .news table td {
   font-size: 1rem;
+  padding: none;
   color: var(--global-text-color);
 }
 
