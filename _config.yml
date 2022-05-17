@@ -235,6 +235,13 @@ defaults:
       type: talks
     values:
       layout: talk
+  # _news
+  - scope:
+      path: ""
+      type: news
+    values:
+      layout: single
+   
 
 news_limit: 10
 
