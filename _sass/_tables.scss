@@ -47,11 +47,14 @@ tr, td, th {
    
 .news table td {
   font-size: 1rem;
-  padding: none;
   color: var(--global-text-color);
 }
 
 .news table th {
-  padding: none;
   color: var(--global-text-color);
+}
+
+.news p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
