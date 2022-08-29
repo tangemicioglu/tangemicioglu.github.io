@@ -4,6 +4,7 @@ excerpt: "Created a pipeline for estimating location of hand and finger keypoint
 teaser: "/images/hand-pose.png"
 date: "2020-10-23"
 collection: portfolio
+tag: classwork
 ---
 
 Writeup coming soon!

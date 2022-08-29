@@ -4,6 +4,7 @@ excerpt: "Developing a new brain-computer interface using fNIRS to detect attemp
 teaser: "/images/brainbraille.jpg"
 date: "2021-05-02"
 collection: portfolio
+tag: research
 ---
 
 Writeup coming soon!

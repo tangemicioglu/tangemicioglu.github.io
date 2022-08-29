@@ -4,6 +4,7 @@ excerpt: "Prepared a complete replica of competition in simulation to enable Rob
 teaser: "/images/jessiii.jpg"
 date: "2019-12-17"
 collection: portfolio
+tag: independent
 ---
 
 Writeup coming soon!
