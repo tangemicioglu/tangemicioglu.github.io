@@ -1,8 +1,8 @@
 ---
-title: "SilentSpeller: Towards mobile, hands-free silent speech text entry using electropalatography"
+title: "Tongue Gestures for Hands-Free Interaction in Head Worn Displays"
 collection: publications
-date: 2022-04-30
-venue: 'Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems'
-paperurl: 'https://doi.org/10.1145/3491102.3502015'
-citation: ' Naoki Kimura,  <b>Tan Gemicioglu</b>,  Jonathan Womack,  Richard Li,  Yuhui Zhao,  Abdelkareem Bedri, Zixiong Su, Alex Olwal,  Jun Rekimoto,  Thad Starner, &quot;SilentSpeller: Towards mobile, hands-free silent speech text entry using electropalatography.&quot; Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems, 2022.'
+date: 2022-09-11
+venue: 'Proceedings of the 2022 ACM International Joint Conference on Pervasive and Ubiquitous Computing'
+paperurl: 'https://doi.org/10.1145/3544793.3560363'
+citation: '<b>Tan Gemicioglu <\b>, Mike Winters, Yu-Te Wang, and Ivan Tashev. 2022. Tongue Gestures for Hands-Free Interaction in Head Worn Displays. In Proceedings of the 2022 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC ’22 Adjunct), September 11–15, 2022, Cambridge, United Kingdom. ACM, New York, NY, USA, 3 pages.'
 ---
