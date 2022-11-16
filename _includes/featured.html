@@ -1,7 +1,7 @@
 {% include base_path %}
-
+<!-- https://codeburst.io/how-to-pure-css-carousel-ce1a8cb231c8 -->
 <div class="featured">
-    <h1>Featured</h1>
+    <!-- <h1>Featured</h1> -->
     <div class="carousel-container">
     <div class="carousel my-carousel carousel--translate">
         <input class="carousel__activator" type="radio" name="carousel" id="F" checked="checked"/>
@@ -31,19 +31,19 @@
         </div>
         <div class="carousel__track">
         <li class="carousel__slide">
-            <h1>F</h1>
+            <h1 class="carousel__text">Passive Haptic Learning</h1>
         </li>
         <li class="carousel__slide">
-            <h1>G</h1>
+            <h1 class="carousel__text">Tongue Gestures</h1>
         </li>
         <li class="carousel__slide">
-            <h1>H</h1>
+            <h1 class="carousel__text">BrainBraille</h1>
         </li>
         <li class="carousel__slide">
-            <h1>I</h1>
+            <h1 class="carousel__text">SilentSpeller</h1>
         </li>
         <li class="carousel__slide">
-            <h1>J</h1>
+            <h1 class="carousel__text">AI Through Symbiosis</h1>
         </li>
         </div>
         <div class="carousel__indicators">
@@ -65,8 +65,8 @@
   * Control & indicator mixin
 */
 .carousel {
-  height: 300px;
-  width: 80%;
+  aspect-ratio: 1.91;
+  width: 100%;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -282,10 +282,11 @@ body {
 } */
 .carousel-container {
   display: inline-block;
+  width: 100%
 }
 .my-carousel {
   border-radius: 5px;
-  margin: 30px;
+  margin-bottom: 10px;
 }
 .carousel__slide {
   overflow: hidden;
@@ -316,32 +317,35 @@ h3 {
 }
 .carousel__slide:nth-of-type(1),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
-  background-image: url("https://unsplash.it/300?random");
+  background-image: url("images/passivehapticlearning.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .carousel__slide:nth-of-type(2),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
-  background-image: url("https://unsplash.it/600?random");
+  background-image: url("images/tonguegestures.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .carousel__slide:nth-of-type(3),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
-  background-image: url("https://unsplash.it/900?random");
+  background-image: url("images/brainbraille.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .carousel__slide:nth-of-type(4),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
-  background-image: url("https://unsplash.it/1200?random");
+  background-image: url("images/silentspeller.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .carousel__slide:nth-of-type(5),
 .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
-  background-image: url("https://unsplash.it/1500?random");
+  background-image: url("images/ai-through-symbiosis.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+}
+.carousel__text {
+    margin-top: 1em
 }
 </style>

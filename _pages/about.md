@@ -11,7 +11,7 @@ redirect_from:
 
 Hello and welcome! I'm Tan Gemicioglu (pronounced Ton Geh-me-gee-oh-loo), currently a rising fourth year undergraduate in Computer Science at Georgia Tech. I'm a researcher in Georgia Tech's Contextual Computing Group, advised by wearable computing pioneer [Thad Starner](https://www.cc.gatech.edu/home/thad/index.htm). 
 
-I'm interested in developing **symbiotic interfaces**, devices that integrate with their users' physiology while learning alongside them to enable new abilities and enhance their performance. I study and design wearable technology using sensors and haptics for **new interaction techniques** and **faster skill acquisition**, broadly drawing from influences across human-computer interaction, machine learning and neuroscience. My research has been published in top human-computer interaction venues such as ACM CHI and UbiComp.
+I'm interested in developing **symbiotic interfaces**, devices that integrate with their users' physiology while learning alongside them to augment their abilities. I study and design wearable technology using sensors and haptics for **new interaction techniques** and **faster skill acquisition**, broadly drawing from influences across human-computer interaction, machine learning and neuroscience. My research has been published in top human-computer interaction venues such as ACM CHI and UbiComp.
 
 Currently, I am applying for PhD student positions and wrapping up my research projects at Georgia Tech. I also serve as a member of the [Futuring SIGCHI Committee](https://sigchi.org/people/committees/#futuring-sigchi-committee) and the [BCI Society](https://bcisociety.org/)'s Postdoc and Student Committee. 
 
