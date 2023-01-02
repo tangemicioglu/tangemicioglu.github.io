@@ -4,8 +4,8 @@ excerpt: "The field of brain-computer interfaces (BCIs) is growing rapidly, but 
 teaser: "/images/bcisociety.png"
 date: "2022-10-20"
 collection: projects
-category: organization
-tag: education, bci, open-science
+categories: organization
+tags: [ education, bci, open-science ]
 ---
 
 Writeup coming soon!

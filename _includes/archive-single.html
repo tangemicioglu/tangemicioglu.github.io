@@ -35,7 +35,7 @@
     </h2>
     
     {% if post.collection == 'projects' or post.collection == 'publications' %}
-      <img src="{{ post.teaser }}" alt="{{ post.title }}" align="left" style="padding: 10px; width: 20%;">
+      <img src="{{ post.teaser }}" alt="{{ post.title }}" align="left" style="padding: 5px; width: 30%;">
     {% endif %}
     
     {% if post.read_time %}
@@ -65,6 +65,8 @@
       <p><a href=" {{ post.paperurl }} ">{{ post.paperurl }}</a></p>
     {% endif %}
 
+    {% include page__taxonomy.html %}
+    
     <!-- <p class="archive__item-links">{{ post.links }}</p> -->
   </article>
 </div>
