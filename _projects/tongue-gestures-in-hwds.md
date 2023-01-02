@@ -4,7 +4,8 @@ excerpt: "Pioneered a new, accessible method of hands-free interaction with head
 teaser: "/images/tonguegestures.png"
 date: "2022-08-12"
 collection: projects
-tag: research
+categories: research
+tags: [ sensing, hwd, subtle-interaction ]
 ---
 
 Writeup coming soon!

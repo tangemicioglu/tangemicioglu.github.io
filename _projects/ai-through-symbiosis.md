@@ -4,7 +4,8 @@ excerpt: "Investigating a new method for training unsupervised object recognitio
 teaser: "/images/ai-through-symbiosis.jpg"
 date: "2020-11-07"
 collection: projects
-tag: research
+categories: research
+tags: [ machine-learning, computer-vision, hwd ]
 ---
 
 Writeup coming soon!

@@ -4,7 +4,8 @@ excerpt: "Designed and applied a framework for training reinforcement learning m
 teaser: "/images/robomaster.jpg"
 date: "2018-05-25"
 collection: projects
-tag: competition
+categories: organizations
+tags: [ robotics, machine-learning, competition ]
 ---
 
 Writeup coming soon!

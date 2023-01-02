@@ -4,7 +4,8 @@ excerpt: "Designing a custom vibrotactile haptic glove for enabling faster learn
 teaser: "/images/passivehapticlearning.jpg"
 date: "2021-05-12"
 collection: projects
-tag: research
+categories: research
+tags: [ haptics, wearables, music ]
 ---
 
 Writeup coming soon!

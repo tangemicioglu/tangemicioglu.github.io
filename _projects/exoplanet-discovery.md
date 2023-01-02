@@ -6,7 +6,8 @@ date: "2020-04-16"
 collection: projects
 layout: forward
 target: https://andrewyarovoi.github.io/exoplanet-detection/
-tag: classwork
+categories: classwork
+tags: [ machine-learning, astronomy ]
 ---
 
 You can find a writeup of the project here: [https://andrewyarovoi.github.io/exoplanet-detection/](https://andrewyarovoi.github.io/exoplanet-detection/).

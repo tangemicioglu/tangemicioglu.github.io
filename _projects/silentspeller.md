@@ -4,7 +4,8 @@ excerpt: "Created the first-ever silent speech system capable of being used with
 teaser: "/images/silentspeller.png"
 date: "2020-01-24"
 collection: projects
-tag: research
+categories: research
+tags: [ wearables, assistive-technology, subtle-interaction ]
 ---
 
 Writeup coming soon!
