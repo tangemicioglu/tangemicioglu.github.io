@@ -83,7 +83,7 @@ author:
   name             : "Tan Gemicioglu"
   pronouns         : "they/them"
   avatar           : "profile.png"
-  bio              : "<b>Graduate Research Assistant</b> Georgia Institute of Technology"
+  bio              : "<b>Graduate Research Assistant</b></br>Georgia Institute of Technology"
   location         :
   employer         :
   pubmed           : 
@@ -104,13 +104,14 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "tangemicioglu"
+  mastodon         : "https://hci.social/@tangemicioglu"
   orcid            : "0000-0001-9324-4431"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "tangemicioglu"
+  twitter          :
   vine             :
   weibo            :
   xing             :
