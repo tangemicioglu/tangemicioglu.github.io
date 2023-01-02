@@ -5,7 +5,7 @@ teaser: "/images/tonguegestures.png"
 date: "2022-08-12"
 collection: projects
 categories: research
-tags: [ sensing, hwd, subtle-interaction ]
+tags: [ sensing, head-worn-displays, subtle-interaction ]
 ---
 
 Writeup coming soon!

@@ -5,7 +5,7 @@ teaser: "/images/bcisociety.png"
 date: "2022-10-20"
 collection: projects
 categories: organizations
-tags: [ education, bci ]
+tags: [ education, brain-computer-interfaces ]
 ---
 
 Writeup coming soon!

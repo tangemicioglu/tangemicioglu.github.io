@@ -5,7 +5,7 @@ teaser: "/images/ai-through-symbiosis.jpg"
 date: "2020-11-07"
 collection: projects
 categories: research
-tags: [ machine-learning, computer-vision, hwd ]
+tags: [ machine-learning, computer-vision, head-worn-displays ]
 ---
 
 Writeup coming soon!

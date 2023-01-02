@@ -5,7 +5,7 @@ teaser: "/images/brainbraille.jpg"
 date: "2021-05-02"
 collection: projects
 categories: research
-tags: [ bci, wearables, assistive-technology ]
+tags: [ brain-computer-interfaces, fnirs, assistive-technology ]
 ---
 
 Writeup coming soon!

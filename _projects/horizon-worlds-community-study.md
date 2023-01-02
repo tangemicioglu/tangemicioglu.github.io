@@ -5,7 +5,7 @@ teaser: "/images/horizonworlds.png"
 date: "2022-04-22"
 collection: projects
 categories: classwork
-tags: [ social-computing, vr ]
+tags: [ social-computing, virtual-reality ]
 # We examined in detail different aspects of the community such as moderation and social roles based on Amy Jo Kim's community design principles.
 ---
 
