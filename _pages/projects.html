@@ -2,25 +2,25 @@
 layout: archive
 title: "Projects"
 permalink: /projects/
-author_profile: false
+author_profile: true
 ---
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% assign projects = (site.projects | sort: 'date') | reverse %}
-{% assign category = projects | map: 'category' | uniq | sort %}
+{% assign categories = projects | map: 'category' | uniq | sort %}
 {% assign tags = projects | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 <p class="page__taxonomy">
   <details open>
     <summary>Filter by category:</summary>
     {% for category in categories %}
-      <button class="page__taxonomy-item" category="{{ category }}" onclick="categoryClicked(this)"> {{ category }} </button>
+      <button class="page__taxonomy-item" category="{{ category }}" onclick="categoryClicked(this);"> {{ category }} </button>
     {% endfor %}
   </details>
   <details>
     <summary>Filter by tag:</summary>
     {% for tag in tags %}
-      <button class="page__taxonomy-item" tag="{{ tag }}" onclick="tagClicked(this)"> {{ tag }} </button>
+      <button class="page__taxonomy-item" tag="{{ tag }}" onclick="tagClicked(this);"> {{ tag }} </button>
     {% endfor %}
   </details>
 </p>
@@ -54,32 +54,34 @@ var posts = {
   {% endfor %}
 };
 
+var categories = {
+  {% assign firstCategory = true %}
+  {% for category in categories %}
+      {% if firstCategory == false %},{% endif %}
+      {% assign firstCategory = false %}
+      "{{category[0]}}": {
+        selected: false
+      }
+  {% endfor %}
+};
+
+var category_selected = "Research";
+// categories["Research"].selected = true;
+
 var tags = {
   {% assign firstTag = true %}
   {% for tag in tags %}
       {% if firstTag == false %},{% endif %}
       {% assign firstTag = false %}
       "{{tag[0]}}": {
-        selected: false,
-        pages: [
-          {% assign firstPage = true %}
-          {% for post in tag[1] %}
-            {% if firstPage == false %},{% endif %}
-            {% assign firstPage = false %}
-            {
-              title: "{{post.title}}"
-            }
-          {% endfor %}
-        ]
+        selected: false
       }
   {% endfor %}
 };
 
-var post_elements = document.getElementsByClassName("list__item")
+var post_elements = document.getElementsByClassName("list__item");
 
-console.log(post_elements)
-console.log(posts)
-console.log(tags)
+
 
 // try {
 //   var selectedTags = new URL(location).searchParams.get("tags").split(",");
@@ -93,11 +95,39 @@ console.log(tags)
 
 // }
 
+function categoryClicked(element) {
+  if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
+    return;
+  }
+  element.classList.toggle("page__taxonomy-item-selected");
+  categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
+  category_selected = element.getAttribute("category");
+  updatePosts();
+}
+
 function tagClicked(element) {
-  if(element.hasClass("page__taxonomy-item-selected")) {
-    element.removeClass("page__taxonomy-item-selected")
-  } else {
-    element.addClass("page__taxonomy-item-selected")
+  element.classList.toggle("page__taxonomy-item-selected");
+  tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
+  updatePosts();
+}
+
+function updatePosts() {
+  for (post_element of post_elements) {
+    var post = posts[post_element.getAttribute("title")];
+    var show = true;
+    if (post.category in categories) {
+      show = show && categories[post.category].selected;
+    }
+    for (tag of post.tags) {
+      if (tag in tags) {
+        show = show || tags[tag].selected;
+      }
+    }
+    if (show) {
+      post_element.style.display = "block";
+    } else {
+      post_element.style.display = "none";
+    }
   }
 }
   
