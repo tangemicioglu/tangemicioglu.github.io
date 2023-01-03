@@ -8,11 +8,21 @@ author_profile: false
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% assign projects = (site.projects | sort: 'date') | reverse %}
+{% assign category = projects | map: 'categories' | join: ','  | split: ',' | uniq | sort %}
 {% assign tags = projects | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 <p class="page__taxonomy">
-  {% for tag in tags %}
-    <button class="page__taxonomy-item" onclick="tagClicked({{ tag }})"> {{ tag }} </button>
-  {% endfor %}
+  <details>
+    <summary>Filter by category:</summary>
+    {% for category in categories %}
+      <button class="page__taxonomy-item" category="{{ category }}" onclick="categoryClicked(this)"> {{ category }} </button>
+    {% endfor %}
+  </details>
+  <details>
+    <summary>Filter by tag:</summary>
+    {% for tag in tags %}
+      <button class="page__taxonomy-item" tag="{{ tag }}" onclick="tagClicked(this)"> {{ tag }} </button>
+    {% endfor %}
+  </details>
 </p>
 
 {% for post in projects %}
@@ -27,7 +37,49 @@ author_profile: false
 <!-- Credit to mmpataki for this script -->
 
 <script>
-  function tagClicked(tag) {
-    console.log(tag)
+
+{% for tag in tags %}
+  {% for post in tag[1] %}
+    console.log(post)
+  {% endfor %}
+{% endfor %}
+
+// var tags = {
+//   {% for tag in tags %}
+//     "{{tag}}": {
+//       selected: false,
+//       pages: [
+//         {% for post in tag[1] %}
+//           {
+//             console.log(post)
+//           },
+//         {% endfor %}
+//       ]
+//     },
+//   {% endfor %}
+
+var post_elements = document.getElementsByClassName("list__item")
+
+console.log(post_elements)
+
+try {
+  var selectedTags = new URL(location).searchParams.get("tags").split(",");
+  for(selectedTag in selectedTags) {
+    var tag = selectedTags[selectedTag]
+    if (tag in tags) {
+      tags[tag].selected = true
+    }
   }
+} catch {
+
+}
+
+function tagClicked(element) {
+  if(element.hasClass("page__taxonomy-item-selected")) {
+    element.removeClass("page__taxonomy-item-selected")
+  } else {
+    element.addClass("page__taxonomy-item-selected")
+  }
+}
+  
 </script>
