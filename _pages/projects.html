@@ -2,7 +2,7 @@
 layout: archive
 title: "Projects"
 permalink: /projects/
-author_profile: true
+author_profile: false
 ---
 
 {% include base_path %}
@@ -59,7 +59,7 @@ var categories = {
   {% for category in categories %}
       {% if firstCategory == false %},{% endif %}
       {% assign firstCategory = false %}
-      "{{category[0]}}": {
+      "{{ category }}": {
         selected: false
       }
   {% endfor %}
@@ -73,27 +73,13 @@ var tags = {
   {% for tag in tags %}
       {% if firstTag == false %},{% endif %}
       {% assign firstTag = false %}
-      "{{tag[0]}}": {
+      "{{ tag }}": {
         selected: false
       }
   {% endfor %}
 };
 
 var post_elements = document.getElementsByClassName("list__item");
-
-
-
-// try {
-//   var selectedTags = new URL(location).searchParams.get("tags").split(",");
-//   for(selectedTag in selectedTags) {
-//     var tag = selectedTags[selectedTag]
-//     if (tag in tags) {
-//       tags[tag].selected = true
-//     }
-//   }
-// } catch {
-
-// }
 
 function categoryClicked(element) {
   if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
@@ -103,13 +89,13 @@ function categoryClicked(element) {
   categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
   category_selected = element.getAttribute("category");
   updatePosts();
-}
+};
 
 function tagClicked(element) {
   element.classList.toggle("page__taxonomy-item-selected");
   tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
   updatePosts();
-}
+};
 
 function updatePosts() {
   for (post_element of post_elements) {
@@ -129,8 +115,20 @@ function updatePosts() {
       post_element.style.display = "none";
     }
   }
-}
+};
   
+// try {
+//   var selectedTags = new URL(location).searchParams.get("tags").split(",");
+//   for(selectedTag in selectedTags) {
+//     var tag = selectedTags[selectedTag]
+//     if (tag in tags) {
+//       tags[tag].selected = true
+//     }
+//   }
+// } catch {
+
+// }
+
 </script>
 
 
