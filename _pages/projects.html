@@ -14,13 +14,13 @@ author_profile: false
   <details open>
     <summary>Filter by category:</summary>
     {% for category in categories %}
-      <button class="page__taxonomy-item" category="{{ category }}" onclick="categoryClicked(this);"> {{ category }} </button>
+      <button class="page__taxonomy-item" category="{{ category }}" id="category-filter-item"> {{ category }} </button>
     {% endfor %}
   </details>
   <details>
     <summary>Filter by tag:</summary>
     {% for tag in tags %}
-      <button class="page__taxonomy-item" tag="{{ tag }}" onclick="tagClicked(this);"> {{ tag }} </button>
+      <button class="page__taxonomy-item" tag="{{ tag }}" id="tag-filter-item"> {{ tag }} </button>
     {% endfor %}
   </details>
 </p>
@@ -38,97 +38,104 @@ author_profile: false
 
 <script>
 
-var posts = {
-  {% for post in projects %}
-    "{{post.title}}": {
-      category: "{{post.category}}",
-      tags: [
-        {% assign firstTag = true %}
-        {% for tag in post.tags %}
-          {% if firstTag == false %},{% endif %}
-          {% assign firstTag = false %}
-          "{{tag}}"
-        {% endfor %}
-      ]
-    },
-  {% endfor %}
-};
-
-var categories = {
-  {% assign firstCategory = true %}
-  {% for category in categories %}
-      {% if firstCategory == false %},{% endif %}
-      {% assign firstCategory = false %}
-      "{{ category }}": {
-        selected: false
-      }
-  {% endfor %}
-};
-
-var category_selected = "Research";
-// categories["Research"].selected = true;
-
-var tags = {
-  {% assign firstTag = true %}
-  {% for tag in tags %}
-      {% if firstTag == false %},{% endif %}
-      {% assign firstTag = false %}
-      "{{ tag }}": {
-        selected: false
-      }
-  {% endfor %}
-};
-
-var post_elements = document.getElementsByClassName("list__item");
-
-function categoryClicked(element) {
-  if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
-    return;
-  }
-  element.classList.toggle("page__taxonomy-item-selected");
-  categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
-  category_selected = element.getAttribute("category");
-  updatePosts();
-};
-
-function tagClicked(element) {
-  element.classList.toggle("page__taxonomy-item-selected");
-  tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
-  updatePosts();
-};
-
-function updatePosts() {
-  for (post_element of post_elements) {
-    var post = posts[post_element.getAttribute("title")];
-    var show = true;
-    if (post.category in categories) {
-      show = show && categories[post.category].selected;
-    }
-    for (tag of post.tags) {
-      if (tag in tags) {
-        show = show || tags[tag].selected;
-      }
-    }
-    if (show) {
-      post_element.style.display = "block";
-    } else {
-      post_element.style.display = "none";
-    }
-  }
-};
+  var posts = {
+    {% for post in projects %}
+      "{{post.title}}": {
+        category: "{{post.category}}",
+        tags: [
+          {% assign firstTag = true %}
+          {% for tag in post.tags %}
+            {% if firstTag == false %},{% endif %}
+            {% assign firstTag = false %}
+            "{{tag}}"
+          {% endfor %}
+        ]
+      },
+    {% endfor %}
+  };
   
-// try {
-//   var selectedTags = new URL(location).searchParams.get("tags").split(",");
-//   for(selectedTag in selectedTags) {
-//     var tag = selectedTags[selectedTag]
-//     if (tag in tags) {
-//       tags[tag].selected = true
-//     }
-//   }
-// } catch {
+  var categories = {
+    {% assign firstCategory = true %}
+    {% for category in categories %}
+        {% if firstCategory == false %},{% endif %}
+        {% assign firstCategory = false %}
+        "{{ category }}": {
+          selected: false
+        }
+    {% endfor %}
+  };
+  
+  var category_selected = "Research";
+  
+  var tags = {
+    {% assign firstTag = true %}
+    {% for tag in tags %}
+        {% if firstTag == false %},{% endif %}
+        {% assign firstTag = false %}
+        "{{ tag }}": {
+          selected: false
+        }
+    {% endfor %}
+  };
+  
+  var post_elements = document.getElementsByClassName("list__item");
+  
+  function categoryClicked(element) {
+    if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
+      return;
+    }
+    element.classList.toggle("page__taxonomy-item-selected");
+    categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
+    category_selected = element.getAttribute("category");
+    updatePosts();
+  };
+  document.getElementById("category-filter-item").addEventListener("click", function() {
+    categoryClicked(this);
+  });
+  
+  function tagClicked(element) {
+    element.classList.toggle("page__taxonomy-item-selected");
+    tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
+    updatePosts();
+  };
+  document.getElementById("tag-filter-item").addEventListener("click", function() {
+    tagClicked(this);
+  });
 
-// }
 
-</script>
+  
+  function updatePosts() {
+    for (post_element of post_elements) {
+      var post = posts[post_element.getAttribute("title")];
+      var show = true;
+      if (post.category in categories) {
+        show = show && categories[post.category].selected;
+      }
+      for (tag of post.tags) {
+        if (tag in tags) {
+          show = show || tags[tag].selected;
+        }
+      }
+      if (show) {
+        post_element.style.display = "block";
+      } else {
+        post_element.style.display = "none";
+      }
+    }
+  };
+    
+  // try {
+  //   var selectedTags = new URL(location).searchParams.get("tags").split(",");
+  //   for(selectedTag in selectedTags) {
+  //     var tag = selectedTags[selectedTag]
+  //     if (tag in tags) {
+  //       tags[tag].selected = true
+  //     }
+  //   }
+  // } catch {
+  
+  // }
+  
+  </script>
 
 
