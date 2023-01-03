@@ -4,7 +4,7 @@ excerpt: "Tongue gestures are an accessible and subtle method for interacting wi
 teaser: "/images/tonguegestures.png"
 date: "2022-08-12"
 collection: projects
-categories: research
+category: research
 tags: [ sensing, head-worn-displays, subtle-interaction ]
 ---
 

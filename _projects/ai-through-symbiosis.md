@@ -4,7 +4,7 @@ excerpt: "Investigating a new method for training unsupervised object recognitio
 teaser: "/images/ai-through-symbiosis.jpg"
 date: "2020-11-07"
 collection: projects
-categories: research
+category: research
 tags: [ machine-learning, computer-vision, head-worn-displays ]
 ---
 

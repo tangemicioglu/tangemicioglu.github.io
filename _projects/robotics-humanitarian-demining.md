@@ -4,7 +4,7 @@ excerpt: "Competed in the IEEE Robotics and Automation Society's Humanitarian Ro
 teaser: "/images/hratc.jpg"
 date: "2017-06-03"
 collection: projects
-categories: organizations
+category: organizations
 tags: [ robotics, machine-learning, competition ]
 ---
 

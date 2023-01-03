@@ -4,7 +4,7 @@ excerpt: "Investigated working memory activity through N-back tasks with differe
 teaser: "/images/working-memory.png"
 date: "2021-07-23"
 collection: projects
-categories: organizations
+category: organizations
 tags: [ neuroscience, fmri, memory ]
 ---
 

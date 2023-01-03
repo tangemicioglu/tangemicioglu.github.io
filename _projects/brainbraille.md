@@ -4,7 +4,7 @@ excerpt: "Developed a new brain-computer interface using fNIRS to detect attempt
 teaser: "/images/brainbraille.jpg"
 date: "2021-05-02"
 collection: projects
-categories: research
+category: research
 tags: [ brain-computer-interfaces, fnirs, assistive-technology ]
 ---
 

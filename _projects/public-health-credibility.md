@@ -4,7 +4,7 @@ excerpt: "Examined how credibility of public health messages regarding COVID-19 
 teaser: "/images/healthcredibility.png"
 date: "2022-04-27"
 collection: projects
-categories: classwork
+category: classwork
 tags: [ social-computing, healthcare ]
 ---
 
