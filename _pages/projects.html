@@ -8,6 +8,15 @@ author_profile: false
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% assign projects = (site.projects | sort: 'date') | reverse %}
+{% assign tags = projects | map: 'tags' | uniq | sort %}
+{% for tag in tags %}
+ <span class="tag-list">
+    <a href="/tag/{{ tag | first | slugify }}/">
+            {{ tag[0] }} ({{ tag | last | size }})
+    </a>
+</span>
+{% endfor %}
+
 {% for post in projects %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
