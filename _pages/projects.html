@@ -8,13 +8,9 @@ author_profile: false
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
 {% assign projects = (site.projects | sort: 'date') | reverse %}
-{% assign tags = projects | map: 'tags' | uniq | sort %}
+{% assign tags = projects | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 {% for tag in tags %}
- <span class="tag-list">
-    <a href="/tag/{{ tag | first | slugify }}/">
-            {{ tag[0] }} ({{ tag | last | size }})
-    </a>
-</span>
+ <h3> {{ tag }} </h3>
 {% endfor %}
 
 {% for post in projects %}
@@ -25,3 +21,4 @@ author_profile: false
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+
