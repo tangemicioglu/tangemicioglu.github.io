@@ -8,4 +8,4 @@ category: organizations
 tags: [ education, brain-computer-interfaces ]
 ---
 
-Writeup coming soon!
+This page will be replaced by a link to the repository once it's published by the BCI Society.

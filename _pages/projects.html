@@ -12,13 +12,13 @@ author_profile: false
 {% assign tags = projects | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 <p class="page__taxonomy">
   <details open>
-    <summary>Filter by category:</summary>
+    <summary>Filter by category</summary>
     {% for category in categories %}
       <button class="page__taxonomy-item category-filter-item" category="{{ category }}"> {{ category }} </button>
     {% endfor %}
   </details>
   <details>
-    <summary>Filter by tag:</summary>
+    <summary>Filter by tag</summary>
     {% for tag in tags %}
       <button class="page__taxonomy-item tag-filter-item" tag="{{ tag }}"> {{ tag }} </button>
     {% endfor %}
@@ -41,7 +41,6 @@ author_profile: false
   var posts = {
     {% for post in projects %}
       "{{post.title}}": {
-        year: "{{post.date | date: '%Y'}}",
         category: "{{post.category}}",
         tags: [
           {% assign firstTag = true %}
@@ -87,7 +86,6 @@ author_profile: false
     var tag_temp = new URL(location).searchParams.get("tags").split(",");
     if(tag_temp != null) {
       tag_selected = tag_temp;
-      category_selected = "";
     }
     var category_temp = new URL(location).searchParams.get("category");
     if(category_temp != null) {
