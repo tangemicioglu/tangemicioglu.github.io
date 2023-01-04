@@ -77,7 +77,7 @@
         {% for hash in category_hashes %}
           {% assign keyValue = hash | split: '#' %}
           {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-          <a href="?category={{ category_word }}" class="page__taxonomy-item"> {{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+          <a href="?category={{ category_word }}" style="text-decoration: none" class="page__taxonomy-item"> {{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
         {% endfor %}
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -87,11 +87,11 @@
       {% for hash in tag_hashes %}
         {% assign keyValue = hash | split: '#' %}
         {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-        <a href="?tags={{ tag_word }}" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+        <a href="?tags={{ tag_word }}" style="text-decoration: none" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
       {% endfor %}
       </span>
       {% for link in post.links %}
-        <a href="{{ link[2] }}" class="page__taxonomy-item">
+        <a href="{{ link[2] }}" style="text-decoration: none" class="page__taxonomy-item">
           {% case link[1] %}
             {% when "video" %}
               <i class="fa fa-fw fab fa-youtube"></i>
