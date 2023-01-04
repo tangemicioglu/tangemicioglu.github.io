@@ -6,6 +6,9 @@ date: "2022-08-12"
 collection: projects
 category: research
 tags: [ sensing, head-worn-displays, subtle-interaction ]
+links:
+- [poster, paper, https://tangemicioglu.com/publications/]
+- [seminar, talk, https://www.microsoft.com/en-us/research/video/tongue-gesture-recognition-in-head-mounted-displays/]
 ---
 
 Pioneered a new, accessible method of hands-free interaction with head-worn displays using tongue gestures, detected using multimodal sensing capabilities in current VR headsets. Collected a multi-location, multi-sensor dataset of 50,000 gestures across 16 participants.

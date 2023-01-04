@@ -1,7 +1,7 @@
 ---
 title: 'Wearable Health Trackers and Privacy'
 date: 2021-12-01
-permalink: /posts/2021/12/health-tracking-privacy/
+permalink: /posts/health-tracking-privacy/
 tags:
   - coursework
   - ethics

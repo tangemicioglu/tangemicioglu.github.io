@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item" title="{{ post.title }}" year="{{ post.date | date: "%Y" }}">
+<div class="{{ include.type | default: "list" }}__item" title="{{ post.title }}" id="{{ post.title | slugify }}" year="{{ post.date | date: "%Y" }}">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -90,6 +90,34 @@
         <a href="?tags={{ tag_word }}" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
       {% endfor %}
       </span>
+      {% for link in post.links %}
+        <a href="{{ link[2] }}" class="page__taxonomy-item">
+          {% case link[1] %}
+            {% when "video" %}
+              <i class="fa-brands fa-youtube"></i>
+            {% when "slides" %}
+              <i class="fa-regular fa-file-powerpoint"></i>
+            {% when "pdf" %}
+              <i class="fa-regular fa-file-pdf"></i>
+            {% when "paper" %}
+              <i class="fa-regular fa-scroll"></i>
+            {% when "writeup" %}
+              <i class="fa-regular fa-pen-nib"></i>
+            {% when "code" %}
+              <i class="fa-regular fa-code"></i>
+            {% when "doi" %}
+              <i class="fa-solid fa-quotes"></i>
+            {% when "award" %}
+              <i class="fa-regular fa-award"></i>
+            {% when "press" %}
+              <i class="fa-regular fa-newspaper"></i>
+            {% when "website" %}
+              <i class="fa-regular fa-link"></i>
+            {% else %}
+              <i class="fa-regular fa-link"></i>
+          {% endcase %}
+          {{ link[0] }}</a>
+      {% endfor %
     </p>
 
     <!-- <p class="archive__item-links">{{ post.links }}</p> -->
