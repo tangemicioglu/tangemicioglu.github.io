@@ -7,7 +7,7 @@ collection: projects
 category: research
 tags: [ sensing, head-worn-displays, subtle-interaction ]
 links:
-- [poster, paper, https://tangemicioglu.com/publications/]
+- [poster, paper, https://tangemicioglu.com/publications/#tongue-gestures-for-hands-free-interaction-in-head-worn-displays/]
 - [seminar, talk, https://www.microsoft.com/en-us/research/video/tongue-gesture-recognition-in-head-mounted-displays/]
 ---
 

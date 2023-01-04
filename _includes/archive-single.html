@@ -94,27 +94,27 @@
         <a href="{{ link[2] }}" class="page__taxonomy-item">
           {% case link[1] %}
             {% when "video" %}
-              <i class="fa-brands fa-youtube"></i>
+              <i class="fa fa-fw fab fa-youtube"></i>
             {% when "slides" %}
-              <i class="fa-regular fa-file-powerpoint"></i>
+              <i class="fa fa-fw far fa-file-powerpoint"></i>
             {% when "pdf" %}
-              <i class="fa-regular fa-file-pdf"></i>
+              <i class="fa fa-fw far fa-file-pdf"></i>
             {% when "paper" %}
-              <i class="fa-regular fa-scroll"></i>
+              <i class="fa fa-fw far fa-scroll"></i>
             {% when "writeup" %}
-              <i class="fa-regular fa-pen-nib"></i>
+              <i class="fa fa-fw far fa-pen-nib"></i>
             {% when "code" %}
-              <i class="fa-regular fa-code"></i>
+              <i class="fa fa-fw far fa-code"></i>
             {% when "doi" %}
-              <i class="fa-solid fa-quotes"></i>
+              <i class="fa fa-fw fas fa-quotes"></i>
             {% when "award" %}
-              <i class="fa-regular fa-award"></i>
+              <i class="fa fa-fw far fa-award"></i>
             {% when "press" %}
-              <i class="fa-regular fa-newspaper"></i>
+              <i class="fa fa-fw far fa-newspaper"></i>
             {% when "website" %}
-              <i class="fa-regular fa-link"></i>
+              <i class="fa fa-fw far fa-link"></i>
             {% else %}
-              <i class="fa-regular fa-link"></i>
+              <i class="fa fa-fw far fa-link"></i>
           {% endcase %}
           {{ link[0] }}</a>
       {% endfor %}
