@@ -95,14 +95,17 @@ author_profile: false
     }
   } catch {}
 
+var category_selected_element = null;
   function categoryClicked(element) {
     if(element.getAttribute("category") != category_selected && category_selected.length != 0 && categories[category_selected].selected == true) {
-      return;
+      category_selected_element.classList.toggle("page__taxonomy-item-selected");
+      categories[category_selected].selected = !categories[category_selected].selected;
     }
     element.classList.toggle("page__taxonomy-item-selected");
     categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
     if(categories[element.getAttribute("category")].selected) {
       category_selected = element.getAttribute("category");
+      category_selected_element = element;
     } else {
       category_selected = "";
     }
