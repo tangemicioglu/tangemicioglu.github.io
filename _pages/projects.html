@@ -80,7 +80,7 @@ author_profile: false
   var year_elements = document.getElementsByClassName("archive__subtitle");
   var post_elements = document.getElementsByClassName("list__item");
 
-  var category_selected = "research";
+  var category_selected = "";
   var tag_selected = [];
 
   try {
@@ -96,7 +96,7 @@ author_profile: false
   } catch {}
 
   function categoryClicked(element) {
-    if(element.getAttribute("category") != category_selected && category_selected != "" && categories[category_selected].selected == true) {
+    if(element.getAttribute("category") != category_selected && category_selected.length != 0 && categories[category_selected].selected == true) {
       return;
     }
     element.classList.toggle("page__taxonomy-item-selected");
@@ -152,7 +152,7 @@ author_profile: false
           show2 = show2 || tags[tag].selected;
         }
       }
-      if ((category_selected=="" || show) && (tag_selected_num == 0 || show2)) {
+      if ((category_selected.length === 0 || show) && (tag_selected_num == 0 || show2)) {
         post_element.style.display = "block";
       } else {
         post_element.style.display = "none";
