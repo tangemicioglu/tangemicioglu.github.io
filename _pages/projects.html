@@ -41,6 +41,7 @@ author_profile: false
   var posts = {
     {% for post in projects %}
       "{{post.title}}": {
+        year: "{{post.date | date: '%Y'}}",
         category: "{{post.category}}",
         tags: [
           {% assign firstTag = true %}
@@ -76,24 +77,26 @@ author_profile: false
     {% endfor %}
   };
   
+  var year_elements = document.getElementsByClassName("archive__subtitle");
   var post_elements = document.getElementsByClassName("list__item");
 
   var category_selected = "research";
   var tag_selected = [];
 
   try {
+    var tag_temp = new URL(location).searchParams.get("tags").split(",");
+    if(tag_temp != null) {
+      tag_selected = tag_temp;
+      category_selected = "";
+    }
     var category_temp = new URL(location).searchParams.get("category");
     if(category_temp != null) {
       category_selected = category_temp;
     }
-    var tag_temp = new URL(location).searchParams.get("tags").split(",");
-    if(tag_temp != null) {
-      tag_selected = tag_temp;
-    }
   } catch {}
 
   function categoryClicked(element) {
-    if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
+    if(element.getAttribute("category") != category_selected && category_selected != "" && categories[category_selected].selected == true) {
       return;
     }
     element.classList.toggle("page__taxonomy-item-selected");
@@ -153,6 +156,19 @@ author_profile: false
         post_element.style.display = "block";
       } else {
         post_element.style.display = "none";
+      }
+    }
+    for (year_element of year_elements) {
+      var show = false;
+      for (post_element of post_elements) {
+        if (post_element.style.display == "block" && post_element.getAttribute("year") == year_element.getAttribute("id")) {
+          show = true;
+        }
+      }
+      if (show) {
+        year_element.style.display = "block";
+      } else {
+        year_element.style.display = "none";
       }
     }
   };
