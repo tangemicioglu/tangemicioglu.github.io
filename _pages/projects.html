@@ -89,21 +89,24 @@ author_profile: false
     category_selected = element.getAttribute("category");
     updatePosts();
   };
-  document.getElementsByClassName("category-filter-item").addEventListener("click", function() {
-    categoryClicked(this);
-  });
+  categoryElements = document.getElementsByClassName("category-filter-item");
+  for(var i = 0; i < categoryElements.length; i++) {
+    categoryElements[i].addEventListener("click", function() {
+      categoryClicked(this);
+    });
+  }
   
   function tagClicked(element) {
     element.classList.toggle("page__taxonomy-item-selected");
     tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
     updatePosts();
   };
-  document.getElementsByClassName("tag-filter-item").addEventListener("click", function() {
-    tagClicked(this);
-  });
+  for(var i = 0; i < document.getElementsByClassName("tag-filter-item").length; i++) {
+    document.getElementsByClassName("tag-filter-item")[i].addEventListener("click", function() {
+      tagClicked(this);
+    });
+  }
 
-
-  
   function updatePosts() {
     for (post_element of post_elements) {
       var post = posts[post_element.getAttribute("title")];
