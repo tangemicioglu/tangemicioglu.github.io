@@ -9,6 +9,16 @@ redirect_from:
 
 {% include base_path %}
 {% capture written_year %}'None'{% endcapture %}
+{% assign tags = site.posts | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
+<p class="page__taxonomy">
+  <details>
+    <summary>Filter by tag</summary>
+    {% for tag in tags %}
+      <button class="page__taxonomy-item tag-filter-item" tag="{{ tag }}"> {{ tag }} </button>
+    {% endfor %}
+  </details>
+</p>
+
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
@@ -17,3 +27,99 @@ redirect_from:
   {% endif %}
   {% include archive-single.html %}
 {% endfor %}
+
+<!-- Credit to mmpataki for parts of this script -->
+
+<script>
+
+  var posts = {
+    {% for post in site.posts %}
+      "{{post.title}}": {
+        tags: [
+          {% assign firstTag = true %}
+          {% for tag in post.tags %}
+            {% if firstTag == false %},{% endif %}
+            {% assign firstTag = false %}
+            "{{tag}}"
+          {% endfor %}
+        ]
+      },
+    {% endfor %}
+  };
+  
+  var tags = {
+    {% assign firstTag = true %}
+    {% for tag in tags %}
+        {% if firstTag == false %},{% endif %}
+        {% assign firstTag = false %}
+        "{{ tag }}": {
+          selected: false
+        }
+    {% endfor %}
+  };
+  
+  var year_elements = document.getElementsByClassName("archive__subtitle");
+  var post_elements = document.getElementsByClassName("list__item");
+
+  var tag_selected = [];
+
+  try {
+    var tag_temp = new URL(location).searchParams.get("tags").split(",");
+    if(tag_temp != null) {
+      tag_selected = tag_temp;
+    }
+  } catch {}
+  
+  var tag_selected_num = 0;
+  function tagClicked(element) {
+    element.classList.toggle("page__taxonomy-item-selected");
+    tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
+    if(tags[element.getAttribute("tag")].selected) {
+      tag_selected_num++;
+    } else {
+      tag_selected_num--;
+    }
+    updatePosts();
+  };
+  var tag_elements = document.getElementsByClassName("tag-filter-item");
+  for(var i = 0; i < tag_elements.length; i++) {
+    tag_elements[i].addEventListener("click", function() {
+      tagClicked(this);
+    });
+    if(tag_selected.includes(tag_elements[i].getAttribute("tag"))) {
+      tag_elements[i].click();
+    }
+  }
+
+  function updatePosts() {
+    for (post_element of post_elements) {
+      var post = posts[post_element.getAttribute("title")];
+      var show = false;
+      for (tag of post.tags) {
+        if (tag in tags) {
+          show = show || tags[tag].selected;
+        }
+      }
+      if (tag_selected_num == 0 || show2) {
+        post_element.style.display = "block";
+      } else {
+        post_element.style.display = "none";
+      }
+    }
+    for (year_element of year_elements) {
+      var show = false;
+      for (post_element of post_elements) {
+        if (post_element.style.display == "block" && post_element.getAttribute("year") == year_element.getAttribute("id")) {
+          show = true;
+        }
+      }
+      if (show) {
+        year_element.style.display = "block";
+      } else {
+        year_element.style.display = "none";
+      }
+    }
+  };
+  
+  updatePosts();
+  </script>
