@@ -4,7 +4,7 @@ excerpt: "Prototyped an intelligent stovetop appliance and mobile app interface 
 teaser: "/images/smartstove-app.png"
 date: "2022-04-24"
 collection: projects
-category: classwork
+category: coursework
 tags: [ ubiquitous-computing, assistive-technology ]
 ---
 

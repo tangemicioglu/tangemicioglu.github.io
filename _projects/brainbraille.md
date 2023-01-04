@@ -6,6 +6,7 @@ date: "2021-05-02"
 collection: projects
 category: research
 tags: [ brain-computer-interfaces, fnirs, assistive-technology ]
+
 ---
 
 Writeup coming soon!

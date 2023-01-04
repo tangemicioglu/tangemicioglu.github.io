@@ -4,7 +4,7 @@ excerpt: "Created a pipeline for estimating location of hand and finger keypoint
 teaser: "/images/hand-pose.png"
 date: "2020-10-23"
 collection: projects
-category: classwork
+category: coursework
 tags: [ machine-learning, computer-vision ]
 ---
 

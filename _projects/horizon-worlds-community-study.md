@@ -4,7 +4,7 @@ excerpt: "Using ethnographic methods, studied the online VR community in Horizon
 teaser: "/images/horizonworlds.png"
 date: "2022-04-22"
 collection: projects
-category: classwork
+category: coursework
 tags: [ social-computing, virtual-reality ]
 # We examined in detail different aspects of the community such as moderation and social roles based on Amy Jo Kim's community design principles.
 ---
