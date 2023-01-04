@@ -90,7 +90,6 @@ author_profile: false
     if(tag_temp != null) {
       tag_selected = tag_temp;
     }
-    console.log(tag_temp);
   } catch {}
 
   function categoryClicked(element) {
@@ -99,37 +98,41 @@ author_profile: false
     }
     element.classList.toggle("page__taxonomy-item-selected");
     categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
-    category_selected = element.getAttribute("category");
+    if(categories[element.getAttribute("category")].selected) {
+      category_selected = element.getAttribute("category");
+    } else {
+      category_selected = "";
+    }
     updatePosts();
   };
-  var categoryElements = document.getElementsByClassName("category-filter-item");
-  for(var i = 0; i < categoryElements.length; i++) {
-    categoryElements[i].addEventListener("click", function() {
+  var category_elements = document.getElementsByClassName("category-filter-item");
+  for(var i = 0; i < category_elements.length; i++) {
+    category_elements[i].addEventListener("click", function() {
       categoryClicked(this);
     });
-    if(categoryElements[i].getAttribute("category") == category_selected) {
-      categoryElements[i].click();
+    if(category_elements[i].getAttribute("category") == category_selected) {
+      category_elements[i].click();
     }
   }
   
-  var tagSelectedNum = 0;
+  var tag_selected_num = 0;
   function tagClicked(element) {
     element.classList.toggle("page__taxonomy-item-selected");
     tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
     if(tags[element.getAttribute("tag")].selected) {
-      tagSelectedNum++;
+      tag_selected_num++;
     } else {
-      tagSelectedNum--;
+      tag_selected_num--;
     }
     updatePosts();
   };
-  var tagElements = document.getElementsByClassName("tag-filter-item");
-  for(var i = 0; i < tagElements.length; i++) {
-    tagElements[i].addEventListener("click", function() {
+  var tag_elements = document.getElementsByClassName("tag-filter-item");
+  for(var i = 0; i < tag_elements.length; i++) {
+    tag_elements[i].addEventListener("click", function() {
       tagClicked(this);
     });
-    if(tagElements[i].getAttribute("tag") in tag_selected) {
-      tagElements[i].click();
+    if(tag_selected.includes(tag_elements[i].getAttribute("tag"))) {
+      tag_elements[i].click();
     }
   }
 
@@ -140,13 +143,13 @@ author_profile: false
       if (post.category in categories) {
         show = show && categories[post.category].selected;
       }
-      var show2 = tagSelectedNum == 0;
+      var show2 = false;
       for (tag of post.tags) {
         if (tag in tags) {
           show2 = show2 || tags[tag].selected;
         }
       }
-      if (show && show2) {
+      if ((category_selected=="" || show) && (tag_selected_num == 0 || show2)) {
         post_element.style.display = "block";
       } else {
         post_element.style.display = "none";
