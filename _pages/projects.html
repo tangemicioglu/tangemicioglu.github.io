@@ -86,7 +86,10 @@ author_profile: false
     var tag_temp = new URL(location).searchParams.get("tags").split(",");
     if(tag_temp != null) {
       tag_selected = tag_temp;
+      category_selected = "";
     }
+  } catch {}
+  try {
     var category_temp = new URL(location).searchParams.get("category");
     if(category_temp != null) {
       category_selected = category_temp;
