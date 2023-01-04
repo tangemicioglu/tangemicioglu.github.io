@@ -14,13 +14,13 @@ author_profile: false
   <details open>
     <summary>Filter by category:</summary>
     {% for category in categories %}
-      <button class="page__taxonomy-item" category="{{ category }}" id="category-filter-item"> {{ category }} </button>
+      <button class="page__taxonomy-item category-filter-item" category="{{ category }}"> {{ category }} </button>
     {% endfor %}
   </details>
   <details>
     <summary>Filter by tag:</summary>
     {% for tag in tags %}
-      <button class="page__taxonomy-item" tag="{{ tag }}" id="tag-filter-item"> {{ tag }} </button>
+      <button class="page__taxonomy-item tag-filter-item" tag="{{ tag }}"> {{ tag }} </button>
     {% endfor %}
   </details>
 </p>
@@ -65,8 +65,6 @@ author_profile: false
     {% endfor %}
   };
   
-  var category_selected = "Research";
-  
   var tags = {
     {% assign firstTag = true %}
     {% for tag in tags %}
@@ -80,6 +78,8 @@ author_profile: false
   
   var post_elements = document.getElementsByClassName("list__item");
   
+  
+  var category_selected = "research";
   function categoryClicked(element) {
     if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
       return;
@@ -89,7 +89,7 @@ author_profile: false
     category_selected = element.getAttribute("category");
     updatePosts();
   };
-  document.getElementById("category-filter-item").addEventListener("click", function() {
+  document.getElementsByClassName("category-filter-item").addEventListener("click", function() {
     categoryClicked(this);
   });
   
@@ -98,7 +98,7 @@ author_profile: false
     tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
     updatePosts();
   };
-  document.getElementById("tag-filter-item").addEventListener("click", function() {
+  document.getElementsByClassName("tag-filter-item").addEventListener("click", function() {
     tagClicked(this);
   });
 
