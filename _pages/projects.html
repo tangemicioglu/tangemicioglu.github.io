@@ -77,9 +77,21 @@ author_profile: false
   };
   
   var post_elements = document.getElementsByClassName("list__item");
-  
-  
+
   var category_selected = "research";
+  var tag_selected = [];
+
+  try {
+    category_temp = new URL(location).searchParams.get("category");
+    if(category_temp != null) {
+      category_selected = category_temp;
+    }
+    tag_temp = new URL(location).searchParams.get("tags").split(",");
+    if(tag_temp != null) {
+      tag_selected = tag_temp;
+    }
+  } catch {}
+
   function categoryClicked(element) {
     if(element.getAttribute("category") != category_selected && categories[category_selected].selected == true) {
       return;
@@ -94,6 +106,9 @@ author_profile: false
     categoryElements[i].addEventListener("click", function() {
       categoryClicked(this);
     });
+    if(categoryElements[i].getAttribute("category") == category_selected) {
+      categoryElements[i].click();
+    }
   }
   
   function tagClicked(element) {
@@ -101,10 +116,14 @@ author_profile: false
     tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
     updatePosts();
   };
-  for(var i = 0; i < document.getElementsByClassName("tag-filter-item").length; i++) {
-    document.getElementsByClassName("tag-filter-item")[i].addEventListener("click", function() {
+  tagElements = document.getElementsByClassName("tag-filter-item");
+  for(var i = 0; i < tagElements.length; i++) {
+    tagElements[i].addEventListener("click", function() {
       tagClicked(this);
     });
+    if(tagElements[i].getAttribute("tag") in tag_selected) {
+      tagElements[i].click();
+    }
   }
 
   function updatePosts() {
@@ -116,7 +135,7 @@ author_profile: false
       }
       for (tag of post.tags) {
         if (tag in tags) {
-          show = show || tags[tag].selected;
+          show = show && tags[tag].selected;
         }
       }
       if (show) {
@@ -126,18 +145,6 @@ author_profile: false
       }
     }
   };
-    
-  // try {
-  //   var selectedTags = new URL(location).searchParams.get("tags").split(",");
-  //   for(selectedTag in selectedTags) {
-  //     var tag = selectedTags[selectedTag]
-  //     if (tag in tags) {
-  //       tags[tag].selected = true
-  //     }
-  //   }
-  // } catch {
-  
-  // }
   
   </script>
 
