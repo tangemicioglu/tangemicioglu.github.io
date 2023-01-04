@@ -82,14 +82,15 @@ author_profile: false
   var tag_selected = [];
 
   try {
-    category_temp = new URL(location).searchParams.get("category");
+    var category_temp = new URL(location).searchParams.get("category");
     if(category_temp != null) {
       category_selected = category_temp;
     }
-    tag_temp = new URL(location).searchParams.get("tags").split(",");
+    var tag_temp = new URL(location).searchParams.get("tags").split(",");
     if(tag_temp != null) {
       tag_selected = tag_temp;
     }
+    console.log(tag_temp);
   } catch {}
 
   function categoryClicked(element) {
@@ -101,7 +102,7 @@ author_profile: false
     category_selected = element.getAttribute("category");
     updatePosts();
   };
-  categoryElements = document.getElementsByClassName("category-filter-item");
+  var categoryElements = document.getElementsByClassName("category-filter-item");
   for(var i = 0; i < categoryElements.length; i++) {
     categoryElements[i].addEventListener("click", function() {
       categoryClicked(this);
@@ -111,12 +112,18 @@ author_profile: false
     }
   }
   
+  var tagSelectedNum = 0;
   function tagClicked(element) {
     element.classList.toggle("page__taxonomy-item-selected");
     tags[element.getAttribute("tag")].selected = !tags[element.getAttribute("tag")].selected;
+    if(tags[element.getAttribute("tag")].selected) {
+      tagSelectedNum++;
+    } else {
+      tagSelectedNum--;
+    }
     updatePosts();
   };
-  tagElements = document.getElementsByClassName("tag-filter-item");
+  var tagElements = document.getElementsByClassName("tag-filter-item");
   for(var i = 0; i < tagElements.length; i++) {
     tagElements[i].addEventListener("click", function() {
       tagClicked(this);
@@ -133,12 +140,13 @@ author_profile: false
       if (post.category in categories) {
         show = show && categories[post.category].selected;
       }
+      var show2 = tagSelectedNum == 0;
       for (tag of post.tags) {
         if (tag in tags) {
-          show = show && tags[tag].selected;
+          show2 = show2 || tags[tag].selected;
         }
       }
-      if (show) {
+      if (show && show2) {
         post_element.style.display = "block";
       } else {
         post_element.style.display = "none";
