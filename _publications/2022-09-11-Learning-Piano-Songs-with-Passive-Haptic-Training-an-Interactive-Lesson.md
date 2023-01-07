@@ -1,6 +1,6 @@
 ---
 title: "Learning Piano Songs with Passive Haptic Training: an Interactive Lesson"
-teaser: "/images/passivehapticlearning.jpg"
+teaser: "/images/passivehapticlearning-3.jpg"
 date: "2022-09-11"
 collection: publications
 authors: "Asha Bhandarkar, <b>Tan Gemicioglu</b>, Brahmi Dwivedi, Caitlyn Seim, Thad Starner"

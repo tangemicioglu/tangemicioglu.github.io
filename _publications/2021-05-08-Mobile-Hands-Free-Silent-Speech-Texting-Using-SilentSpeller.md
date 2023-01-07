@@ -1,6 +1,6 @@
 ---
 title: "Mobile, Hands-Free, Silent Speech Texting Using SilentSpeller"
-teaser: "/images/silentspeller.png"
+teaser: "/images/silentspeller-2.png"
 date: "2021-05-08"
 collection: publications
 authors: "Naoki Kimura, <b>Tan Gemicioglu</b>, Jonathan Womack, Richard Li, Yuhui Zhao, Abdelkareem Bedri, Alex Olwal, Jun Rekimoto, Thad Starner"

@@ -1,6 +1,6 @@
 ---
 title: "Passive Haptic Rehearsal for Accelerated Piano Skill Acquisition"
-teaser: "/images/passivehapticlearning.jpg"
+teaser: "/images/passivehapticlearning-2.jpg"
 date: "2022-04-30"
 collection: publications
 authors: "<b>Tan Gemicioglu</b>, Noah Teuscher, Brahmi Dwivedi, Soobin Park, Emerson Miller, Celeste Mason, Caitlyn Seim, Thad Starner"
