@@ -7,7 +7,7 @@ collection: projects
 category: coursework
 tags: [ machine-learning, computer-vision ]
 links:
-- [slides, slides, files/slides/hand_pose_slides.pptx]
+- [slides, slides, /files/slides/hand_pose_slides.pptx]
 ---
 
 Writeup coming soon!

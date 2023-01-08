@@ -7,7 +7,7 @@ collection: projects
 category: research
 tags: [ brain-computer-interfaces, fnirs, assistive-technology ]
 links:
-- [undergraduate thesis, paper, files/misc_pdfs/BrainBraille_Undergrad_Thesis.pdf]
+- [undergraduate thesis, paper, /files/misc_pdfs/BrainBraille_Undergrad_Thesis.pdf]
 - [President's Undergraduate Research Award, award, https://undergradresearch.gatech.edu/content/presidents-undergraduate-research-awards]
 
 ---

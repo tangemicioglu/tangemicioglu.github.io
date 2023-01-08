@@ -7,7 +7,7 @@ collection: projects
 category: organizations
 tags: [ robotics, competition ]
 links:
-- [report, pdf, files/misc_pdf/Jessiii_Design_Report.pdf]
+- [report, pdf, /files/misc_pdf/Jessiii_Design_Report.pdf]
 - [code, code, https://github.com/RoboJackets/igvc-software]
 - [3rd place Grand Award, award, http://www.igvc.org/results.htm]
 ---

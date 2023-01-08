@@ -8,7 +8,7 @@ category: organizations
 tags: [ neuroscience, fmri, memory ]
 links:
 - [code, code, https://colab.research.google.com/drive/1XkjX9aF_FztIpzAETZ0UhufWfHd3lty4]
-- [slides, slides, files/slides/working_memory.pptx]
+- [slides, slides, /files/slides/working_memory.pptx]
 ---
 
 Writeup coming soon!

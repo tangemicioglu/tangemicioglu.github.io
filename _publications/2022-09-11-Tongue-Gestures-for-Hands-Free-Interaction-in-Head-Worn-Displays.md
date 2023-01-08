@@ -11,5 +11,5 @@ tags: [poster, sensing, subtle-interaction]
 links:
 - [doi, doi, https://doi.org/10.1145/3544793.3560363]
 - [paper, pdf, /files/papers/Tongue_Gestures_UbiComp_2022_Poster.pdf]
-- [poster, slides, files/slides/Tongue Gestures Poster.pptx]
+- [poster, slides, /files/slides/Tongue Gestures Poster.pptx]
 ---

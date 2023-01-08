@@ -7,8 +7,8 @@ collection: projects
 category: coursework
 tags: [ ubiquitous-computing, assistive-technology ]
 links:
-- [slides, slides, files/slides/assistive_smart_stove.pdf]
-- [report, pdf, files/misc_pdf/SmartStove_Report.pdf]
+- [slides, slides, /files/slides/assistive_smart_stove.pdf]
+- [report, pdf, /files/misc_pdf/SmartStove_Report.pdf]
 ---
 
 Writeup coming soon!

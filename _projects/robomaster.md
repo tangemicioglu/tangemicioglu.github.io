@@ -7,7 +7,7 @@ collection: projects
 category: organizations
 tags: [ robotics, machine-learning, competition ]
 links:
-- [report, pdf, '/files/misc_pdf/Team RCMakers Technical Report 2018.pdf']
+- [report, pdf, /files/misc_pdf/Team RCMakers Technical Report 2018.pdf]
 - [Finalist Award, award, https://www.robomaster.com/en-US/resource/pages/announcement/863]
 
 ---

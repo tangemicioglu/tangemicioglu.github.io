@@ -7,7 +7,7 @@ collection: projects
 category: coursework
 tags: [ social-computing, healthcare ]
 links:
-- [poster, slides, files/slides/public_health_credibility.pptx]
+- [poster, slides, /files/slides/public_health_credibility.pptx]
 ---
 
 Writeup coming soon!

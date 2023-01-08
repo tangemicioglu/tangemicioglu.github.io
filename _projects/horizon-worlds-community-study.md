@@ -7,7 +7,7 @@ collection: projects
 category: coursework
 tags: [ social-computing, virtual-reality ]
 links:
-- [report, pdf, files/misc_pdf/Horizon_Worlds.pdf]
+- [report, pdf, /files/misc_pdf/Horizon_Worlds.pdf]
 # We examined in detail different aspects of the community such as moderation and social roles based on Amy Jo Kim's community design principles.
 ---
 
