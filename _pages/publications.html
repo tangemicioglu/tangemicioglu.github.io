@@ -6,9 +6,17 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% capture written_year %}'None'{% endcapture %}
 {% assign publications = (site.publications | sort: 'date') | reverse %}
+{% assign categories = publications | map: 'category' | uniq | sort %}
 {% assign tags = publications | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 <p class="page__taxonomy">
+  <details open>
+    <summary>Filter by category</summary>
+    {% for category in categories %}
+      <button class="page__taxonomy-item category-filter-item" category="{{ category }}"> {{ category }} </button>
+    {% endfor %}
+  </details>
   <details>
     <summary>Filter by tag</summary>
     {% for tag in tags %}
@@ -16,7 +24,6 @@ author_profile: false
     {% endfor %}
   </details>
 </p>
-
 
 {% for post in publications %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -34,6 +41,7 @@ author_profile: false
   var posts = {
     {% for post in publications %}
       "{{post.title}}": {
+        category: "{{post.category}}",
         tags: [
           {% assign firstTag = true %}
           {% for tag in post.tags %}
@@ -43,6 +51,17 @@ author_profile: false
           {% endfor %}
         ]
       },
+    {% endfor %}
+  };
+  
+  var categories = {
+    {% assign firstCategory = true %}
+    {% for category in categories %}
+        {% if firstCategory == false %},{% endif %}
+        {% assign firstCategory = false %}
+        "{{ category }}": {
+          selected: false
+        }
     {% endfor %}
   };
   
@@ -60,14 +79,47 @@ author_profile: false
   var year_elements = document.getElementsByClassName("archive__subtitle");
   var post_elements = document.getElementsByClassName("list__item");
 
+  var category_selected = "";
   var tag_selected = [];
 
+  try {
+    var category_temp = new URL(location).searchParams.get("category");
+    if(category_temp != null) {
+      category_selected = category_temp;
+    }
+  } catch {}
   try {
     var tag_temp = new URL(location).searchParams.get("tags").split(",");
     if(tag_temp != null) {
       tag_selected = tag_temp;
     }
   } catch {}
+
+var category_selected_element = null;
+  function categoryClicked(element) {
+    if(element.getAttribute("category") != category_selected && category_selected.length != 0 && categories[category_selected].selected == true) {
+      category_selected_element.classList.toggle("page__taxonomy-item-selected");
+      categories[category_selected].selected = !categories[category_selected].selected;
+    }
+    element.classList.toggle("page__taxonomy-item-selected");
+    categories[element.getAttribute("category")].selected = !categories[element.getAttribute("category")].selected;
+    if(categories[element.getAttribute("category")].selected) {
+      category_selected = element.getAttribute("category");
+      category_selected_element = element;
+    } else {
+      category_selected = "";
+    }
+    updatePosts();
+  };
+  var category_elements = document.getElementsByClassName("category-filter-item");
+  for(var i = 0; i < category_elements.length; i++) {
+    category_elements[i].addEventListener("click", function() {
+      categoryClicked(this);
+    });
+    if(category_elements[i].getAttribute("category") == category_selected) {
+      category_elements[i].click();
+    }
+  }
   
   var tag_selected_num = 0;
   function tagClicked(element) {
@@ -93,13 +145,17 @@ author_profile: false
   function updatePosts() {
     for (post_element of post_elements) {
       var post = posts[post_element.getAttribute("title")];
-      var show = false;
+      var show = true;
+      if (post.category in categories) {
+        show = show && categories[post.category].selected;
+      }
+      var show2 = false;
       for (tag of post.tags) {
         if (tag in tags) {
-          show = show || tags[tag].selected;
+          show2 = show2 || tags[tag].selected;
         }
       }
-      if (tag_selected_num == 0 || show) {
+      if ((category_selected.length === 0 || show) && (tag_selected_num == 0 || show2)) {
         post_element.style.display = "block";
       } else {
         post_element.style.display = "none";
