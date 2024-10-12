@@ -8,7 +8,7 @@ venue: "Proceedings of the 2022 ACM International Joint Conference on Pervasive 
 abstract: "Passive haptic learning (PHL) is a method for learning piano pieces through repetition of haptic stimuli while a user is focused on other daily tasks. In combination with active practice techniques, this method is a powerful tool for users to learn piano pieces with less time spent in active practice while also reducing cognitive effort and increasing retention. We propose a demo combining these two learning methods, in which attendees will engage in a short active practice session followed by a passive practice session using vibrotactile haptic gloves. Attendees will be able to experience the effects of passive haptic learning for themselves as well as gauge their mastery of the piece with a final performance at the end of the demo."
 link: "/files/papers/PHL_UbiComp_2022_Demo.pdf"
 category: demo
-tags: [haptics, piano]
+tags: [haptics, piano, learning]
 links:
 - [doi, doi, https://doi.org/10.1145/3544793.3560321]
 - [paper, pdf, /files/papers/PHL_UbiComp_2022_Demo.pdf]
