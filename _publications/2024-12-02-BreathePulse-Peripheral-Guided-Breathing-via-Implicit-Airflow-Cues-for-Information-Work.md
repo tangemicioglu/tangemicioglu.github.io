@@ -1,7 +1,7 @@
 ---
 title: "BreathePulse: Peripheral Guided Breathing via Implicit Airflow Cues for Information Work"
 teaser: "/images/breathepulse-2.jpg"
-date: "2024-12-01"
+date: "2024-12-02"
 collection: publications
 authors: " <b>Tan Gemicioglu*</b>, Thalia Viranda*, Yiran Zhao*, Olzhas Yessenbayev, Jatin Arora, Jane Wang, Pedro Lopes, Alexander T. Adams, Tanzeem Choudhury"
 venue: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 8, Issue 4"

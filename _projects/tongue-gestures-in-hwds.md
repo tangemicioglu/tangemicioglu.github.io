@@ -7,6 +7,8 @@ collection: projects
 category: research
 tags: [ sensing, head-worn-displays, subtle-interaction ]
 links:
+- [ICMI'24 paper, paper, https://tangemicioglu.com/publications/#tonguetap-multimodal-tongue-gesture-recognition-withhead-worn-devices]
+- [CHI'23 demo, paper, https://tangemicioglu.com/publications/#gaze-tongue-a-subtle-hands-free-interaction-for-head-worn-devices]
 - [UbiComp'22 poster, paper, https://tangemicioglu.com/publications/#tongue-gestures-for-hands-free-interaction-in-head-worn-displays]
 - [talk, video, https://www.microsoft.com/en-us/research/video/tongue-gesture-recognition-in-head-mounted-displays/]
 ---
