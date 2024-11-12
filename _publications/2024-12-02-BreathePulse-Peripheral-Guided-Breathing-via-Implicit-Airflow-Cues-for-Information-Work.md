@@ -10,6 +10,6 @@ link: "/files/papers/BreathePulse_IMWUT_2024.pdf"
 category: full-paper
 tags: [respiration, entrainment, implicit-interfaces]
 links:
-- [doi, doi, https://doi.org/10.1145/3699748]
-- [paper, pdf, /files/papers/PHL_IMWUT_2024.pdf]
+- [doi, doi, https://doi.org/10.1145/3702211]
+- [paper, pdf, /files/papers/BreathePulse_IMWUT_2024.pdf]
 ---

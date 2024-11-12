@@ -12,4 +12,5 @@ tags: [sensing, subtle-interaction, gaze, gesture]
 links:
 - [doi, doi, https://doi.org/10.1145/3544549.3583930]
 - [paper, pdf, /files/papers/Tongue_Gestures_CHI_2023_Interactivity.pdf]
+- [award, Best Demo Finalist, https://chi2023.acm.org/for-authors/interactivity/]
 ---
