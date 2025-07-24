@@ -7,7 +7,7 @@ collection: projects
 category: research
 tags: [ wearables, sensing, force, muscle]
 links:
-- ISWC'25 paper, paper, https://tangemicioglu.com/publications/#echoforce-continuous-grip-force-estimation]
+- [ISWC'25 paper, paper, https://tangemicioglu.com/publications/#echoforce-continuous-grip-force-estimation-from-skin-deformation-using-active-acoustic-sensing-on-a-wristband]
 ---
 
 Writeup coming soon!
