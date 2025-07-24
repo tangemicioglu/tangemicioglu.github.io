@@ -7,7 +7,6 @@ collection: projects
 category: research
 tags: [ clinical, haptics, rehabilitation, wearables]
 links:
-- 
 ---
 
 Writeup coming soon!

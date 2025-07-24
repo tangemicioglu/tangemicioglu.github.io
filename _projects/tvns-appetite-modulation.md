@@ -7,7 +7,7 @@ collection: projects
 category: research
 tags: [wearables, neural-interfaces, eating]
 links:
-
+- [InterfaceNeuro'25 poster, slides, /files/slides/VNS_InterfaceNeuro_Poster.pptx]
 ---
 
 Writeup coming soon!
