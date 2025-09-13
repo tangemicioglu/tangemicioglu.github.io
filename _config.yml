@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Tan Gemicioglu"
-  pronouns         : "they/them"
+  pronouns         : 
   avatar           : "profile.jpg"
   bio              : "<b>PhD Student</b></br>Cornell University"
   location         :
@@ -104,7 +104,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "tangemicioglu"
-  mastodon         : "https://hci.social/@tangemicioglu"
+  mastodon         : 
   orcid            : "0000-0001-9324-4431"
   pinterest        :
   soundcloud       :
