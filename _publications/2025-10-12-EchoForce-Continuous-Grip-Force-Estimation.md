@@ -11,6 +11,6 @@ category: full-paper
 tags: [sensing, ultrasound, muscle]
 links:
 - [paper, pdf, /files/papers/EchoForce_ISWC_2025.pdf]
-- [doi, https://doi.org/10.1145/3715071.3750405]
+- [doi, doi, https://doi.org/10.1145/3715071.3750405]
 
 ---
