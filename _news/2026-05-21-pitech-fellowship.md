@@ -2,4 +2,4 @@
 date: 2026-05-21
 collection: news
 ---
-This summer, I'll be a **Siegel PiTech PhD Impact Fellow**, working with [Ability Beyond](https://abilitybeyond.org/) on smart-sensor alerts that help caregivers respond to residents' health and safety needs.
+I'll be joining [Ability Beyond](https://abilitybeyond.org/) this summer as a **Siegel PiTech PhD Impact Fellow**, exploring how ubiquitous sensing can make interventions and alerts for care home staff more effective.
