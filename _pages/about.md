@@ -17,6 +17,6 @@ My research focuses on **passive wearable therapeutics**: closed-loop wearable s
 
 I previously served as the [BCI Society](https://bcisociety.org/) Postdoc and Student Committee Chair and was a member of the [Futuring SIGCHI Committee](https://sigchi.org/people/committees/#futuring-sigchi-committee). 
 
-Previously, I did my undergraduate at Georgia Tech, where I built haptic gloves and subtle interfaces as a research assistant for wearable computing pioneer [Dr. Thad Starner](https://www.cc.gatech.edu/home/thad/index.htm). I've also worked with the [Audio and Acoustics group](https://www.microsoft.com/en-us/research/group/audio-and-acoustics-research-group/) at Microsoft Research, investigating brain-computer interfaces for VR/AR and tongue interactions.
+Previously, I did my undergraduate at Georgia Tech, where I built haptic gloves and subtle interfaces as a research assistant for wearable computing pioneer [Thad Starner](https://www.cc.gatech.edu/home/thad/index.htm). I've also worked with the [Audio and Acoustics group](https://www.microsoft.com/en-us/research/group/audio-and-acoustics-research-group/) at Microsoft Research, investigating brain-computer interfaces for VR/AR and tongue interactions.
 
 In my free time, I enjoy cooking Mediterranean-Asian fusion food and I'm an avid reader of science fiction and fantasy.
