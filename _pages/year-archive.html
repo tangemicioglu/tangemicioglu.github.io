@@ -1,13 +1,17 @@
 ---
 layout: archive
-permalink: /blog/
-title: "Blog"
+permalink: /writing/
+title: "Writing"
 author_profile: false
 redirect_from:
+  - /blog/
   - /wordpress/blog-posts/
 ---
 
 {% include base_path %}
+{% capture writing_feed_url %}{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}{% endcapture %}
+<p><a href="{{ writing_feed_url | strip }}"><i class="fas fa-rss" aria-hidden="true"></i> Follow via RSS</a></p>
+
 {% capture written_year %}'None'{% endcapture %}
 {% assign tags = site.posts | map: 'tags' | join: ','  | split: ',' | uniq | sort %}
 <p class="page__taxonomy">
