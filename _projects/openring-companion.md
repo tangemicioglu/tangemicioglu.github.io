@@ -1,7 +1,7 @@
 ---
 title: "OpenRing Companion: A Local-First Health Dashboard for Tau-Ring"
 excerpt: "OpenRing Companion is an independent Android companion app for Tsinghua's Tau-Ring smart ring. It replaces a data-collection-oriented interface with a local-first health dashboard that turns passive ring measurements into interpretable daily scores, trends, and intraday views while keeping health data and exports on the user's device."
-teaser: "/images/openring-companion.png"
+teaser: "/images/openring-companion-teaser.png"
 date: "2026-07-04"
 collection: projects
 category: independent
