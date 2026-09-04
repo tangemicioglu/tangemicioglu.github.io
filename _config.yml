@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Tan Gemicioglu"
 title_separator          : "-"
 name                     : &name "Tan Gemicioglu"
-description              : &description "Personal website containing my portfolio & blog"
+description              : &description "Research portfolio, publications, projects, and writing by Tan Gemicioglu, a PhD candidate working on wearable computing, human-computer interaction, and AI."
 url                      : https://tangemicioglu.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "tangemicioglu/tangemicioglu.github.io"
@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : "tangemicioglu"
 facebook:
   username               :
   app_id                 :
@@ -66,9 +66,17 @@ og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : "Tan Gemicioglu"
+  job_title              : "PhD Candidate"
+  affiliation            : "Cornell Tech"
+  affiliation_url        : "https://tech.cornell.edu/"
+  links:
+    - "https://orcid.org/0000-0001-9324-4431"
+    - "https://scholar.google.com/citations?user=l3r5twcAAAAJ&hl=en"
+    - "https://github.com/tangemicioglu"
+    - "https://www.linkedin.com/in/tangemicioglu"
+    - "https://twitter.com/tangemicioglu"
 
 
 # Analytics
@@ -83,7 +91,7 @@ author:
   name             : "Tan Gemicioglu"
   pronouns         : 
   avatar           : "profile.jpg"
-  bio              : "<b>PhD Candidate</b></br>Cornell Tech"
+  bio              : "<strong>PhD Candidate</strong><br>Cornell Tech"
   location         :
   employer         :
   pubmed           : 

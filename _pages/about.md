@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "About"
+description: "Tan Gemicioglu is a PhD candidate at Cornell Tech researching passive wearable therapeutics, human-computer interaction, wearable sensing, haptics, and AI."
+schema_type: ProfilePage
 author_profile: true
 news: true
 featured: false

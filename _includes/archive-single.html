@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item" title="{{ post.title }}" id="{{ post.title | slugify }}" year="{{ post.date | date: "%Y" }}">
+<div class="{{ include.type | default: "list" }}__item" data-title="{{ post.title | escape }}" id="{{ post.title | slugify }}" data-year="{{ post.date | date: "%Y" }}">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -37,7 +37,7 @@
     </h2>
     
     {% if post.collection == 'projects' or post.collection == 'publications' %}
-      <img src="{{ post.teaser }}" alt="{{ post.title }}" align="left" style="padding: 10px; width: 30%;">
+      <img src="{{ post.teaser }}" alt="{{ post.title }}" style="float: left; padding: 10px; width: 30%;">
     {% endif %}
     
     {% if post.read_time %}
@@ -58,17 +58,17 @@
     {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
-    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
     {% endif %}
     
     {% if post.citation and post.paperurl %}
-      <p>{{ post.citation }} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
+      <p>{{ post.citation }} <a href="{{ post.paperurl | replace: ' ', '%20' }}">{{ post.paperurl }}</a></p>
     {% elsif post.citation %}
       <p>{{ post.citation }} </p>
     {% elsif post.paperurl %}
-      <p><a href=" {{ post.paperurl }} ">{{ post.paperurl }}</a></p>
+      <p><a href="{{ post.paperurl | replace: ' ', '%20' }}">{{ post.paperurl }}</a></p>
     {% endif %}
 
 
@@ -83,7 +83,7 @@
         {% for hash in category_hashes %}
           {% assign keyValue = hash | split: '#' %}
           {% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-          <a href="?category={{ category_word }}" style="text-decoration: none" class="page__taxonomy-item"> {{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+          <a href="?category={{ category_word | url_encode }}" style="text-decoration: none" class="page__taxonomy-item"> {{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
         {% endfor %}
         </span>
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -93,11 +93,11 @@
       {% for hash in tag_hashes %}
         {% assign keyValue = hash | split: '#' %}
         {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
-        <a href="?tags={{ tag_word }}" style="text-decoration: none" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
+        <a href="?tags={{ tag_word | url_encode }}" style="text-decoration: none" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
       {% endfor %}
       </span>
       {% for link in post.links %}
-        <a href="{{ link[2] }}" style="text-decoration: none" class="page__taxonomy-item">
+        <a href="{{ link[2] | replace: ' ', '%20' }}" style="text-decoration: none" class="page__taxonomy-item">
           {% case link[1] %}
             {% when "video" %}
               <i class="fa fa-fw fab fa-youtube"></i>

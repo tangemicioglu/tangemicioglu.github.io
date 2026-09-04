@@ -1,0 +1,83 @@
+{% assign structured_url = page.url | prepend: seo_url | replace: "/index.html", "/" %}
+{% assign structured_description = page.description | default: page.excerpt | default: site.description | markdownify | strip_html | strip_newlines %}
+
+{% if page.collection == "publications" %}
+  {% assign structured_abstract = page.abstract | default: structured_description | strip_html | strip_newlines %}
+  {% assign structured_authors = page.authors | strip_html | split: "," %}
+  {% assign structured_doi = nil %}
+  {% for structured_link in page.links %}
+    {% if structured_link[1] == "doi" %}
+      {% assign structured_doi = structured_link[2] %}
+    {% endif %}
+  {% endfor %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ScholarlyArticle",
+      "headline": {{ page.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "description": {{ structured_abstract | jsonify }},
+      "url": {{ structured_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "author": [
+        {% for structured_author in structured_authors %}
+          {
+            "@type": "Person",
+            "name": {{ structured_author | strip | replace: "*", "" | jsonify }}
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]{% if page.venue %},
+      "isPartOf": {
+        "@type": "CreativeWork",
+        "name": {{ page.venue | strip_html | jsonify }}
+      }{% endif %}{% if page.teaser %},
+      "image": {{ page.teaser | prepend: site.url | jsonify }}{% endif %}{% if page.tags %},
+      "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}{% if structured_doi %},
+      "sameAs": {{ structured_doi | jsonify }}{% endif %}
+    }
+  </script>
+{% elsif page.collection == "projects" %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": {{ page.schema_type | default: "CreativeWork" | jsonify }},
+      "name": {{ page.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "description": {{ structured_description | jsonify }},
+      "url": {{ structured_url | jsonify }},
+      "dateCreated": {{ page.date | date_to_xmlschema | jsonify }},
+      "contributor": {
+        "@type": "Person",
+        "name": {{ site.social.name | default: site.name | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      }{% if page.teaser %},
+      "image": {{ page.teaser | prepend: site.url | jsonify }}{% endif %}{% if page.tags %},
+      "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
+    }
+  </script>
+{% elsif page.collection == "posts" %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "description": {{ structured_description | jsonify }},
+      "url": {{ structured_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ site.social.name | default: site.name | jsonify }},
+        "url": {{ seo_url | jsonify }}
+      }{% if page.tags %},
+      "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
+    }
+  </script>
+{% elsif page.schema_type %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": {{ page.schema_type | jsonify }},
+      "name": {{ page.title | default: site.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "description": {{ structured_description | jsonify }},
+      "url": {{ structured_url | jsonify }}
+    }
+  </script>
+{% endif %}

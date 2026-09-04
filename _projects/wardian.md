@@ -4,6 +4,7 @@ excerpt: "Wardian is a local-first desktop habitat where work done with CLI agen
 teaser: "/images/wardian.png"
 date: "2026-02-24"
 collection: projects
+schema_type: SoftwareApplication
 category: independent
 tags: [ agent orchestration, developer tools, terminals, workflows, rust ]
 links:

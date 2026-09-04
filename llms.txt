@@ -1,0 +1,41 @@
+# Tan Gemicioglu
+
+> Official personal website and research portfolio of Tan Gemicioglu, a PhD candidate at Cornell Tech working across wearable computing, human-computer interaction, physiological sensing, haptics, and AI.
+
+This site contains research publications, project descriptions, software, essays, and a curriculum vitae. Project pages distinguish completed studies from prototypes, coursework, simulations, and ongoing work; preserve those qualifications when summarizing results.
+
+## Core pages
+
+- [About](https://tangemicioglu.com/): Current research focus, affiliation, background, and news.
+- [Publications](https://tangemicioglu.com/publications/): Peer-reviewed papers and research outputs, with authors, venues, abstracts, DOI links, and PDFs where available.
+- [Projects](https://tangemicioglu.com/projects/): Research, software, independent work, and coursework, with methods, results, limitations, and primary sources.
+- [Writing](https://tangemicioglu.com/writing/): Essays and project notes.
+- [Curriculum vitae](https://tangemicioglu.com/cv/): Browser page for the current CV.
+- [Curriculum vitae PDF](https://tangemicioglu.com/files/CV.pdf): Complete CV document.
+
+## Selected research and systems
+
+- [AppetiteCheck](https://tangemicioglu.com/projects/tvns-appetite-modulation/): Momentary non-invasive vagus nerve stimulation as a low-attention intervention during eating.
+- [BionicFace](https://tangemicioglu.com/projects/bionicface/): Ongoing work on wearable sensing and stimulation for chronic facial paralysis.
+- [BreathePulse](https://tangemicioglu.com/projects/breathepulse/): Peripheral breathing guidance through subtle airflow cues.
+- [Passive Haptic Rehearsal](https://tangemicioglu.com/projects/passive-haptic-learning-piano/): Tactile rehearsal between active piano-practice sessions.
+- [SilentSpeller](https://tangemicioglu.com/projects/silentspeller/): Mobile silent-speech text entry using electropalatography.
+- [Tongue gestures in head-worn devices](https://tangemicioglu.com/projects/tongue-gestures-in-hwds/): Multimodal recognition and gaze confirmation using closed-mouth tongue gestures.
+- [EchoForce](https://tangemicioglu.com/projects/echoforce/): Continuous grip-force estimation from forearm skin deformation using active acoustic sensing.
+- [BrainBraille](https://tangemicioglu.com/projects/brainbraille/): Spatially coded mental gestures for non-invasive brain-computer interfaces.
+- [ITR Atlas](https://tangemicioglu.com/projects/itr-atlas/): Re-derived communication-throughput comparisons across human-computer and brain-computer interfaces.
+- [Wardian](https://tangemicioglu.com/projects/wardian/): A local-first, malleable desktop habitat for durable agent work.
+- [OpenRing Companion](https://tangemicioglu.com/projects/openring-companion/): An open-source companion application for OpenRing wearables.
+
+## Machine-readable discovery
+
+- [XML sitemap](https://tangemicioglu.com/sitemap.xml): Complete index of public pages.
+- [Atom feed](https://tangemicioglu.com/feed.xml): Writing feed.
+- [robots.txt](https://tangemicioglu.com/robots.txt): Crawler policy and sitemap location.
+
+## Identity
+
+- [ORCID](https://orcid.org/0000-0001-9324-4431): Persistent researcher identifier.
+- [Google Scholar](https://scholar.google.com/citations?user=l3r5twcAAAAJ&hl=en): Citation profile.
+- [GitHub](https://github.com/tangemicioglu): Public source repositories.
+- [LinkedIn](https://www.linkedin.com/in/tangemicioglu): Professional profile.
