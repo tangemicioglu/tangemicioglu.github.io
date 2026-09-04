@@ -1,6 +1,6 @@
 ---
 title: "Mobile Robotics for Autonomous Humanitarian Demining"
-excerpt: "As a small high-school team, we competed in the IEEE Robotics and Automation Society's Humanitarian Robotics and Technologies Challenge by applying machine learning for autonomous mine detection with a metal detector on a low-cost robot platform. We earned 3rd place in the competition and demonstrated robot at ICRA 2017 as a finalist."
+excerpt: "For the 2017 IEEE humanitarian-demining robotics challenge, our high-school team combined a low-cost mobile robot, dual-coil metal detector, decision-tree classifier, and ROS navigation stack. I worked on mine detection and supporting research; the team placed third and demonstrated the system at ICRA 2017."
 teaser: "/images/hratc.jpg"
 date: "2017-06-03"
 collection: projects

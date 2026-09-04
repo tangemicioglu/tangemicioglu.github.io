@@ -1,22 +1,27 @@
 ---
-title: "Wardian: A Workspace for Coordinating Coding Agents"
-excerpt: "Wardian is a desktop workspace for coordinating multiple coding agents in parallel. It brings agent terminals, live status, workspaces, workflows, and communication into one inspectable habitat so people can delegate work, monitor progress, and intervene when an agent needs attention. Its tactile multi-pane interface is backed by a Rust-powered runtime for reliable local orchestration."
+title: "Wardian: A Malleable Habitat for Local Agent Work"
+excerpt: "Wardian is a local-first desktop habitat where work done with CLI agents becomes visible, durable, and malleable. It preserves real provider sessions, project context, coordination, and evidence, then lets repeated work become reusable prompts, skills, agent classes, and automations."
 teaser: "/images/wardian.png"
 date: "2026-02-24"
 collection: projects
 category: independent
 tags: [ agent orchestration, developer tools, terminals, workflows, rust ]
 links:
+- [project site, website, https://wardian.org/]
+- [source code, code, https://github.com/wardian-app/Wardian]
+- [documentation, writeup, https://docs.wardian.org/]
 ---
 
-Coding agents are commonly used as isolated terminal sessions. That works for a single bounded task, but becomes difficult when several agents are researching, implementing, reviewing, or waiting for input at the same time. Wardian is a desktop workspace for making that work visible and coordinated without replacing the underlying command-line agents.
+Most agent work still begins and ends as a disposable terminal session. The useful parts are scattered across scrollback, project files, prompts, and the operator's memory; coordinating several agents often means remembering which window is doing what and reconstructing what happened after it finishes. I built Wardian around a different premise: local agent work should remain visible, durable, and malleable.
 
-Each managed agent keeps its own identity, role, provider, workspace, terminal, status, and durable habitat. Wardian adapts real provider CLIs into a common lifecycle while preserving their native terminal behavior. The workbench can place agent sessions beside project files, source control, a task queue, reusable prompts and skills, or automation state, so that coordination remains connected to the evidence of what each agent actually did.
+Wardian runs the CLI agents people already use in real project folders and gives that work a durable local home. A managed agent is not merely a terminal tab: it is a named working instance that combines a provider and model, project context, a reusable role, scoped skills, a live session, and reviewable results. Provider-specific adapters preserve the behavior of the underlying tools while exposing a common lifecycle for starting, observing, messaging, and coordinating them.
 
-![Wardian workbench showing multiple coding agents and project surfaces in one desktop workspace.](/images/wardian.png)
+![Wardian habitat showing live agent sessions, project surfaces, and a persistent roster.](/images/wardian.png)
 
-The central design goal is inspectability. Prompts and structured requests can be sent through the interface or CLI; agent output and completion evidence remain reviewable; and reusable practices can be promoted into roles, skills, prompts, or automation templates. Agents can also receive isolated Git worktrees when concurrent code changes need stronger boundaries.
+The desktop workbench is one view into that system, not its defining feature. Live terminals can sit beside source control, project files, the Inbox, automation runs, or reusable library material. A persistent roster, teams, watchlists, and the communication graph make relationships between agents explicit. Structured asks and replies preserve accountable handoffs, while Queue and automation records keep completions, failures, and action-needed work from disappearing into terminal scrollback.
 
-Wardian is local-first infrastructure rather than a hosted agent service. A Rust and Tauri backend supervises real pseudoterminals and persists state locally, while a React and TypeScript frontend presents the workbench. The same local runtime supports Windows, macOS, and Linux, with provider-specific adapters handling differences in session identity, permission hooks, transcript capture, and completion detection.
+Wardian also treats successful work as material that can be shaped. A recurring request can become a saved prompt; a reliable method can become a skill; a stable role can become an agent class; and a repeated multi-step process can become an automation. This gradual *tailorability slope* is central to the project. People can begin with one existing agent and adopt more structure only when their work demands it, rather than committing to a rigid orchestration framework in advance.
 
-The longer-term direction is a malleable environment for agent work: repeated instructions become reusable capabilities, successful workflows become inspectable automations, and completed work remains available as evidence rather than disappearing into terminal scrollback. The project is under active development, so the interface and supported workflows continue to evolve with the reliability demands exposed by everyday use.
+The underlying engineering is correspondingly broader than a terminal multiplexer. A Rust and Tauri runtime supervises real pseudoterminals, provider processes, delivery, status transitions, automations, and local persistence across Windows, macOS, and Linux. The React and TypeScript interface projects that state into movable work surfaces, while the bundled command-line interface lets agents and scripts inspect the roster, coordinate with peers, and run automations through the same local control layer.
+
+Wardian is a working open-source system under active development. Current priorities include provider reliability, inspectable reusable artifacts, bounded coordination, and durable automation evidence; richer spatial organization and additional reusable integrations remain future directions. The system also motivates an ongoing study of how new users structure work across multiple persistent agents. The [project site](https://wardian.org/), [source repository](https://github.com/wardian-app/Wardian), and [documentation](https://docs.wardian.org/) describe the current release and its active development direction.

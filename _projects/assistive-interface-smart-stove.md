@@ -1,6 +1,6 @@
 ---
 title: "Assistive Smart Stove for Safer Kitchens"
-excerpt: "For elderly people with cognitive impairments, the kitchen can be dangerous. To reduce risks of burns, falling objects and memory lapses in the kitchen, we prototyped an intelligent stovetop appliance and mobile app interface. We conducted a Wizard of Oz study on prototype and collected usability information from interviews, performance, and NASA-TLX."
+excerpt: "This coursework prototype combined mobile controls, burner reminders, an adjustable cooking surface, and a side-loading oven to explore support for memory, reach, and posture in the kitchen. A four-person Wizard-of-Oz study identified useful interactions and substantial usability issues, but did not include the intended older-adult population."
 teaser: "/images/smartstove-app.png"
 date: "2022-04-24"
 collection: projects

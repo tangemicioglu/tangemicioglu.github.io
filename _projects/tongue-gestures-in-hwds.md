@@ -1,6 +1,6 @@
 ---
 title: "Tongue Gestures in Head Worn Devices"
-excerpt: "Tongue gestures are an accessible and subtle method for interacting with wearables but past studies have used custom hardware with a single sensing modality. At Microsoft Research, we used multimodal sensors in a commercial VR headset and EEG headband to build a 50,000 gesture dataset and real-time classifier. We also invented a new interaction method combining tongue and gaze to enable faster gaze-based selection in hands-free interactions."
+excerpt: "At Microsoft Research, we collected 48,000 trials from 16 participants across eight closed-mouth tongue gestures using sensors in commercial head-worn devices. A multimodal model reached 94% accuracy, and a follow-on interaction technique used tongue gestures to confirm gaze targets without dwell for subtle, hands-free selection."
 teaser: "/images/tonguegestures.png"
 date: "2022-08-12"
 collection: projects

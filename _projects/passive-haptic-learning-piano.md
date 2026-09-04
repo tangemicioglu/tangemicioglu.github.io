@@ -1,6 +1,6 @@
 ---
 title: "Passive Haptic Learning for Accelerated Learning of Piano"
-excerpt: "Learning piano is difficult, especially for older learners with busy lives. Passive haptic learning can reduce time spent practicing piano through instructional tactile cues. We designed a custom vibrotactile haptic glove for daily wear, enabling faster learning of piano skills. I led a group of undergraduate and graduate students in manufacturing glove hardware, designing a web portal and organizing user studies to evaluate performance."
+excerpt: "We developed passive haptic rehearsal: a wearable glove, light-up keyboard, and learning portal that supplement active piano practice with tactile repetition between sessions. In the primary analysis of 20 participants with complete, valid data from a 36-person in-home study, passive rehearsal increased the modeled learning rate for note accuracy by 49.7%, but did not significantly improve rhythm."
 teaser: "/images/passivehapticlearning-2.jpg"
 date: "2021-05-12"
 collection: projects

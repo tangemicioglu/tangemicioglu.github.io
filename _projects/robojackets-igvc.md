@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Navigation for Mobile Robots in Open Terrain"
-excerpt: "As part of the software team, I prepared a complete replica of competition in simulation to enable RoboJackets' Intelligent Ground Vehicle Competition robots to be tested realistically. I also coded motor control firmware and path planning algorithms to enable more accurate robot motion. Later, as project manager, I supervised the software, electrical and mechanical teams' progress."
+excerpt: "For RoboJackets' autonomous ground vehicles, I developed motor-control and path-planning software and built a full-scale Gazebo reproduction of the competition course. I later managed the mechanical, electrical, and software subteams as the project integrated perception, localization, planning, and recovery behavior into a single outdoor robot."
 teaser: "/images/jessiii.jpg"
 date: "2019-12-17"
 collection: projects

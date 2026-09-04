@@ -1,6 +1,6 @@
 ---
 title: "Localization of Working Memory using tfMRI"
-excerpt: "As part of Neuromatch Academy student collaboration, we investigated working memory activity through N-back tasks with different sequence lengths and stimuli based on the Human Connectome Project's task-based fMRI data. We localized and characterized prominent regions of activation using GLMs."
+excerpt: "In a Neuromatch Academy collaboration, we analyzed Human Connectome Project fMRI data from 100 participants across 360 cortical regions. Contrasting 2-back with 0-back tasks isolated increased frontoparietal activity and reduced activity in parts of visual cortex, but did not establish the direction of information flow between regions."
 teaser: "/images/working-memory.png"
 date: "2021-07-23"
 collection: projects

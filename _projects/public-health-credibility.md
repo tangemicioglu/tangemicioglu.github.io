@@ -1,6 +1,6 @@
 ---
 title: "Perceived Credibility of Public Health Messages"
-excerpt: "With the COVID-19 pandemic, online delivery of public health messages has become a critical role for public healthcare. We examined how credibility of public health messages regarding COVID-19 varies across different platforms (Twitter, original website) and source (CDC, Georgia Department of Health, independent academics) in a controlled experiment."
+excerpt: "In a survey experiment with 51 Georgia Tech undergraduates, we tested whether the stated source and platform of a COVID-19 public-health message affected its credibility. Messages attributed to public-health agencies were rated above those with an unknown source; the text-only platform manipulation produced no significant effect."
 teaser: "/images/healthcredibility.png"
 date: "2022-04-27"
 collection: projects

@@ -1,6 +1,6 @@
 ---
 title: "Horizon Worlds: A Community of Practice for Social VR Design"
-excerpt: "Despite recent attention, Horizon Worlds hasn't been studied extensively as a social VR platform. Using ethnographic methods, my group studied the online VR community in Horizon Worlds. Based on observational reports and interviews, we found the creative community of world designers to be a prototypical community of practice for designing social VR experiences."
+excerpt: "Through roughly 50 hours of participant observation and interviews with six community members, we studied how people learned, collaborated, formed roles, and handled conflict in Horizon Worlds. Its creator community operated as a community of practice, while moderation and the ephemerality of encounters shaped whether its social spaces could remain dependable."
 teaser: "/images/horizonworlds.png"
 date: "2022-04-22"
 collection: projects
@@ -13,7 +13,7 @@ links:
 
 Social virtual-reality platforms are simultaneously software products, public spaces, and creative tools. We studied Horizon Worlds shortly after its early public expansion to understand how those roles were negotiated by its users. Rather than evaluating the headset or interface in isolation, we focused on the practices through which people built worlds, learned from one another, formed roles, and handled conflict.
 
-Our group used participant observation across creator meetups, world tours, comedy clubs, music spaces, and other social worlds. We also interviewed six community members, most of whom were creators, and examined activity on related Facebook and YouTube communities. This produced a qualitative account of both activity inside Horizon and the peripheral platforms used to coordinate it.
+Our group conducted roughly 50 hours of participant observation across creator meetups, world tours, comedy clubs, music spaces, and other social worlds. We also interviewed six community members, most of whom were creators, and examined activity on related Facebook and YouTube communities. This produced a qualitative account of both activity inside Horizon and the peripheral platforms used to coordinate it.
 
 ![Examples of creator gatherings and community events observed in Horizon Worlds.](/images/horizonworlds-community.png)
 

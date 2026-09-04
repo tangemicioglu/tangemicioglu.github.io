@@ -1,6 +1,6 @@
 ---
 title: "Hand Pose Estimation using Convolutional Neural Networks in Stereoscopic Vision"
-excerpt: "Estimating hand poses is valuable for gesture interactions and hand tracking but often requires expensive depth cameras. Stereo cameras show multiple perspectives of the hand, allowing depth perception. We created a pipeline for estimating location of hand and finger keypoints with a stereo camera using deep convolutional neural networks."
+excerpt: "In this computer-vision course project, we built an early-fusion convolutional model for estimating 21 hand keypoints from synchronized stereo images. The model did not converge to a usable estimator; a persistent coordinate offset made the project a practical lesson in validating camera geometry independently of end-to-end training loss."
 teaser: "/images/hand-pose.png"
 date: "2020-10-23"
 collection: projects

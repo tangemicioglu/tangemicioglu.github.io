@@ -1,13 +1,11 @@
 ---
 title: "Vibrotactile Stimulation for Lower Limb Spasticity"
-excerpt: "We are conducting a dual-phase clinical trial on the feasibility of using a wearable vibrotactile stimulation sleeve for post-stroke rehabilitation of spasticity in the leg and foot. In particular, we are investigating the neurophysiological mechanism of vibrotactile stimulation in rehabilitation, and its effect when used in conjunction with gait training."
+excerpt: "This ongoing project develops an adjustable vibrotactile wrap and a planned two-phase study for lower-limb spasticity after stroke. The study will compare stimulation locations using electrophysiological and functional measures, then compare stimulation at rest with stimulation during gait training; no outcomes are claimed before data collection is complete."
 teaser: "/images/vts-lls-concept.png"
 date: "2025-06-01"
 collection: projects
 category: research
 tags: [ clinical, haptics, rehabilitation, wearables]
-links:
-- [related upper-limb device-design paper, paper, https://doi.org/10.1109/TNSRE.2022.3174808]
 ---
 
 Lower-limb spasticity can persist long after stroke, tightening muscles around the hip, knee, ankle, and foot and making gait less predictable. Existing care often requires repeated access to rehabilitation specialists, medication, or injections. This project examines whether low-amplitude vibrotactile stimulation can be delivered through an adjustable wearable as a complement to those treatments, including during rest and gait training.
