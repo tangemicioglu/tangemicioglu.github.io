@@ -70,6 +70,31 @@
       "keywords": {{ page.tags | join: ", " | jsonify }}{% endif %}
     }
   </script>
+{% elsif page.schema_type == "ProfilePage" %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "name": {{ page.title | default: site.title | markdownify | strip_html | strip_newlines | jsonify }},
+      "description": {{ structured_description | jsonify }},
+      "url": {{ structured_url | jsonify }},
+      "mainEntity": {
+        "@type": "Person",
+        "@id": {{ seo_url | append: "/#person" | jsonify }},
+        "name": {{ site.social.name | default: site.name | jsonify }},
+        "url": {{ seo_url | jsonify }},
+        "description": {{ site.description | jsonify }},
+        "image": {{ site.author.avatar | prepend: "/images/" | prepend: site.url | jsonify }},
+        "sameAs": {{ site.social.links | jsonify }}{% if site.social.job_title %},
+        "jobTitle": {{ site.social.job_title | jsonify }}{% endif %}{% if site.social.affiliation %},
+        "affiliation": {
+          "@type": "Organization",
+          "name": {{ site.social.affiliation | jsonify }}{% if site.social.affiliation_url %},
+          "url": {{ site.social.affiliation_url | jsonify }}{% endif %}
+        }{% endif %}
+      }
+    }
+  </script>
 {% elsif page.schema_type %}
   <script type="application/ld+json">
     {
