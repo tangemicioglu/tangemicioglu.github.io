@@ -66,6 +66,10 @@
   }
 }
 
+.archive__item-excerpt--project {
+  font-size: $type-size-5;
+}
+
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
