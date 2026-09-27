@@ -1,5 +1,5 @@
 ---
-title: "BionicFace: Closed-Loop Facial Symmetry for Facial Paralysis"
+title: "BionicFace: Closed-Loop Facial Muscle Stimulation for Facial Symmetry after Facial Paralysis"
 excerpt: "BionicFace is an assistive wearable research project for people with chronic facial paralysis caused by nerve damage. We are exploring glasses-based facial sensing and closed-loop electrical muscle stimulation to support real-time upper-face symmetry during social expression and communication, with a focus on hardware integration, calibration, comfort, safety, and everyday use."
 teaser: "/images/bionicface.png"
 date: "2026-07-28"
