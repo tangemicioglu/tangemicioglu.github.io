@@ -1,8 +1,8 @@
 """Build the site's garden data locally; --check validates it without loading a model.
 
 Ported from Website-Garden's approved prototype. Only previously committed,
-published collection files enter the garden. Existing map positions are fixed
-unless --relayout is explicitly requested.
+published collection files enter the garden. Each build recomputes the full
+semantic map from current content.
 """
 import argparse
 import datetime as dt
@@ -156,7 +156,7 @@ def related_ids(item, by):
             if iid not in excluded and (score >= .62 or (score >= .57 and set(item["areas"]) & set(by[iid]["areas"])))]
 
 
-def build(root=ROOT, check=False, relayout=False):
+def build(root=ROOT, check=False):
     items, digest = read_items(root)
     tracks = yaml.safe_load((root / "_data/tracks.yml").read_text(encoding="utf-8"))
     series = yaml.safe_load((root / "_data/series.yml").read_text(encoding="utf-8"))
@@ -177,8 +177,7 @@ def build(root=ROOT, check=False, relayout=False):
     vectors = embeddings(texts, root / ".garden-cache")
     similarity = vectors @ vectors.T
     np.fill_diagonal(similarity, -1)
-    previous = {} if relayout else {i["id"]: (i["x"], i["y"]) for i in old.get("items", [])}
-    xy = positions(vectors, [i["id"] for i in items], previous)
+    xy = positions(vectors)
     by = {i["id"]: i for i in items}
     for k, item in enumerate(items):
         neighbors = np.argsort(-similarity[k], kind="stable")[:min(5, len(items) - 1)]
@@ -189,18 +188,18 @@ def build(root=ROOT, check=False, relayout=False):
     for item in items:
         item["related_items"] = related_ids(item, by)
     today = dt.date.today().isoformat()
-    meta = {"built": today, "epoch": old.get("meta", {}).get("epoch", today) if previous else today,
+    meta = {"built": today, "epoch": today,
             "input_digest": digest, "model": "Alibaba-NLP/gte-modernbert-base"}
     out.write_text(json.dumps({"meta": meta, "tracks": tracks, "series": series, "items": items}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Built {len(items)} items, {len(series)} series, {len(tracks)} labels; retained {sum(i['id'] in previous for i in items)} positions.")
+    print(f"Built {len(items)} items, {len(series)} series, {len(tracks)} labels; recomputed all map positions.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Validate committed output without model dependencies")
-    parser.add_argument("--relayout", action="store_true", help="Deliberately replace all map positions")
+    parser.add_argument("--relayout", action="store_true", help="Accepted for compatibility; every build now recomputes map positions")
     args = parser.parse_args()
     try:
-        build(check=args.check, relayout=args.relayout)
+        build(check=args.check)
     except ValueError as error:
         parser.exit(1, str(error) + "\n")

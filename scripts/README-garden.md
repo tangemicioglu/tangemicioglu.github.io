@@ -43,9 +43,11 @@ remains a project; CYOAIF is the first exploration.
 or project-member date is used. `stage` is retained for future use but hidden.
 
 The first local build can download `Alibaba-NLP/gte-modernbert-base`. Later
-builds reuse text-hashed vectors in ignored `.garden-cache/`. Existing map
-coordinates remain fixed, including when new content is added. Use
-`python scripts/build_garden.py --relayout` only for a deliberate full redraw.
+builds reuse text-hashed vectors in ignored `.garden-cache/`. Every build
+recomputes the full map, so additions, removals, and text revisions can move
+existing entries. A fixed random seed makes unchanged inputs repeatable within
+the same dependency environment. `--relayout` remains accepted for compatibility
+but is no longer needed. Labels do not apply attraction forces.
 
 The three uncommitted 2026 writing drafts remain unpublished. When Tan publishes
 the ITR Atlas introduction, add its ID to the end of `measuring-bcis` in

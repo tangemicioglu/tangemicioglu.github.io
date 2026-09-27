@@ -1,4 +1,4 @@
-"""Publication boundary, relations, and stable-layout regression tests."""
+"""Publication boundary, relations, and content-driven layout regression tests."""
 import copy
 import subprocess
 import sys
@@ -44,14 +44,23 @@ class GardenTests(unittest.TestCase):
         by = {key: {"areas": ["a" if key in ("same", "weak") else "b"]} for key in item["similar"]}
         self.assertEqual(related_ids(item, by), ["same", "strong"])
 
-    def test_incremental_positions_do_not_move_even_with_one_anchor(self):
-        vectors = np.array([[1., 0.], [.99, .01], [0., 1.]])
-        old = {"one": (.125, -.7)}
-        first = positions(vectors, ["one", "two", "three"], old)
-        self.assertEqual(tuple(first[0]), old["one"])
-        np.testing.assert_array_equal(first, positions(vectors, ["one", "two", "three"], old))
-        all_old = dict(zip(["one", "two", "three"], first))
-        np.testing.assert_array_equal(first, positions(vectors, ["one", "two", "three"], all_old))
+    def test_layout_repeatable_but_updates_existing_entries_with_content(self):
+        vectors = np.random.default_rng(42).normal(size=(12, 8)).astype(np.float32)
+        vectors /= np.linalg.norm(vectors, axis=1, keepdims=True)
+        first = positions(vectors)
+        np.testing.assert_array_equal(first, positions(vectors))
+        self.assertTrue(np.isfinite(first).all())
+        reduced = positions(vectors[:-1])
+        self.assertFalse(np.allclose(first[:-1], reduced), "Adding an item must refit existing entries")
+        revised = vectors.copy()
+        revised[0] = -revised[0]
+        self.assertFalse(np.allclose(first, positions(revised)), "Revised content must affect the map")
+
+    def test_small_collections_have_finite_positions(self):
+        for count in range(4):
+            xy = positions(np.ones((count, 8)))
+            self.assertEqual(xy.shape, (count, 2))
+            self.assertTrue(np.isfinite(xy).all())
 
     def test_uncommitted_and_explicitly_unpublished_files_excluded(self):
         with tempfile.TemporaryDirectory() as tmp:
