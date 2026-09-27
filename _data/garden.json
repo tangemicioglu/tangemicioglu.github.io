@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "9e706bd64e9ef5c49f2a87eda6e1489d617a0eb5c296a9106d40e791d0a4a46c",
+    "input_digest": "3b757e666af73928ac91eecf8d50e470a7446c14ccb3d5c8eccc9100b2bb5072",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -18,8 +18,8 @@
     },
     {
       "id": "agents",
-      "title": "AI agents",
-      "blurb": "Working alongside AI agents, and building the environment they work in. Wardian, and essays on what changes."
+      "title": "Artificial intelligence",
+      "blurb": "Systems that learn from human activity and support work, from weakly supervised visual learning to persistent AI agents."
     },
     {
       "id": "sensing",
@@ -48,7 +48,7 @@
     },
     {
       "id": "augmentation",
-      "title": "Augmentation",
+      "title": "Human augmentation",
       "blurb": "Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention."
     },
     {
@@ -219,14 +219,14 @@
       "teaser": "/images/ai-through-symbiosis.jpg",
       "tended": "2020-11-07",
       "areas": [
+        "agents",
         "ml",
-        "subtle",
         "wearables"
       ],
       "status": "complete",
       "start": "2020-02-02",
       "short": "AI through Symbiosis",
-      "track": "ml",
+      "track": "agents",
       "members": [],
       "end": "2020-11-07",
       "series": [],
@@ -2432,11 +2432,11 @@
       "teaser": "/images/augmentation-workshop2025.jpg",
       "tended": "2025-09-27",
       "areas": [
+        "augmentation",
         "therapeutics",
-        "haptics",
-        "augmentation"
+        "haptics"
       ],
-      "track": "therapeutics",
+      "track": "augmentation",
       "members": [],
       "series": [
         {
