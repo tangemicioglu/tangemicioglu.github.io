@@ -46,7 +46,6 @@
       {% endif %}
     {% endif %}
     
-    {% if post.collection == 'projects' %}<p class="garden-work-kind">Project</p>{% elsif post.collection == 'explorations' %}<p class="garden-work-kind">Exploration</p>{% endif %}
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -97,6 +96,7 @@
           <a href="?category={{ category_word | url_encode }}" style="text-decoration: none" class="page__taxonomy-item"> {{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
         {% endfor %}
         </span>
+        {% if post.collection == 'explorations' %}<a href="{{ '/projects/' | relative_url }}?kind=exploration" class="page__taxonomy-item">exploration</a>{% endif %}
         &nbsp;&nbsp;&nbsp;&nbsp;
       {% endif %}
       <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i></strong>

@@ -20,7 +20,6 @@
 .garden-filters summary { cursor: pointer; margin-bottom: .35em; }
 .garden-filters .page__taxonomy-item[aria-pressed=true] { background: #24748e; border-color: #24748e; color: #fff; }
 .garden-kind-filter { margin-bottom: .9em; }
-.garden-work-kind { color: var(--gray); font-size: .8em; }
 .garden-label-description p { margin: .8em 0; }
 .garden-year-items::after { content: ''; display: table; clear: both; }
 .garden-year .list__item { overflow: hidden; }
