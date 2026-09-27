@@ -11,6 +11,50 @@
   let category = '', legacyTags = [];
   const storageKey = 'garden-archive-view';
 
+  // A full-width reading surface keeps long abstracts out of narrow gallery cards.
+  const dialog = document.querySelector('.garden-publication-dialog');
+  if (dialog && typeof dialog.showModal === 'function') {
+    let opener;
+    root.classList.add('has-publication-dialog');
+    root.querySelectorAll('[data-read-publication]').forEach(link => link.setAttribute('aria-haspopup', 'dialog'));
+    root.addEventListener('click', event => {
+      const link = event.target.closest('[data-read-publication]');
+      if (!link || !root.classList.contains('is-gallery')) return;
+      event.preventDefault();
+      opener = link;
+      const card = link.closest('[data-garden-item]');
+      const title = document.createElement('h2');
+      title.id = 'garden-publication-dialog-title';
+      title.textContent = card.dataset.title;
+      const venue = card.querySelector('.garden-publication-venue').cloneNode(true);
+      venue.className = 'garden-dialog-venue';
+      const abstractTitle = document.createElement('h3');
+      abstractTitle.textContent = 'Abstract';
+      const abstract = card.querySelector('.garden-publication-abstract p').cloneNode(true);
+      const authorsTitle = document.createElement('h3');
+      authorsTitle.textContent = 'Authors';
+      const authors = card.querySelector('.garden-publication-authors').cloneNode(true);
+      authors.className = 'garden-dialog-authors';
+      const links = document.createElement('div');
+      links.className = 'garden-dialog-links';
+      const paper = card.querySelector('.archive__item-title > a').cloneNode(false);
+      paper.textContent = 'Read paper';
+      const page = card.querySelector('.garden-permalink').cloneNode(false);
+      page.removeAttribute('aria-label');
+      page.textContent = 'Publication page';
+      links.append(paper, page);
+      dialog.querySelector('.garden-dialog-content').replaceChildren(title, venue, abstractTitle, abstract, authorsTitle, authors, links);
+      dialog.showModal();
+      dialog.scrollTop = 0;
+      document.documentElement.classList.add('publication-dialog-open');
+    });
+    dialog.querySelector('[data-close-publication]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('close', () => {
+      document.documentElement.classList.remove('publication-dialog-open');
+      if (opener?.isConnected) opener.focus({preventScroll: true});
+    });
+  }
+
   function view(mode, remember = false) {
     const gallery = mode === 'gallery';
     root.classList.toggle('is-gallery', gallery);

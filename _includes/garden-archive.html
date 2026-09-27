@@ -46,4 +46,10 @@
     </section>
   {% endif %}
 </div>
+{% if include.collection == 'publications' %}
+<dialog class="garden-publication-dialog" aria-labelledby="garden-publication-dialog-title">
+  <div class="garden-dialog-toolbar"><button type="button" data-close-publication autofocus>Close <span aria-hidden="true">×</span></button></div>
+  <div class="garden-dialog-content"></div>
+</dialog>
+{% endif %}
 <script src="{{ '/assets/js/garden-archive.js' | relative_url }}" defer></script>

@@ -53,12 +53,17 @@
     {% if post.collection == 'teaching' %}
       <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'publications' %}
-      <p>{{ post.authors }}</p>
-      <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-      <details>
+      <p class="garden-publication-authors">{{ post.authors }}</p>
+      {% if include.garden %}
+        {% assign publication_authors = post.authors | split: ',' %}
+        <p class="garden-publication-authors-short">{% if publication_authors.size > 2 %}{{ publication_authors | first }} et al.{% else %}{{ post.authors }}{% endif %}</p>
+      {% endif %}
+      <p class="garden-publication-venue">Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      <details class="garden-publication-abstract">
         <summary>Abstract</summary>
         <p>{{ post.abstract }}</p>
       </details>
+      {% if include.garden %}<p class="garden-publication-read"><a href="{{ post.link }}" data-read-publication>Abstract &amp; authors</a></p>{% endif %}
     {% elsif post.date %}
       <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
     {% endif %}

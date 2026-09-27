@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "5c62fc52ab14ce588ccb5afbcd7738b6183c0374558fa921074dc2fa70a06ea0",
+    "input_digest": "31a6ed8128140cd2697d015d875e5686f6b6e22c022e2d82ee93b88d17dcfff0",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -53,7 +53,7 @@
     },
     {
       "id": "neural-stimulation",
-      "title": "Neural Stimulation",
+      "title": "Neural stimulation",
       "blurb": "Peripheral electrical stimulation for physiological intervention, including vagus nerve stimulation during eating and facial muscle stimulation for symmetry."
     },
     {

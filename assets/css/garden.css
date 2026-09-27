@@ -36,6 +36,27 @@
 .garden-archive .grid__item .archive__item-title { font-size: 1em; }
 .garden-archive .grid__item details { font-size: .9em; }
 .garden-archive .garden-permalink { font-size: .75em; }
+.garden-publication-authors-short, .garden-publication-read { display: none; }
+.garden-archive.is-gallery.has-publication-dialog .garden-publication-authors,
+.garden-archive.is-gallery.has-publication-dialog .garden-publication-abstract { display: none; }
+.garden-archive.is-gallery.has-publication-dialog .garden-publication-authors-short,
+.garden-archive.is-gallery.has-publication-dialog .garden-publication-read { display: block; }
+.garden-archive.is-gallery .garden-publication-authors-short { line-height: 1.45; }
+.garden-publication-dialog { width: min(760px, calc(100% - 32px)); max-width: none; max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid #ccd4d8; border-radius: 9px; background: var(--bg); color: var(--text); box-shadow: 0 12px 50px #0003; font-size: 18px; line-height: 1.65; overscroll-behavior: contain; }
+.garden-publication-dialog::backdrop { background: #17283099; }
+.garden-dialog-toolbar { display: flex; justify-content: flex-end; padding: 12px 20px; position: sticky; top: 0; background: var(--bg); border-bottom: 1px solid var(--rule); z-index: 1; }
+.garden-dialog-toolbar button { border: 1px solid var(--light); border-radius: 4px; padding: 4px 12px; background: var(--bg); color: var(--text); font: inherit; cursor: pointer; }
+.garden-dialog-content { padding: 20px 32px 28px; }
+.garden-dialog-content h2 { margin: 0 0 .8em; font-size: 1.3em; line-height: 1.35; }
+.garden-dialog-content h3 { margin: 1.3em 0 .4em; font-size: 1em; }
+.garden-dialog-content p { margin: .65em 0; }
+.garden-dialog-content .garden-dialog-venue { color: var(--gray); font-size: .9em; }
+.garden-dialog-links { display: flex; flex-wrap: wrap; gap: 1.2em; margin-top: 1.5em; }
+.publication-dialog-open { overflow: hidden; }
+@media (max-width: 760px) {
+  .garden-dialog-content { padding: 18px 20px 24px; }
+  .garden-publication-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
+}
 .garden-also { clear: both; margin-top: 2em; border-top: 1px solid var(--rule); }
 .garden-meta { color: var(--gray); font-size: .85em; }
 .garden-dot { display: inline-block; width: .55em; height: .55em; border-radius: 50%; margin-right: .3em; }
