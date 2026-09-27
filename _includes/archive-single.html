@@ -55,8 +55,7 @@
     {% elsif post.collection == 'publications' %}
       <p class="garden-publication-authors">{{ post.authors }}</p>
       {% if include.garden %}
-        {% assign publication_authors = post.authors | split: ',' %}
-        <p class="garden-publication-authors-short">{% if publication_authors.size > 2 %}{{ publication_authors | first }} et al.{% else %}{{ post.authors }}{% endif %}</p>
+        <p class="garden-publication-authors-short">{% include publication-authors-short.html authors=post.authors %}</p>
       {% endif %}
       <p class="garden-publication-venue">Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
       <details class="garden-publication-abstract">

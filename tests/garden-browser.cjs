@@ -17,7 +17,17 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
     assert.equal(await page.locator('.garden-archive.is-gallery').count(), 1);
     await visit('/publications/');
     assert.equal(await page.locator('.garden-archive.is-gallery').count(), 1, 'Gallery preference carries to Publications');
-    assert.equal(await page.locator('[data-garden-item]').count(), 16);
+    assert.equal(await page.locator('[data-garden-item]').count(), 17);
+    const expectedCredits = [
+      ['Master classes', 'Stephanie L Cernera*, Tan Gemicioglu* et al.'],
+      ['BreathePulse', 'Tan Gemicioglu*, Thalia Viranda*, Yiran Zhao* et al.'],
+      ['EchoForce', 'Kian Mahmoodi*, Yudong Xie*, Tan Gemicioglu* et al.'],
+      ['Workshop on Augmenting Human Dexterity', 'Shan-Yuan Teng et al.']
+    ];
+    for (const [title, credits] of expectedCredits) {
+      const card = page.locator('[data-garden-item]').filter({has: page.locator('.archive__item-title', {hasText: title})});
+      assert.equal((await card.locator('.garden-publication-authors-short').innerText()).trim(), credits);
+    }
     const longPublication = page.locator('[data-garden-item]').filter({hasText: 'Stephanie L Cernera'});
     const authors = (await longPublication.locator('.garden-publication-authors').textContent()).trim();
     const abstract = (await longPublication.locator('.garden-publication-abstract p').textContent()).trim();
@@ -57,7 +67,7 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
     assert.equal(await page.locator('.garden-series-nav').count(), 1);
 
     const data = await (await context.request.get(base + '/garden.json')).json();
-    assert.equal(data.items.length, 41);
+    assert.equal(data.items.length, 42);
     assert.equal(data.items.filter(item => item.collection === 'posts').length, 1);
     for (const item of data.items) {
       const response = await context.request.get(base + item.url);
@@ -69,7 +79,7 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
         await visit(path);
         if (path === '/timeline/') {
           await page.locator('#garden-timeline svg').waitFor();
-          assert.equal(await page.locator('#garden-timeline svg a').count(), 52, 'All 41 items and 11 label links');
+          assert.equal(await page.locator('#garden-timeline svg a').count(), data.items.length + new Set(data.items.map(item => item.track)).size, 'All items and primary label links');
           assert.ok(!(await page.locator('#garden-timeline').textContent()).includes('EARLIER WORK'));
         }
         assert.equal(await page.locator('.garden-earlier, [data-l="__earlier"]').count(), 0, 'Labels have no earlier split');
@@ -143,6 +153,6 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
     assert.ok(Math.abs(rotated.zoom - originalView.zoom) < .0001);
     assert.ok(Math.abs(rotated.bottom - 375) < 1, 'Landscape map fits viewport');
     assert.deepEqual(errors, []);
-    console.log('PASS: archives, filters, shared preference, relations, 41 URLs, mobile widths, map search, pan, zoom and touch gestures.');
+    console.log(`PASS: archives, co-first author credits, filters, shared preference, relations, ${data.items.length} URLs, mobile widths, map search, pan, zoom and touch gestures.`);
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

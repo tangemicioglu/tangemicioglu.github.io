@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "31a6ed8128140cd2697d015d875e5686f6b6e22c022e2d82ee93b88d17dcfff0",
+    "input_digest": "9e706bd64e9ef5c49f2a87eda6e1489d617a0eb5c296a9106d40e791d0a4a46c",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -235,21 +235,22 @@
       "similar": [
         "hand-pose-estimation",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "bionicface",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
-        "bcihub-tutorials"
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
       ],
       "similar_s": [
         0.614,
         0.602,
+        0.601,
         0.598,
-        0.595,
-        0.592
+        0.595
       ],
       "x": -0.0792,
       "y": -0.3729,
       "related_items": [
         "hand-pose-estimation",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "bionicface",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
       ]
@@ -289,26 +290,26 @@
       "backlinks": [],
       "similar": [
         "silentspeller",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
         "brainbraille",
-        "passive-haptic-learning-piano",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
         0.661,
+        0.655,
         0.643,
         0.641,
-        0.629,
-        0.627
+        0.629
       ],
       "x": 0.4983,
       "y": -0.2095,
       "related_items": [
         "silentspeller",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
         "brainbraille",
-        "passive-haptic-learning-piano",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "passive-haptic-learning-piano"
       ]
     },
     {
@@ -712,22 +713,23 @@
       "backlinks": [],
       "similar": [
         "bcihub-tutorials",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "ai-through-symbiosis",
-        "passive-haptic-learning-piano",
-        "brainbraille"
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
         0.632,
+        0.62,
         0.619,
         0.614,
-        0.609,
-        0.608
+        0.609
       ],
       "x": -0.2821,
       "y": -0.9528,
       "related_items": [
         "bcihub-tutorials",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "ai-through-symbiosis"
       ]
     },
@@ -955,20 +957,20 @@
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
         "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
         "touche",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ],
       "similar_s": [
         0.914,
         0.875,
         0.872,
         0.685,
-        0.667
+        0.674
       ],
       "x": -0.5451,
       "y": 0.0421,
       "related_items": [
         "touche",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ]
     },
     {
@@ -1365,25 +1367,25 @@
       "similar": [
         "vts-for-lls",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "echoforce",
-        "passive-haptic-learning-piano",
-        "brainbraille"
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
         0.818,
         0.736,
+        0.717,
         0.694,
-        0.685,
-        0.682
+        0.685
       ],
       "x": -0.296,
       "y": 0.246,
       "related_items": [
         "vts-for-lls",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "echoforce",
-        "passive-haptic-learning-piano",
-        "brainbraille"
+        "passive-haptic-learning-piano"
       ]
     },
     {
@@ -1857,14 +1859,14 @@
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
         "passive-haptic-learning-piano",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "vts-for-lls"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ],
       "similar_s": [
         0.923,
         0.915,
         0.872,
         0.642,
-        0.601
+        0.602
       ],
       "x": -0.6846,
       "y": 0.1923,
@@ -1872,7 +1874,7 @@
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "vts-for-lls"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ]
     },
     {
@@ -2389,7 +2391,7 @@
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "breathepulse",
         "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
-        "tvns-appetite-modulation"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ],
       "similar_s": [
         0.675,
@@ -2405,7 +2407,7 @@
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "breathepulse",
         "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
-        "tvns-appetite-modulation"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ]
     },
     {
@@ -2446,27 +2448,27 @@
       "links": [],
       "backlinks": [],
       "similar": [
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "touche",
         "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "passive-haptic-learning-piano",
-        "tongue-gestures-in-hwds"
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
+        0.796,
         0.736,
         0.672,
         0.667,
-        0.667,
-        0.666
+        0.667
       ],
       "x": -0.0774,
       "y": 0.1897,
       "related_items": [
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "touche",
         "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "passive-haptic-learning-piano",
-        "tongue-gestures-in-hwds"
+        "passive-haptic-learning-piano"
       ]
     },
     {
@@ -2505,21 +2507,22 @@
         "touche",
         "vts-for-lls",
         "passive-haptic-learning-piano",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ],
       "similar_s": [
         0.961,
         0.659,
         0.655,
         0.633,
-        0.618
+        0.621
       ],
       "x": -0.2162,
       "y": 0.154,
       "related_items": [
         "touche",
         "vts-for-lls",
-        "passive-haptic-learning-piano"
+        "passive-haptic-learning-piano",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ]
     },
     {
@@ -2577,6 +2580,63 @@
         "breathepulse",
         "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
+      "url": "/publications/2026-09-27-Workshop-on-Augmenting-Human-Dexterity/",
+      "source": "_publications/2026-09-27-Workshop-on-Augmenting-Human-Dexterity.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Workshop on Augmenting Human Dexterity: From Multisensory Feedback and Motor Capabilities to Skill Acquisition",
+      "date": "2026-09-27",
+      "planted": "2026-09-27",
+      "git_modified": "2026-09-27",
+      "excerpt": "Human dexterity enables versatile and precise manipulation in everyday life. Recent advances in wearable and mobile computing have opened new ways to augment this dexterity. These efforts go beyond traditional assistive tools—whose primary function has been to restore or enhance strength—and instead aim to support more precise and complex performance across diverse domains, such as playing musical",
+      "tags": [
+        "augmentation",
+        "haptics",
+        "wearables",
+        "motor-learning"
+      ],
+      "category": "workshop",
+      "venue": "Adjunct Proceedings of the 39th Annual ACM Symposium on User Interface Software and Technology (UIST '26)",
+      "authors": "Shan-Yuan Teng, Tan Gemicioglu, Kyungyeon Lee, Dishita G Turakhia, Patricia Alves-Oliveira, Jennifer Jacobs, Hideki Koike, Pedro Lopes, Jun Nishida",
+      "teaser": "/images/augmenting-dexterity-uist-2026-teaser.png",
+      "tended": "2026-09-27",
+      "areas": [
+        "augmentation",
+        "haptics",
+        "wearables"
+      ],
+      "short": "Augmenting Human Dexterity",
+      "track": "augmentation",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche",
+        "passive-haptic-learning-piano",
+        "assistive-interface-smart-stove",
+        "echoforce"
+      ],
+      "similar_s": [
+        0.796,
+        0.717,
+        0.674,
+        0.655,
+        0.641
+      ],
+      "x": 0.0046,
+      "y": 0.1933,
+      "related_items": [
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche",
+        "passive-haptic-learning-piano",
+        "assistive-interface-smart-stove",
+        "echoforce"
       ]
     }
   ]

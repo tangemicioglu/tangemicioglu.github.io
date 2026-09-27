@@ -1,0 +1,21 @@
+{%- assign publication_authors = include.authors | split: ',' -%}
+{%- if publication_authors.size > 2 -%}
+  {%- assign shown_authors = 0 -%}
+  {%- for author in publication_authors -%}
+    {%- assign author_text = author | strip_html | strip -%}
+    {%- comment -%}Only the leading single-star group denotes co-first authors; double stars mark senior authors.{%- endcomment -%}
+    {%- unless forloop.first -%}
+      {%- if author_text contains '**' -%}{%- break -%}{%- endif -%}
+      {%- unless author_text contains '*' -%}{%- break -%}{%- endunless -%}
+      {%- assign first_author = publication_authors | first | strip_html -%}
+      {%- unless first_author contains '*' -%}{%- break -%}{%- endunless -%}
+      {%- if first_author contains '**' -%}{%- break -%}{%- endif -%}
+      {{- ', ' -}}
+    {%- endunless -%}
+    {{- author | strip -}}
+    {%- assign shown_authors = shown_authors | plus: 1 -%}
+  {%- endfor -%}
+  {%- if shown_authors < publication_authors.size -%}{{- ' et al.' -}}{%- endif -%}
+{%- else -%}
+  {{- include.authors -}}
+{%- endif -%}
