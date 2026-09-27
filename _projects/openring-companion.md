@@ -8,7 +8,7 @@ category: independent
 tags: [ wearables, android, health, bluetooth, local-first ]
 links:
 - [code, code, https://github.com/tangemicioglu/openring-companion]
-areas: ["sensing"]
+areas: ["sensing", "wearables"]
 status: "complete"
 ---
 

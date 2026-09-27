@@ -1,17 +1,17 @@
 ---
-title: "Vibrotactile Stimulation for Lower Limb Spasticity"
-excerpt: "This ongoing project develops an adjustable vibrotactile wrap and a planned two-phase study for lower-limb spasticity after stroke. The study will compare stimulation locations using electrophysiological and functional measures, then compare stimulation at rest with stimulation during gait training; no outcomes are claimed before data collection is complete."
+title: "VibroTone: Wearable Vibrotactile Stimulation for Lower-Limb Spasticity"
+excerpt: "VibroTone is an adjustable wearable wrap that delivers targeted vibration to the lower leg. We investigate how stimulation location and use during rest or gait training affect muscle tone and mobility after stroke, combining measurements of spinal reflexes and muscle activity with clinical assessments."
 teaser: "/images/vts-lls-concept.png"
 date: "2025-06-01"
 collection: projects
 category: research
 tags: [ clinical, haptics, rehabilitation, wearables]
 short: "VibroTone"
-areas: ["therapeutics"]
+areas: ["therapeutics", "haptics", "wearables", "augmentation"]
 status: "active"
 ---
 
-Lower-limb spasticity can persist long after stroke, tightening muscles around the hip, knee, ankle, and foot and making gait less predictable. Existing care often requires repeated access to rehabilitation specialists, medication, or injections. This project examines whether low-amplitude vibrotactile stimulation can be delivered through an adjustable wearable as a complement to those treatments, including during rest and gait training.
+Lower-limb spasticity can persist long after stroke, tightening muscles around the hip, knee, ankle, and foot and making gait less predictable. Existing care often requires repeated access to rehabilitation specialists, medication, or injections. VibroTone examines whether low-amplitude vibrotactile stimulation can be delivered through an adjustable wearable as a complement to those treatments, including during rest and gait training.
 
 We designed a flexible wrap that can be positioned over the Achilles tendon, gastrocnemius, or tibialis anterior. Four vibration motors, a rechargeable battery, and a custom control board are integrated into textile layers that balance protection, stretch, and skin contact. A single large button and status light minimize interaction demands, while onboard motion sensing and storage record device operation without requiring a phone or cloud connection.
 

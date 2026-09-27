@@ -6,6 +6,8 @@
   --t-bci: #b07aa1; --t-sensing: #f28e2b; --t-agents: #76b7b2;
   --t-neuro: #6b5b95; --t-social: #edc948; --t-ml: #9c755f;
   --t-robotics: #8c8c8c; --t-access: #ff9da7;
+  --t-haptics: #c45163; --t-wearables: #39858c;
+  --t-augmentation: #a07822; --t-neural-stimulation: #7053a1;
 }
 .garden-archive [hidden] { display: none !important; }
 .garden-archive { position: relative; }

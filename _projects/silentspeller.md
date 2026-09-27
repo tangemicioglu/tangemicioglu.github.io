@@ -12,7 +12,7 @@ links:
 - [CHI'21 Interactivity paper, paper, https://tangemicioglu.com/publications/#mobile-hands-free-silent-speech-texting-using-silentspeller]
 - [UROP Outstanding Oral Presentation Award, award, https://symposium.urop.gatech.edu/awards/]
 - [BuzzFeed, press, https://www.buzzfeednews.com/article/richardnieva/google-glass-creator-is-experimenting-with-a-smart-retainer]
-areas: ["subtle", "access"]
+areas: ["subtle", "access", "wearables", "augmentation"]
 status: "complete"
 start: "2019-11-24"
 ---

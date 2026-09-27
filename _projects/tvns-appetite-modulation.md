@@ -9,7 +9,7 @@ tags: [wearables, neural-interfaces, eating]
 links:
 - [InterfaceNeuro'25 poster, slides, /files/slides/VNS_InterfaceNeuro_Poster.pptx]
 - [IMWUT paper, paper, https://doi.org/10.1145/3831630]
-areas: ["therapeutics"]
+areas: ["therapeutics", "wearables", "augmentation", "neural-stimulation"]
 status: "active"
 start: "2024-02-03"
 ---

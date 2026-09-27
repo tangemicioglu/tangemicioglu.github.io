@@ -1,6 +1,6 @@
 ---
 title: "AppetiteCheck: Feasibility of Momentary Vagus Nerve Stimulation as an Implicit Intervention for Eating Behavior"
-teaser: "/images/tvns-satiety.jpg"
+teaser: "/images/appetitecheck-imwut-2026-teaser.png"
 date: "2026-09-01"
 collection: publications
 authors: "<b>Tan Gemicioglu</b>, Jas Brooks, Pedro Lopes, Tanzeem Choudhury"

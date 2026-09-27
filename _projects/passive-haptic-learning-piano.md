@@ -14,7 +14,7 @@ links:
 - [UbiComp'22 Best Demo Award, award, https://ubicomp.org/ubicomp2022/cfp/posters-demos-6/]
 - [UROP Outstanding Oral Presentation Award, award, https://symposium.urop.gatech.edu/awards/]
 short: "Passive haptic piano"
-areas: ["phl"]
+areas: ["phl", "haptics", "wearables", "augmentation"]
 status: "complete"
 ---
 

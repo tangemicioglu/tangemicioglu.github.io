@@ -7,7 +7,7 @@ tags:
   - ethics
   - privacy
   - wearables
-track: "sensing"
+areas: ["sensing", "wearables"]
 stage: "evergreen"
 ---
 

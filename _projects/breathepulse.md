@@ -8,7 +8,7 @@ category: research
 tags: [ ubiquitous-computing, respiration, entrainment, stress]
 links:
 - [IMWUT'24 paper, paper, https://tangemicioglu.com/publications/#breathepulse-peripheral-guided-breathing-via-implicit-airflow-cues-for-information-work]
-areas: ["therapeutics"]
+areas: ["therapeutics", "augmentation"]
 status: "complete"
 ---
 

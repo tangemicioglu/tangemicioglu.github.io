@@ -11,7 +11,7 @@ links:
 - [BCI Meeting poster, paper, /files/papers/BrainBraille_BCIMeeting_2023_Poster.pdf]
 - [President's Undergraduate Research Award, award, https://undergradresearch.gatech.edu/content/presidents-undergraduate-research-awards]
 
-areas: ["bci", "phl", "access"]
+areas: ["bci", "phl", "access", "wearables", "augmentation"]
 status: "complete"
 start: "2019-11-22"
 ---

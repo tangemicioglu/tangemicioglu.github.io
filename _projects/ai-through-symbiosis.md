@@ -10,7 +10,7 @@ links:
 - [ICASSPW'23 paper, paper, https://alexanderyang.me/documents/papers/23-aits-icassp-workshop.pdf]
 - [code, code, https://github.com/czming/ai-through-symbiosis]
 short: "AI through Symbiosis"
-areas: ["ml", "subtle"]
+areas: ["ml", "subtle", "wearables"]
 status: "complete"
 start: "2020-02-02"
 ---

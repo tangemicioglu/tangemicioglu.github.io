@@ -20,6 +20,18 @@
 - id: subtle
   title: Subtle interaction
   blurb: Hands-free, eyes-free input. Silent speech, tongue and gaze, fingerspelling.
+- id: haptics
+  title: Haptics
+  blurb: Touch and vibration for motor learning and rehabilitation, from passive piano rehearsal to vibrotactile stimulation for spasticity.
+- id: wearables
+  title: Wearables
+  blurb: Body-worn sensing, stimulation, and input systems, from smart rings and head-worn devices to haptic gloves and therapeutic wraps.
+- id: augmentation
+  title: Augmentation
+  blurb: Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention.
+- id: neural-stimulation
+  title: Neural Stimulation
+  blurb: Peripheral electrical stimulation for physiological intervention, including vagus nerve stimulation during eating and facial muscle stimulation for symmetry.
 - id: access
   title: Accessibility
   era: earlier

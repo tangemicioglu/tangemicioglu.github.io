@@ -7,7 +7,7 @@ collection: projects
 category: research
 tags: ["wearables", "assistive-technology", "facial paralysis", "ems", "closed-loop systems"]
 links:
-areas: ["therapeutics", "access"]
+areas: ["therapeutics", "access", "wearables", "augmentation", "neural-stimulation"]
 status: "active"
 ---
 

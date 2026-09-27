@@ -6,7 +6,7 @@ date: "2023-01-24"
 collection: projects
 category: research
 tags: [ wearables, haptics, rehabilitation, clinical ]
-areas: ["therapeutics"]
+areas: ["therapeutics", "haptics", "wearables", "augmentation"]
 status: "complete"
 end: "2023-08-31"
 ---

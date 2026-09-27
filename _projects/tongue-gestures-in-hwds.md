@@ -12,7 +12,7 @@ links:
 - [UbiComp'22 poster, paper, https://tangemicioglu.com/publications/#tongue-gestures-for-hands-free-interaction-in-head-worn-displays]
 - [talk, video, https://www.microsoft.com/en-us/research/video/tongue-gesture-recognition-in-head-mounted-displays/]
 short: "Tongue gestures"
-track: "subtle"
+areas: ["subtle", "wearables", "augmentation"]
 status: "complete"
 start: "2022-06-06"
 ---

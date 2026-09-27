@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "7fc3ef8ca36f289f66ed10b36408257462013f5ee68ddd1b68a86044448b0d63",
+    "input_digest": "5c62fc52ab14ce588ccb5afbcd7738b6183c0374558fa921074dc2fa70a06ea0",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -35,6 +35,26 @@
       "id": "subtle",
       "title": "Subtle interaction",
       "blurb": "Hands-free, eyes-free input. Silent speech, tongue and gaze, fingerspelling."
+    },
+    {
+      "id": "haptics",
+      "title": "Haptics",
+      "blurb": "Touch and vibration for motor learning and rehabilitation, from passive piano rehearsal to vibrotactile stimulation for spasticity."
+    },
+    {
+      "id": "wearables",
+      "title": "Wearables",
+      "blurb": "Body-worn sensing, stimulation, and input systems, from smart rings and head-worn devices to haptic gloves and therapeutic wraps."
+    },
+    {
+      "id": "augmentation",
+      "title": "Augmentation",
+      "blurb": "Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention."
+    },
+    {
+      "id": "neural-stimulation",
+      "title": "Neural Stimulation",
+      "blurb": "Peripheral electrical stimulation for physiological intervention, including vagus nerve stimulation during eating and facial muscle stimulation for symmetry."
     },
     {
       "id": "access",
@@ -146,11 +166,12 @@
       "authors": null,
       "teaser": null,
       "tended": "2021-12-01",
-      "track": "sensing",
-      "stage": "evergreen",
       "areas": [
-        "sensing"
+        "sensing",
+        "wearables"
       ],
+      "stage": "evergreen",
+      "track": "sensing",
       "members": [],
       "series": [],
       "links": [],
@@ -199,7 +220,8 @@
       "tended": "2020-11-07",
       "areas": [
         "ml",
-        "subtle"
+        "subtle",
+        "wearables"
       ],
       "status": "complete",
       "start": "2020-02-02",
@@ -228,6 +250,7 @@
       "y": -0.3729,
       "related_items": [
         "hand-pose-estimation",
+        "bionicface",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
       ]
     },
@@ -369,7 +392,10 @@
       "tended": "2026-07-28",
       "areas": [
         "therapeutics",
-        "access"
+        "access",
+        "wearables",
+        "augmentation",
+        "neural-stimulation"
       ],
       "status": "active",
       "track": "therapeutics",
@@ -389,15 +415,15 @@
         "brainbraille",
         "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
         "touche",
-        "vts-for-lls",
-        "silentspeller"
+        "silentspeller",
+        "echoforce"
       ],
       "similar_s": [
         0.662,
         0.656,
         0.648,
-        0.642,
-        0.641
+        0.641,
+        0.637
       ],
       "x": -0.1978,
       "y": -0.2454,
@@ -405,8 +431,8 @@
         "brainbraille",
         "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
         "touche",
-        "vts-for-lls",
-        "silentspeller"
+        "silentspeller",
+        "echoforce"
       ]
     },
     {
@@ -433,7 +459,9 @@
       "areas": [
         "bci",
         "phl",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "status": "complete",
       "start": "2019-11-22",
@@ -497,7 +525,8 @@
       "teaser": "/images/breathepulse.png",
       "tended": "2024-12-02",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "augmentation"
       ],
       "status": "complete",
       "track": "therapeutics",
@@ -561,7 +590,8 @@
       "teaser": "/images/echoforce2.png",
       "tended": "2025-10-12",
       "areas": [
-        "sensing"
+        "sensing",
+        "wearables"
       ],
       "status": "complete",
       "start": "2024-08-07",
@@ -583,7 +613,7 @@
       "similar_s": [
         0.961,
         0.694,
-        0.668,
+        0.682,
         0.662,
         0.649
       ],
@@ -840,7 +870,8 @@
       "teaser": "/images/openring-companion-teaser.png",
       "tended": "2026-07-04",
       "areas": [
-        "sensing"
+        "sensing",
+        "wearables"
       ],
       "status": "complete",
       "track": "sensing",
@@ -868,7 +899,9 @@
       "y": 0.0,
       "related_items": [
         "2021-12-01-health-tracking-privacy",
-        "echoforce"
+        "echoforce",
+        "tongue-gestures-in-hwds",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
       ]
     },
     {
@@ -893,7 +926,10 @@
       "teaser": "/images/passivehapticlearning-2.jpg",
       "tended": "2024-12-01",
       "areas": [
-        "phl"
+        "phl",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "status": "complete",
       "short": "Passive haptic piano",
@@ -1175,7 +1211,9 @@
       "tended": "2022-04-30",
       "areas": [
         "subtle",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "status": "complete",
       "start": "2019-11-24",
@@ -1237,13 +1275,15 @@
       "authors": null,
       "teaser": "/images/tonguegestures.png",
       "tended": "2023-10-09",
-      "track": "subtle",
+      "areas": [
+        "subtle",
+        "wearables",
+        "augmentation"
+      ],
       "status": "complete",
       "start": "2022-06-06",
       "short": "Tongue gestures",
-      "areas": [
-        "subtle"
-      ],
+      "track": "subtle",
       "members": [
         "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
@@ -1303,7 +1343,10 @@
       "teaser": "/images/touche.jpg",
       "tended": "2023-01-24",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "status": "complete",
       "end": "2023-08-31",
@@ -1327,7 +1370,7 @@
         "brainbraille"
       ],
       "similar_s": [
-        0.834,
+        0.818,
         0.736,
         0.694,
         0.685,
@@ -1365,7 +1408,10 @@
       "teaser": "/images/tvns-satiety.jpg",
       "tended": "2026-09-01",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "wearables",
+        "augmentation",
+        "neural-stimulation"
       ],
       "status": "active",
       "start": "2024-02-03",
@@ -1412,11 +1458,11 @@
       "source": "_projects/vts-for-lls.md",
       "kind": "project",
       "collection": "projects",
-      "title": "Vibrotactile Stimulation for Lower Limb Spasticity",
+      "title": "VibroTone: Wearable Vibrotactile Stimulation for Lower-Limb Spasticity",
       "date": "2025-06-01",
       "planted": "2025-07-24",
       "git_modified": "2026-09-27",
-      "excerpt": "This ongoing project develops an adjustable vibrotactile wrap and a planned two-phase study for lower-limb spasticity after stroke. The study will compare stimulation locations using electrophysiological and functional measures, then compare stimulation at rest with stimulation during gait training; no outcomes are claimed before data collection is complete.",
+      "excerpt": "VibroTone is an adjustable wearable wrap that delivers targeted vibration to the lower leg. We investigate how stimulation location and use during rest or gait training affect muscle tone and mobility after stroke, combining measurements of spinal reflexes and muscle activity with clinical assessments.",
       "tags": [
         "clinical",
         "haptics",
@@ -1429,7 +1475,10 @@
       "teaser": "/images/vts-lls-concept.png",
       "tended": "2025-06-01",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "status": "active",
       "short": "VibroTone",
@@ -1453,26 +1502,26 @@
       "backlinks": [],
       "similar": [
         "touche",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "echoforce",
-        "passive-haptic-learning-piano",
-        "bionicface"
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation",
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
-        0.834,
-        0.675,
-        0.668,
-        0.654,
-        0.642
+        0.818,
+        0.682,
+        0.663,
+        0.655,
+        0.651
       ],
       "x": -0.3501,
       "y": 0.1204,
       "related_items": [
         "touche",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "echoforce",
-        "passive-haptic-learning-piano",
-        "bionicface"
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation",
+        "passive-haptic-learning-piano"
       ]
     },
     {
@@ -1605,7 +1654,9 @@
       "project": "silentspeller",
       "areas": [
         "subtle",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1663,7 +1714,10 @@
       "track": "phl",
       "project": "passive-haptic-learning-piano",
       "areas": [
-        "phl"
+        "phl",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1680,7 +1734,7 @@
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
         "passive-haptic-learning-piano",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "touche"
+        "vts-for-lls"
       ],
       "similar_s": [
         0.923,
@@ -1694,7 +1748,8 @@
       "related_items": [
         "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "vts-for-lls"
       ]
     },
     {
@@ -1721,7 +1776,9 @@
       "project": "silentspeller",
       "areas": [
         "subtle",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1780,7 +1837,10 @@
       "track": "phl",
       "project": "passive-haptic-learning-piano",
       "areas": [
-        "phl"
+        "phl",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1797,21 +1857,22 @@
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
         "passive-haptic-learning-piano",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "touche"
+        "vts-for-lls"
       ],
       "similar_s": [
         0.923,
         0.915,
         0.872,
         0.642,
-        0.594
+        0.601
       ],
       "x": -0.6846,
       "y": 0.1923,
       "related_items": [
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "vts-for-lls"
       ]
     },
     {
@@ -1838,7 +1899,9 @@
       "track": "subtle",
       "project": "tongue-gestures-in-hwds",
       "areas": [
-        "subtle"
+        "subtle",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1898,7 +1961,9 @@
       "track": "subtle",
       "project": "tongue-gestures-in-hwds",
       "areas": [
-        "subtle"
+        "subtle",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -1958,7 +2023,9 @@
       "areas": [
         "bci",
         "phl",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -2017,7 +2084,9 @@
       "track": "subtle",
       "project": "tongue-gestures-in-hwds",
       "areas": [
-        "subtle"
+        "subtle",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -2075,7 +2144,9 @@
       "tended": "2023-10-22",
       "areas": [
         "subtle",
-        "access"
+        "access",
+        "wearables",
+        "augmentation"
       ],
       "track": "subtle",
       "members": [],
@@ -2137,7 +2208,10 @@
       "track": "phl",
       "project": "passive-haptic-learning-piano",
       "areas": [
-        "phl"
+        "phl",
+        "haptics",
+        "wearables",
+        "augmentation"
       ],
       "members": [],
       "series": [
@@ -2196,7 +2270,8 @@
       "track": "therapeutics",
       "project": "breathepulse",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "augmentation"
       ],
       "members": [],
       "series": [],
@@ -2221,7 +2296,8 @@
       "related_items": [
         "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
         "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
-        "tvns-appetite-modulation"
+        "tvns-appetite-modulation",
+        "tongue-gestures-in-hwds"
       ]
     },
     {
@@ -2353,10 +2429,12 @@
       "authors": "Yujie Tao, Tan Gemicioglu, Sam Chin, Bingjian Huang, Jas Brooks, Sean Follmer, Pedro Lopes, Suranga Nanayakkara",
       "teaser": "/images/augmentation-workshop2025.jpg",
       "tended": "2025-09-27",
-      "track": "therapeutics",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "haptics",
+        "augmentation"
       ],
+      "track": "therapeutics",
       "members": [],
       "series": [
         {
@@ -2369,26 +2447,26 @@
       "backlinks": [],
       "similar": [
         "touche",
-        "vts-for-lls",
         "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "passive-haptic-learning-piano"
+        "passive-haptic-learning-piano",
+        "tongue-gestures-in-hwds"
       ],
       "similar_s": [
         0.736,
-        0.675,
         0.672,
         0.667,
-        0.667
+        0.667,
+        0.666
       ],
       "x": -0.0774,
       "y": 0.1897,
       "related_items": [
         "touche",
-        "vts-for-lls",
         "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "passive-haptic-learning-piano"
+        "passive-haptic-learning-piano",
+        "tongue-gestures-in-hwds"
       ]
     },
     {
@@ -2415,7 +2493,8 @@
       "track": "sensing",
       "project": "echoforce",
       "areas": [
-        "sensing"
+        "sensing",
+        "wearables"
       ],
       "members": [],
       "series": [],
@@ -2431,7 +2510,7 @@
       "similar_s": [
         0.961,
         0.659,
-        0.634,
+        0.655,
         0.633,
         0.618
       ],
@@ -2463,12 +2542,15 @@
       "category": "full-paper",
       "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 10, Issue 3",
       "authors": "Tan Gemicioglu, Jas Brooks, Pedro Lopes, Tanzeem Choudhury",
-      "teaser": "/images/tvns-satiety.jpg",
+      "teaser": "/images/appetitecheck-imwut-2026-teaser.png",
       "tended": "2026-09-01",
       "track": "therapeutics",
       "project": "tvns-appetite-modulation",
       "areas": [
-        "therapeutics"
+        "therapeutics",
+        "wearables",
+        "augmentation",
+        "neural-stimulation"
       ],
       "members": [],
       "series": [],
