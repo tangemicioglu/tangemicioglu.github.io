@@ -12,4 +12,6 @@ tags: [vagus-nerve-stimulation, eating-behavior, implicit-interfaces, health]
 links:
 - [doi, doi, https://doi.org/10.1145/3831630]
 - [paper, pdf, /files/papers/AppetiteCheck_IMWUT_2026.pdf]
+track: "therapeutics"
+project: "tvns-appetite-modulation"
 ---

@@ -14,4 +14,6 @@ links:
 - [paper, pdf, /files/papers/PHL_UbiComp_2022_Demo.pdf]
 - [video, video, https://youtu.be/LdF_jn4hWHc]
 - [Best Demo Award, award, https://ubicomp.org/ubicomp2022/cfp/posters-demos-6/]
+track: "phl"
+project: "passive-haptic-learning-piano"
 ---

@@ -1,0 +1,6 @@
+<ul>
+  {% for item_id in include.ids %}
+    {% assign linked_item = site.data.garden.items | where: 'id', item_id | first %}
+    <li><a href="{{ linked_item.url | relative_url }}">{{ linked_item.short | default: linked_item.title }}</a> <span class="garden-meta">{{ linked_item.kind }} · {{ linked_item.date | date: '%Y' }}</span></li>
+  {% endfor %}
+</ul>

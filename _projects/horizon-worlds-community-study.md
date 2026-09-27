@@ -9,6 +9,12 @@ tags: [ social-computing, virtual-reality ]
 links:
 - [report, pdf, /files/misc_pdf/Horizon_Worlds.pdf]
 # We examined in detail different aspects of the community such as moderation and social roles based on Amy Jo Kim's community design principles.
+short: "Horizon Worlds"
+track: "social"
+status: "archived"
+start: "2022-01-01"
+end: "2022-04-28"
+context: "Course project, CS 4472 Design of Online Communities, Spring 2022"
 ---
 
 Social virtual-reality platforms are simultaneously software products, public spaces, and creative tools. We studied Horizon Worlds shortly after its early public expansion to understand how those roles were negotiated by its users. Rather than evaluating the headset or interface in isolation, we focused on the practices through which people built worlds, learned from one another, formed roles, and handled conflict.

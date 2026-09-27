@@ -8,6 +8,8 @@ category: research
 tags: [ ubiquitous-computing, respiration, entrainment, stress]
 links:
 - [IMWUT'24 paper, paper, https://tangemicioglu.com/publications/#breathepulse-peripheral-guided-breathing-via-implicit-airflow-cues-for-information-work]
+areas: ["therapeutics"]
+status: "complete"
 ---
 
 Slow breathing can reduce stress and anxiety, but most guided-breathing systems make breathing into a second task. A visual animation must be watched, an audio cue occupies hearing, and a vibration has to be interpreted. BreathePulse explored whether airflow could provide a cue that maps more directly onto breathing and remain at the edge of attention during computer work.

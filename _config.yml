@@ -156,6 +156,9 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - scripts
+  - tests
+  - .garden-cache
 keep_files:
   - .git
   - .svn

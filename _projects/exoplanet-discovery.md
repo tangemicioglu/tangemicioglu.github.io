@@ -8,6 +8,12 @@ category: coursework
 tags: [ machine-learning, astronomy ]
 links:
 - [source writeup, writeup, https://github.com/andrewyarovoi/exoplanet-detection]
+short: "Exoplanet classification"
+track: "ml"
+status: "archived"
+start: "2020-01-01"
+end: "2020-04-28"
+context: "Course project, CS 4641 Machine Learning, Spring 2020"
 ---
 
 NASA's Kepler and K2 missions recorded the brightness of large numbers of stars over time. A planet passing in front of a star can produce a small periodic drop in that light curve, but the volume of observations makes exhaustive manual review impractical. In this machine-learning course project, we explored whether generic time-series features could help rank stars for follow-up without building a model around a single transit shape.

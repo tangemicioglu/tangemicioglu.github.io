@@ -11,6 +11,8 @@ links:
 - [project site, website, https://wardian.org/]
 - [source code, code, https://github.com/wardian-app/Wardian]
 - [documentation, writeup, https://docs.wardian.org/]
+track: "agents"
+status: "active"
 ---
 
 Most agent work still begins and ends as a disposable terminal session. The useful parts are scattered across scrollback, project files, prompts, and the operator's memory; coordinating several agents often means remembering which window is doing what and reconstructing what happened after it finishes. I built Wardian around a different premise: local agent work should remain visible, durable, and malleable.

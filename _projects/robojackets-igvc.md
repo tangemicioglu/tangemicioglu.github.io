@@ -10,6 +10,12 @@ links:
 - [report, pdf, /files/misc_pdf/Jessiii_Design_Report.pdf]
 - [code, code, https://github.com/RoboJackets/igvc-software]
 - [3rd place Grand Award, award, http://www.igvc.org/results.htm]
+short: "RoboJackets IGVC"
+track: "robotics"
+status: "archived"
+start: "2019-08-01"
+end: "2020-11-28"
+context: "RoboJackets, Georgia Tech; IGVC 2019, then Jessiii after the 2020 competition was cancelled"
 ---
 
 The Intelligent Ground Vehicle Competition asks a mobile robot to navigate an outdoor course marked by painted boundaries, ramps, potholes, barrels, and GPS waypoints. Reliable autonomy therefore depends on the entire stack: mechanical traction, weather-resistant electronics, perception under changing light, localization, planning, low-level control, and a simulator capable of exposing failures before competition.

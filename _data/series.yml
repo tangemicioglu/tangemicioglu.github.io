@@ -1,0 +1,43 @@
+# Proposed series: optional, curated reading orders. An item may be in several. Order of `items` = reading order.
+- id: silent-speech
+  section: research
+  title: Talking without sound
+  blurb: From a retainer that reads your tongue to tongue gestures on head-worn displays.
+  items:
+    - silentspeller
+    - 2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller
+    - 2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography
+    - tongue-gestures-in-hwds
+    - 2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays
+    - 2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices
+    - 2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices
+    - 2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition
+- id: passive-haptics
+  section: research
+  title: Learning without practice
+  blurb: Passive haptic learning, first for piano and then for rehabilitation.
+  items:
+    - passive-haptic-learning-piano
+    - 2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition
+    - 2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson
+    - 2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild
+    - touche
+    - vts-for-lls
+- id: implicit-augmentation
+  section: research
+  title: How wearables engage physiology
+  blurb: "A progression in how wearables engage physiology: guiding voluntary breathing, afferent neuromodulation, autonomic signaling, then restoring facial expression."
+  items:
+    - breathepulse
+    - vts-for-lls
+    - tvns-appetite-modulation
+    - bionicface
+    - 2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation
+- id: measuring-bcis
+  section: research
+  title: How fast can an interface talk?
+  blurb: Information transfer rate, from BrainBraille to a public atlas comparing interfaces.
+  items:
+    - brainbraille
+    - 2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs
+    - itr-atlas

@@ -14,4 +14,6 @@ links:
 - [paper, pdf, /files/papers/SilentSpeller_CHI_2021_Interactivity.pdf]
 - [video, video, https://youtu.be/SngjjQuWCo8]
 - [BuzzFeed, press, https://www.buzzfeednews.com/article/richardnieva/google-glass-creator-is-experimenting-with-a-smart-retainer]
+track: "subtle"
+project: "silentspeller"
 ---

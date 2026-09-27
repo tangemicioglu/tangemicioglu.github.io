@@ -1,0 +1,2501 @@
+{
+  "meta": {
+    "built": "2026-09-27",
+    "epoch": "2026-09-27",
+    "input_digest": "77cb9bb3b334adf2f4f82b7e4842b25bfaddad4d047035e9d2e8af8c6a19e42a",
+    "model": "Alibaba-NLP/gte-modernbert-base"
+  },
+  "tracks": [
+    {
+      "id": "therapeutics",
+      "title": "Wearable therapeutics",
+      "blurb": "Wearables that work on the body's own processes without needing your attention, from pacing your breathing and vibrotactile therapy for spasticity to vagus nerve stimulation during meals and restoring facial expression."
+    },
+    {
+      "id": "bci",
+      "title": "Brain–computer interfaces",
+      "blurb": "Passively learnable BCIs, how fast any interface can carry information, and teaching the BCI community."
+    },
+    {
+      "id": "agents",
+      "title": "AI agents",
+      "blurb": "Working alongside AI agents, and building the environment they work in. Wardian, and essays on what changes."
+    },
+    {
+      "id": "sensing",
+      "title": "Wearable sensing",
+      "blurb": "Sensing force, motion and health on the body, and keeping that data with the person it describes."
+    },
+    {
+      "id": "phl",
+      "title": "Passive haptic learning",
+      "blurb": "Learning motor skills such as piano through tactile cues, without active practice."
+    },
+    {
+      "id": "subtle",
+      "title": "Subtle interaction",
+      "blurb": "Hands-free, eyes-free input. Silent speech, tongue and gaze, fingerspelling."
+    },
+    {
+      "id": "access",
+      "title": "Accessibility",
+      "era": "earlier",
+      "blurb": "Designing with and for people with disabilities, from silent speech and ASL to facial paralysis and safer kitchens."
+    },
+    {
+      "id": "social",
+      "title": "Social computing",
+      "era": "earlier",
+      "blurb": "Studies of online communities in social VR and of how people judge public-health messages."
+    },
+    {
+      "id": "ml",
+      "title": "Machine learning & vision",
+      "era": "earlier",
+      "blurb": "Learning from video, stereo images and telescope time series."
+    },
+    {
+      "id": "neuro",
+      "title": "Neuroscience",
+      "era": "earlier",
+      "blurb": "Localizing working memory with task fMRI, at Neuromatch Academy."
+    },
+    {
+      "id": "robotics",
+      "title": "Robotics",
+      "era": "earlier",
+      "blurb": "Autonomous robots for humanitarian demining and competition, before switching to augmentation in undergrad."
+    }
+  ],
+  "series": [
+    {
+      "id": "silent-speech",
+      "section": "research",
+      "title": "Talking without sound",
+      "blurb": "From a retainer that reads your tongue to tongue gestures on head-worn displays.",
+      "items": [
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "tongue-gestures-in-hwds",
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
+      ]
+    },
+    {
+      "id": "passive-haptics",
+      "section": "research",
+      "title": "Learning without practice",
+      "blurb": "Passive haptic learning, first for piano and then for rehabilitation.",
+      "items": [
+        "passive-haptic-learning-piano",
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "touche",
+        "vts-for-lls"
+      ]
+    },
+    {
+      "id": "implicit-augmentation",
+      "section": "research",
+      "title": "How wearables engage physiology",
+      "blurb": "A progression in how wearables engage physiology: guiding voluntary breathing, afferent neuromodulation, autonomic signaling, then restoring facial expression.",
+      "items": [
+        "breathepulse",
+        "vts-for-lls",
+        "tvns-appetite-modulation",
+        "bionicface",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "measuring-bcis",
+      "section": "research",
+      "title": "How fast can an interface talk?",
+      "blurb": "Information transfer rate, from BrainBraille to a public atlas comparing interfaces.",
+      "items": [
+        "brainbraille",
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "itr-atlas"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "2021-12-01-health-tracking-privacy",
+      "url": "/posts/health-tracking-privacy/",
+      "source": "_posts/2021-12-01-health-tracking-privacy.md",
+      "kind": "essay",
+      "collection": "posts",
+      "title": "Wearable Health Trackers and Privacy",
+      "date": "2021-12-01",
+      "planted": "2022-04-27",
+      "git_modified": "2023-01-04",
+      "excerpt": "I originally wrote this for a past iteration of CS3001: Computing and Society at Georgia Tech. I quite like it, and I think the issues are increasingly relevant, so I decided to put it up here. In 2014, Time Magazine crowned the Apple Watch as one of its \"25 Best Inventions of the Year\" (Time, 2014)",
+      "tags": [
+        "coursework",
+        "ethics",
+        "privacy",
+        "wearables"
+      ],
+      "category": null,
+      "venue": null,
+      "authors": null,
+      "teaser": null,
+      "tended": "2021-12-01",
+      "track": "sensing",
+      "stage": "evergreen",
+      "areas": [
+        "sensing"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "echoforce",
+        "openring-companion",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "public-health-credibility",
+        "assistive-interface-smart-stove"
+      ],
+      "similar_s": [
+        0.621,
+        0.615,
+        0.609,
+        0.6,
+        0.591
+      ],
+      "x": 0.0,
+      "y": -0.0777,
+      "related_items": [
+        "echoforce",
+        "openring-companion"
+      ]
+    },
+    {
+      "id": "ai-through-symbiosis",
+      "url": "/projects/ai-through-symbiosis/",
+      "source": "_projects/ai-through-symbiosis.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Artificial Intelligence through Symbiosis",
+      "date": "2020-11-07",
+      "planted": "2022-11-15",
+      "git_modified": "2026-08-30",
+      "excerpt": "We investigated whether the structure of warehouse order-picking tasks could provide weak supervision for object recognition from egocentric video. The system learned visual object models from repeated picks without frame-level labels and was evaluated on independent orders.",
+      "tags": [
+        "machine-learning",
+        "computer-vision",
+        "head-worn-displays"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/ai-through-symbiosis.jpg",
+      "tended": "2020-11-07",
+      "areas": [
+        "ml",
+        "subtle"
+      ],
+      "status": "complete",
+      "start": "2020-02-02",
+      "short": "AI through Symbiosis",
+      "track": "ml",
+      "members": [],
+      "end": "2020-11-07",
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "bionicface",
+        "hand-pose-estimation",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "bcihub-tutorials"
+      ],
+      "similar_s": [
+        0.616,
+        0.614,
+        0.602,
+        0.595,
+        0.592
+      ],
+      "x": -0.0792,
+      "y": -0.3729,
+      "related_items": [
+        "hand-pose-estimation",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+      ]
+    },
+    {
+      "id": "assistive-interface-smart-stove",
+      "url": "/projects/assistive-interface-smart-stove/",
+      "source": "_projects/assistive-interface-smart-stove.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Assistive Smart Stove for Safer Kitchens",
+      "date": "2022-04-24",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "This coursework prototype combined mobile controls, burner reminders, an adjustable cooking surface, and a side-loading oven to explore support for memory, reach, and posture in the kitchen. A four-person Wizard-of-Oz study identified useful interactions and substantial usability issues, but did not include the intended older-adult population.",
+      "tags": [
+        "ubiquitous-computing",
+        "assistive-technology"
+      ],
+      "category": "coursework",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/smartstove-app.png",
+      "tended": "2022-04-24",
+      "areas": [
+        "access"
+      ],
+      "status": "archived",
+      "start": "2022-01-01",
+      "end": "2022-04-28",
+      "short": "Assistive smart stove",
+      "context": "Course project, CS 3873, Spring 2022",
+      "track": "access",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "silentspeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "brainbraille",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.661,
+        0.643,
+        0.641,
+        0.629,
+        0.627
+      ],
+      "x": 0.4983,
+      "y": -0.2095,
+      "related_items": [
+        "silentspeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "brainbraille",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "bcihub-tutorials",
+      "url": "/projects/bcihub-tutorials/",
+      "source": "_projects/bcihub-tutorials.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "BCIhub: A Tutorial Repository by the BCI Society",
+      "date": "2022-10-20",
+      "planted": "2022-12-10",
+      "git_modified": "2026-09-04",
+      "excerpt": "As part of the BCI Society's Postdoc & Student Committee, I helped develop tutorials for the BCI Meeting and began organizing the material in a reusable repository. The initial machine-learning notebook exposes the choices behind preprocessing, features, models, and evaluation rather than presenting only a final classifier score.",
+      "tags": [
+        "education",
+        "brain-computer-interfaces"
+      ],
+      "category": "organizations",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/bcisociety.png",
+      "tended": "2022-10-20",
+      "areas": [
+        "bci"
+      ],
+      "status": "complete",
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "track": "bci",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+      ],
+      "similar": [
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
+        "brainbraille",
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "itr-atlas",
+        "hand-pose-estimation"
+      ],
+      "similar_s": [
+        0.752,
+        0.738,
+        0.696,
+        0.67,
+        0.632
+      ],
+      "x": -0.1155,
+      "y": -0.7317,
+      "related_items": [
+        "brainbraille",
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "itr-atlas",
+        "hand-pose-estimation"
+      ]
+    },
+    {
+      "id": "bionicface",
+      "url": "/projects/bionicface/",
+      "source": "_projects/bionicface.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "BionicFace: Closed-Loop Facial Symmetry for Facial Paralysis",
+      "date": "2026-07-28",
+      "planted": "2026-08-30",
+      "git_modified": "2026-08-30",
+      "excerpt": "BionicFace is an assistive wearable research project for people with chronic facial paralysis caused by nerve damage. We are exploring glasses-based facial sensing and closed-loop electrical muscle stimulation to support real-time upper-face symmetry during social expression and communication, with a focus on hardware integration, calibration, comfort, safety, and everyday use.",
+      "tags": [
+        "wearables",
+        "assistive-technology",
+        "facial paralysis",
+        "ems",
+        "closed-loop systems"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/bionicface.png",
+      "tended": "2026-07-28",
+      "areas": [
+        "therapeutics",
+        "access"
+      ],
+      "status": "active",
+      "track": "therapeutics",
+      "members": [],
+      "start": "2026-07-28",
+      "end": "2026-09-27",
+      "series": [
+        {
+          "id": "implicit-augmentation",
+          "pos": 3,
+          "len": 5
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "brainbraille",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "tongue-gestures-in-hwds",
+        "echoforce"
+      ],
+      "similar_s": [
+        0.67,
+        0.662,
+        0.653,
+        0.639,
+        0.639
+      ],
+      "x": -0.1978,
+      "y": -0.2454,
+      "related_items": [
+        "brainbraille",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "tongue-gestures-in-hwds",
+        "echoforce"
+      ]
+    },
+    {
+      "id": "brainbraille",
+      "url": "/projects/brainbraille/",
+      "source": "_projects/brainbraille.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "BrainBraille: A Passively Learnable Brain Computer Interface using fNIRS",
+      "date": "2021-05-02",
+      "planted": "2022-11-15",
+      "git_modified": "2026-08-30",
+      "excerpt": "BrainBraille is an attempted-movement brain-computer interface that maps combinations of body regions to language. For my undergraduate thesis, I explored a wearable fNIRS implementation and examined whether transitions between movements could expand the command set while improving classification accuracy.",
+      "tags": [
+        "brain-computer-interfaces",
+        "fnirs",
+        "assistive-technology"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/brainbraille.jpg",
+      "tended": "2023-06-06",
+      "areas": [
+        "bci",
+        "phl",
+        "access"
+      ],
+      "status": "complete",
+      "start": "2019-11-22",
+      "track": "bci",
+      "members": [
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs"
+      ],
+      "end": "2023-06-06",
+      "series": [
+        {
+          "id": "measuring-bcis",
+          "pos": 0,
+          "len": 3
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "bcihub-tutorials",
+        "touche",
+        "bionicface",
+        "itr-atlas"
+      ],
+      "similar_s": [
+        0.8,
+        0.738,
+        0.682,
+        0.67,
+        0.662
+      ],
+      "x": -0.2353,
+      "y": -0.4456,
+      "related_items": [
+        "bcihub-tutorials",
+        "touche",
+        "bionicface",
+        "itr-atlas"
+      ]
+    },
+    {
+      "id": "breathepulse",
+      "url": "/projects/breathepulse/",
+      "source": "_projects/breathepulse.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "BreathePulse: Peripheral Guided Breathing via Implicit Airflow Cues",
+      "date": "2023-10-24",
+      "planted": "2024-03-28",
+      "git_modified": "2026-08-30",
+      "excerpt": "BreathePulse is a laptop-mounted breathing guide that uses pulsed airflow as an implicit cue. In a controlled N-back study, airflow guided slower breathing most consistently during the easier task, while adding workload and producing little measurable change in stress.",
+      "tags": [
+        "ubiquitous-computing",
+        "respiration",
+        "entrainment",
+        "stress"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/breathepulse.png",
+      "tended": "2024-12-02",
+      "areas": [
+        "therapeutics"
+      ],
+      "status": "complete",
+      "track": "therapeutics",
+      "members": [
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work"
+      ],
+      "start": "2023-10-24",
+      "end": "2024-12-02",
+      "series": [
+        {
+          "id": "implicit-augmentation",
+          "pos": 0,
+          "len": 5
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+        "tvns-appetite-modulation",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "tongue-gestures-in-hwds",
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
+      ],
+      "similar_s": [
+        0.928,
+        0.683,
+        0.667,
+        0.662,
+        0.658
+      ],
+      "x": 0.0971,
+      "y": 0.3248,
+      "related_items": [
+        "tvns-appetite-modulation",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "tongue-gestures-in-hwds",
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
+      ]
+    },
+    {
+      "id": "echoforce",
+      "url": "/projects/echoforce/",
+      "source": "_projects/echoforce.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "EchoForce: Continuous Wearable Grip Force Estimation with Acoustic Sensing",
+      "date": "2025-04-01",
+      "planted": "2025-07-24",
+      "git_modified": "2026-08-30",
+      "excerpt": "EchoForce is a wristband that estimates grip force from acoustic reflections produced by subtle skin deformation above the forearm flexor muscles. We evaluated both user-dependent and user-independent models across sessions and hand orientations.",
+      "tags": [
+        "wearables",
+        "sensing",
+        "force",
+        "muscle"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/echoforce2.png",
+      "tended": "2025-10-12",
+      "areas": [
+        "sensing"
+      ],
+      "status": "complete",
+      "start": "2024-08-07",
+      "track": "sensing",
+      "members": [
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation"
+      ],
+      "end": "2025-10-12",
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation",
+        "touche",
+        "vts-for-lls",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.961,
+        0.694,
+        0.668,
+        0.662,
+        0.649
+      ],
+      "x": -0.1727,
+      "y": -0.0001,
+      "related_items": [
+        "touche",
+        "vts-for-lls",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "exoplanet-discovery",
+      "url": "/projects/exoplanet-discovery/",
+      "source": "_projects/exoplanet-discovery.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Classifying Exoplanet Candidates from Stellar Time Series",
+      "date": "2020-04-16",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "In this machine-learning course project, we represented Kepler K2 light curves using generic time-series features and compared five classifiers on a curated set of 685 stars. A random forest produced the strongest result, with an F1 score of 0.83 and cross-validated accuracy of 0.80 ± 0.06; the model ranked candidates rather than confirming new planets.",
+      "tags": [
+        "machine-learning",
+        "astronomy"
+      ],
+      "category": "coursework",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/exoplanet-discovery.png",
+      "tended": "2020-04-16",
+      "track": "ml",
+      "status": "archived",
+      "start": "2020-01-01",
+      "end": "2020-04-28",
+      "short": "Exoplanet classification",
+      "context": "Course project, CS 4641 Machine Learning, Spring 2020",
+      "areas": [
+        "ml"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "hand-pose-estimation",
+        "bcihub-tutorials",
+        "brainbraille",
+        "passive-haptic-learning-piano",
+        "2021-12-01-health-tracking-privacy"
+      ],
+      "similar_s": [
+        0.56,
+        0.552,
+        0.54,
+        0.53,
+        0.528
+      ],
+      "x": -0.1148,
+      "y": -0.9355,
+      "related_items": []
+    },
+    {
+      "id": "hand-pose-estimation",
+      "url": "/projects/hand-pose-estimation/",
+      "source": "_projects/hand-pose-estimation.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Hand Pose Estimation using Convolutional Neural Networks in Stereoscopic Vision",
+      "date": "2020-10-23",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "In this computer-vision course project, we built an early-fusion convolutional model for estimating 21 hand keypoints from synchronized stereo images. The model did not converge to a usable estimator; a persistent coordinate offset made the project a practical lesson in validating camera geometry independently of end-to-end training loss.",
+      "tags": [
+        "machine-learning",
+        "computer-vision"
+      ],
+      "category": "coursework",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/hand-pose.png",
+      "tended": "2020-10-23",
+      "track": "ml",
+      "status": "archived",
+      "start": "2020-08-01",
+      "end": "2020-12-28",
+      "short": "Stereo hand pose",
+      "context": "Course project, CS 4476 Computer Vision, Fall 2020",
+      "areas": [
+        "ml"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "bcihub-tutorials",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "ai-through-symbiosis",
+        "passive-haptic-learning-piano",
+        "brainbraille"
+      ],
+      "similar_s": [
+        0.632,
+        0.619,
+        0.614,
+        0.609,
+        0.608
+      ],
+      "x": -0.2821,
+      "y": -0.9528,
+      "related_items": [
+        "bcihub-tutorials",
+        "ai-through-symbiosis"
+      ]
+    },
+    {
+      "id": "horizon-worlds-community-study",
+      "url": "/projects/horizon-worlds-community-study/",
+      "source": "_projects/horizon-worlds-community-study.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Horizon Worlds: A Community of Practice for Social VR Design",
+      "date": "2022-04-22",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "Through roughly 50 hours of participant observation and interviews with six community members, we studied how people learned, collaborated, formed roles, and handled conflict in Horizon Worlds. Its creator community operated as a community of practice, while moderation and the ephemerality of encounters shaped whether its social spaces could remain dependable.",
+      "tags": [
+        "social-computing",
+        "virtual-reality"
+      ],
+      "category": "coursework",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/horizonworlds.png",
+      "tended": "2022-04-22",
+      "track": "social",
+      "status": "archived",
+      "start": "2022-01-01",
+      "end": "2022-04-28",
+      "short": "Horizon Worlds",
+      "context": "Course project, CS 4472 Design of Online Communities, Spring 2022",
+      "areas": [
+        "social"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "assistive-interface-smart-stove",
+        "bcihub-tutorials",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+      ],
+      "similar_s": [
+        0.617,
+        0.604,
+        0.599,
+        0.599,
+        0.596
+      ],
+      "x": 0.2431,
+      "y": -0.4567,
+      "related_items": []
+    },
+    {
+      "id": "itr-atlas",
+      "url": "/projects/itr-atlas/",
+      "source": "_projects/itr-atlas.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "ITR Atlas: Comparing Information Transfer Rates Across Interfaces",
+      "date": "2026-06-24",
+      "planted": "2026-08-30",
+      "git_modified": "2026-08-30",
+      "excerpt": "The Information Transfer Rate Atlas is an independent comparison site for communication and control interfaces across HCI and BCI. We recalculate information transfer rates from original papers and system figures, providing step-by-step derivations and conservative cross-modal comparisons with tighter bounds for language and pointing tasks.",
+      "tags": [
+        "brain-computer-interfaces",
+        "hci",
+        "communication",
+        "metrics",
+        "visualization"
+      ],
+      "category": "independent",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/itr-atlas.png",
+      "tended": "2026-06-24",
+      "areas": [
+        "bci"
+      ],
+      "status": "active",
+      "track": "bci",
+      "members": [],
+      "start": "2026-06-24",
+      "end": "2026-09-27",
+      "series": [
+        {
+          "id": "measuring-bcis",
+          "pos": 2,
+          "len": 3
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "bcihub-tutorials",
+        "brainbraille",
+        "working-memory-localization",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+      ],
+      "similar_s": [
+        0.719,
+        0.67,
+        0.662,
+        0.639,
+        0.637
+      ],
+      "x": -0.2393,
+      "y": -0.6081,
+      "related_items": [
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "bcihub-tutorials",
+        "brainbraille",
+        "working-memory-localization",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+      ]
+    },
+    {
+      "id": "openring-companion",
+      "url": "/projects/openring-companion/",
+      "source": "_projects/openring-companion.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "OpenRing Companion: A Local-First Health Dashboard for Tau-Ring",
+      "date": "2026-07-04",
+      "planted": "2026-08-30",
+      "git_modified": "2026-08-30",
+      "excerpt": "OpenRing Companion is an independent Android companion app for Tsinghua's Tau-Ring smart ring. It replaces a data-collection-oriented interface with a local-first health dashboard that turns passive ring measurements into interpretable daily scores, trends, and intraday views while keeping health data and exports on the user's device.",
+      "tags": [
+        "wearables",
+        "android",
+        "health",
+        "bluetooth",
+        "local-first"
+      ],
+      "category": "independent",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/openring-companion-teaser.png",
+      "tended": "2026-07-04",
+      "areas": [
+        "sensing"
+      ],
+      "status": "complete",
+      "track": "sensing",
+      "members": [],
+      "start": "2026-07-04",
+      "end": "2026-07-04",
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2021-12-01-health-tracking-privacy",
+        "echoforce",
+        "tongue-gestures-in-hwds",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "robojackets-igvc"
+      ],
+      "similar_s": [
+        0.615,
+        0.602,
+        0.592,
+        0.592,
+        0.591
+      ],
+      "x": 0.1621,
+      "y": 0.0,
+      "related_items": [
+        "2021-12-01-health-tracking-privacy",
+        "echoforce"
+      ]
+    },
+    {
+      "id": "passive-haptic-learning-piano",
+      "url": "/projects/passive-haptic-learning-piano/",
+      "source": "_projects/passive-haptic-learning-piano.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Passive Haptic Learning for Accelerated Learning of Piano",
+      "date": "2021-05-12",
+      "planted": "2023-01-02",
+      "git_modified": "2026-09-04",
+      "excerpt": "We developed passive haptic rehearsal: a wearable glove, light-up keyboard, and learning portal that supplement active piano practice with tactile repetition between sessions. In the primary analysis of 20 participants with complete, valid data from a 36-person in-home study, passive rehearsal increased the modeled learning rate for note accuracy by 49.7%, but did not significantly improve rhythm.",
+      "tags": [
+        "haptics",
+        "wearables",
+        "music"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/passivehapticlearning-2.jpg",
+      "tended": "2024-12-01",
+      "areas": [
+        "phl"
+      ],
+      "status": "complete",
+      "short": "Passive haptic piano",
+      "track": "phl",
+      "members": [
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild"
+      ],
+      "start": "2021-05-12",
+      "end": "2024-12-01",
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 0,
+          "len": 6
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "touche",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.914,
+        0.875,
+        0.872,
+        0.685,
+        0.667
+      ],
+      "x": -0.5451,
+      "y": 0.0421,
+      "related_items": [
+        "touche",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "public-health-credibility",
+      "url": "/projects/public-health-credibility/",
+      "source": "_projects/public-health-credibility.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Perceived Credibility of Public Health Messages",
+      "date": "2022-04-27",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "In a survey experiment with 51 Georgia Tech undergraduates, we tested whether the stated source and platform of a COVID-19 public-health message affected its credibility. Messages attributed to public-health agencies were rated above those with an unknown source; the text-only platform manipulation produced no significant effect.",
+      "tags": [
+        "social-computing",
+        "healthcare"
+      ],
+      "category": "coursework",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/healthcredibility.png",
+      "tended": "2022-04-27",
+      "track": "social",
+      "status": "archived",
+      "start": "2022-01-01",
+      "end": "2022-04-28",
+      "short": "Public-health credibility",
+      "context": "Course project, PSYC 2015 Research Methods, Spring 2022",
+      "areas": [
+        "social"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2021-12-01-health-tracking-privacy",
+        "horizon-worlds-community-study",
+        "breathepulse",
+        "assistive-interface-smart-stove",
+        "tvns-appetite-modulation"
+      ],
+      "similar_s": [
+        0.6,
+        0.569,
+        0.568,
+        0.543,
+        0.54
+      ],
+      "x": 0.1605,
+      "y": -0.222,
+      "related_items": []
+    },
+    {
+      "id": "robojackets-igvc",
+      "url": "/projects/robojackets-igvc/",
+      "source": "_projects/robojackets-igvc.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Autonomous Navigation for Mobile Robots in Open Terrain",
+      "date": "2019-12-17",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "For RoboJackets' autonomous ground vehicles, I developed motor-control and path-planning software and built a full-scale Gazebo reproduction of the competition course. I later managed the mechanical, electrical, and software subteams as the project integrated perception, localization, planning, and recovery behavior into a single outdoor robot.",
+      "tags": [
+        "robotics",
+        "competition"
+      ],
+      "category": "organizations",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/jessiii.jpg",
+      "tended": "2019-12-17",
+      "track": "robotics",
+      "status": "archived",
+      "start": "2019-08-01",
+      "end": "2020-11-28",
+      "short": "RoboJackets IGVC",
+      "context": "RoboJackets, Georgia Tech; IGVC 2019, then Jessiii after the 2020 competition was cancelled",
+      "areas": [
+        "robotics"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robotics-humanitarian-demining",
+        "robomaster",
+        "wardian",
+        "openring-companion",
+        "hand-pose-estimation"
+      ],
+      "similar_s": [
+        0.754,
+        0.738,
+        0.609,
+        0.591,
+        0.583
+      ],
+      "x": 0.4944,
+      "y": -0.8981,
+      "related_items": [
+        "robotics-humanitarian-demining",
+        "robomaster"
+      ]
+    },
+    {
+      "id": "robomaster",
+      "url": "/projects/robomaster/",
+      "source": "_projects/robomaster.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Multi-Agent Reinforcement Learning in the 2018 DJI RoboMaster AI Challenge",
+      "date": "2018-05-25",
+      "planted": "2022-11-15",
+      "git_modified": "2026-08-30",
+      "excerpt": "I designed a recurrent reinforcement-learning and simulation framework for an autonomous robot in the 2018 DJI RoboMaster AI Challenge. Team RCMakers qualified as a finalist and placed 11th at ICRA 2018.",
+      "tags": [
+        "robotics",
+        "machine-learning",
+        "competition"
+      ],
+      "category": "organizations",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/robomaster.jpg",
+      "tended": "2018-05-25",
+      "areas": [
+        "robotics",
+        "ml"
+      ],
+      "status": "archived",
+      "start": "2017-10-01",
+      "end": "2018-05-28",
+      "short": "RoboMaster AI Challenge",
+      "context": "High-school team RCMakers; finals May 2018 at ICRA, Brisbane",
+      "track": "robotics",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robojackets-igvc",
+        "robotics-humanitarian-demining",
+        "bcihub-tutorials",
+        "wardian",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+      ],
+      "similar_s": [
+        0.738,
+        0.716,
+        0.59,
+        0.589,
+        0.586
+      ],
+      "x": 0.2864,
+      "y": -0.9327,
+      "related_items": [
+        "robojackets-igvc",
+        "robotics-humanitarian-demining"
+      ]
+    },
+    {
+      "id": "robotics-humanitarian-demining",
+      "url": "/projects/robotics-humanitarian-demining/",
+      "source": "_projects/robotics-humanitarian-demining.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Mobile Robotics for Autonomous Humanitarian Demining",
+      "date": "2017-06-03",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "For the 2017 IEEE humanitarian-demining robotics challenge, our high-school team combined a low-cost mobile robot, dual-coil metal detector, decision-tree classifier, and ROS navigation stack. I worked on mine detection and supporting research; the team placed third and demonstrated the system at ICRA 2017.",
+      "tags": [
+        "robotics",
+        "machine-learning",
+        "competition"
+      ],
+      "category": "organizations",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/hratc.jpg",
+      "tended": "2017-06-03",
+      "areas": [
+        "robotics",
+        "ml"
+      ],
+      "status": "archived",
+      "start": "2017-01-01",
+      "end": "2017-05-28",
+      "short": "HRATC landmine detection",
+      "context": "High-school team RCMakers; finals May 2017 at ICRA (3rd place)",
+      "track": "robotics",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robojackets-igvc",
+        "robomaster",
+        "wardian",
+        "hand-pose-estimation",
+        "brainbraille"
+      ],
+      "similar_s": [
+        0.754,
+        0.716,
+        0.593,
+        0.565,
+        0.559
+      ],
+      "x": 0.3813,
+      "y": -0.8008,
+      "related_items": [
+        "robojackets-igvc",
+        "robomaster"
+      ]
+    },
+    {
+      "id": "silentspeller",
+      "url": "/projects/silentspeller/",
+      "source": "_projects/silentspeller.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "SilentSpeller: Silent Speech Text Entry using Electropalatography",
+      "date": "2020-05-12",
+      "planted": "2022-11-15",
+      "git_modified": "2026-08-30",
+      "excerpt": "SilentSpeller is a hands-free text-entry system that senses tongue contact through capacitive electrodes in a dental retainer. We evaluated silent spelling with a 1,164-word vocabulary while participants were seated and walking, as well as in live text entry.",
+      "tags": [
+        "wearables",
+        "assistive-technology",
+        "subtle-interaction"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/silentspeller.png",
+      "tended": "2022-04-30",
+      "areas": [
+        "subtle",
+        "access"
+      ],
+      "status": "complete",
+      "start": "2019-11-24",
+      "track": "subtle",
+      "members": [
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography"
+      ],
+      "end": "2022-04-30",
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 0,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ],
+      "similar_s": [
+        0.96,
+        0.928,
+        0.78,
+        0.729,
+        0.723
+      ],
+      "x": 0.5729,
+      "y": 0.0058,
+      "related_items": [
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ]
+    },
+    {
+      "id": "tongue-gestures-in-hwds",
+      "url": "/projects/tongue-gestures-in-hwds/",
+      "source": "_projects/tongue-gestures-in-hwds.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Tongue Gestures in Head Worn Devices",
+      "date": "2022-08-12",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "At Microsoft Research, we collected 48,000 trials from 16 participants across eight closed-mouth tongue gestures using sensors in commercial head-worn devices. A multimodal model reached 94% accuracy, and a follow-on interaction technique used tongue gestures to confirm gaze targets without dwell for subtle, hands-free selection.",
+      "tags": [
+        "sensing",
+        "head-worn-displays",
+        "subtle-interaction"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/tonguegestures.png",
+      "tended": "2023-10-09",
+      "track": "subtle",
+      "status": "complete",
+      "start": "2022-06-06",
+      "short": "Tongue gestures",
+      "areas": [
+        "subtle"
+      ],
+      "members": [
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ],
+      "end": "2023-10-09",
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 3,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
+      ],
+      "similar_s": [
+        0.918,
+        0.906,
+        0.878,
+        0.716,
+        0.69
+      ],
+      "x": 0.3642,
+      "y": 0.1588,
+      "related_items": [
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
+      ]
+    },
+    {
+      "id": "touche",
+      "url": "/projects/touche/",
+      "source": "_projects/touche.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Touché: Wearable Vibrotactile Stimulation Hardware for Upper-Limb Spasticity",
+      "date": "2023-01-24",
+      "planted": "2023-09-06",
+      "git_modified": "2026-08-30",
+      "excerpt": "Touché explores flexible, low-cost wearable electronics for delivering vibrotactile stimulation to people with post-stroke upper-limb spasticity. The project focuses on making extended stimulation easier to use at home and during daily activity.",
+      "tags": [
+        "wearables",
+        "haptics",
+        "rehabilitation",
+        "clinical"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/touche.jpg",
+      "tended": "2023-01-24",
+      "areas": [
+        "therapeutics"
+      ],
+      "status": "complete",
+      "end": "2023-08-31",
+      "track": "therapeutics",
+      "members": [],
+      "start": "2023-01-24",
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 4,
+          "len": 6
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "vts-for-lls",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "echoforce",
+        "passive-haptic-learning-piano",
+        "brainbraille"
+      ],
+      "similar_s": [
+        0.834,
+        0.736,
+        0.694,
+        0.685,
+        0.682
+      ],
+      "x": -0.296,
+      "y": 0.246,
+      "related_items": [
+        "vts-for-lls",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "echoforce",
+        "passive-haptic-learning-piano",
+        "brainbraille"
+      ]
+    },
+    {
+      "id": "tvns-appetite-modulation",
+      "url": "/projects/tvns-appetite-modulation/",
+      "source": "_projects/tvns-appetite-modulation.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "AppetiteCheck: Momentary Vagus Nerve Stimulation During Eating",
+      "date": "2025-03-01",
+      "planted": "2025-07-24",
+      "git_modified": "2026-08-30",
+      "excerpt": "AppetiteCheck examines momentary, non-invasive vagus nerve stimulation as a low-attention intervention during eating. In a controlled study, participants ate less and more slowly under stimulation than under sham while reporting similar post-snacking satiety.",
+      "tags": [
+        "wearables",
+        "neural-interfaces",
+        "eating"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/tvns-satiety.jpg",
+      "tended": "2026-09-01",
+      "areas": [
+        "therapeutics"
+      ],
+      "status": "active",
+      "start": "2024-02-03",
+      "track": "therapeutics",
+      "members": [
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
+      ],
+      "end": "2026-09-27",
+      "series": [
+        {
+          "id": "implicit-augmentation",
+          "pos": 2,
+          "len": 5
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+        "breathepulse",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.914,
+        0.683,
+        0.662,
+        0.662,
+        0.658
+      ],
+      "x": 0.026,
+      "y": 0.3864,
+      "related_items": [
+        "breathepulse",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "vts-for-lls",
+      "url": "/projects/vts-for-lls/",
+      "source": "_projects/vts-for-lls.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Vibrotactile Stimulation for Lower Limb Spasticity",
+      "date": "2025-06-01",
+      "planted": "2025-07-24",
+      "git_modified": "2026-09-04",
+      "excerpt": "This ongoing project develops an adjustable vibrotactile wrap and a planned two-phase study for lower-limb spasticity after stroke. The study will compare stimulation locations using electrophysiological and functional measures, then compare stimulation at rest with stimulation during gait training; no outcomes are claimed before data collection is complete.",
+      "tags": [
+        "clinical",
+        "haptics",
+        "rehabilitation",
+        "wearables"
+      ],
+      "category": "research",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/vts-lls-concept.png",
+      "tended": "2025-06-01",
+      "areas": [
+        "therapeutics"
+      ],
+      "status": "active",
+      "short": "VibroTone",
+      "track": "therapeutics",
+      "members": [],
+      "start": "2025-06-01",
+      "end": "2026-09-27",
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 5,
+          "len": 6
+        },
+        {
+          "id": "implicit-augmentation",
+          "pos": 1,
+          "len": 5
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "touche",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "echoforce",
+        "passive-haptic-learning-piano",
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation"
+      ],
+      "similar_s": [
+        0.834,
+        0.675,
+        0.668,
+        0.654,
+        0.634
+      ],
+      "x": -0.3501,
+      "y": 0.1204,
+      "related_items": [
+        "touche",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "echoforce",
+        "passive-haptic-learning-piano",
+        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation"
+      ]
+    },
+    {
+      "id": "wardian",
+      "url": "/projects/wardian/",
+      "source": "_projects/wardian.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Wardian: A Malleable Habitat for Local Agent Work",
+      "date": "2026-02-24",
+      "planted": "2026-08-30",
+      "git_modified": "2026-09-04",
+      "excerpt": "Wardian is a local-first desktop habitat where work done with CLI agents becomes visible, durable, and malleable. It preserves real provider sessions, project context, coordination, and evidence, then lets repeated work become reusable prompts, skills, agent classes, and automations.",
+      "tags": [
+        "agent orchestration",
+        "developer tools",
+        "terminals",
+        "workflows",
+        "rust"
+      ],
+      "category": "independent",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/wardian.png",
+      "tended": "2026-02-24",
+      "track": "agents",
+      "status": "active",
+      "areas": [
+        "agents"
+      ],
+      "members": [],
+      "start": "2026-02-24",
+      "end": "2026-09-27",
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robojackets-igvc",
+        "robotics-humanitarian-demining",
+        "robomaster",
+        "horizon-worlds-community-study",
+        "assistive-interface-smart-stove"
+      ],
+      "similar_s": [
+        0.609,
+        0.593,
+        0.589,
+        0.583,
+        0.567
+      ],
+      "x": 0.4715,
+      "y": -0.6917,
+      "related_items": []
+    },
+    {
+      "id": "working-memory-localization",
+      "url": "/projects/working-memory-localization/",
+      "source": "_projects/working-memory-localization.md",
+      "kind": "project",
+      "collection": "projects",
+      "title": "Localization of Working Memory using tfMRI",
+      "date": "2021-07-23",
+      "planted": "2022-11-15",
+      "git_modified": "2026-09-04",
+      "excerpt": "In a Neuromatch Academy collaboration, we analyzed Human Connectome Project fMRI data from 100 participants across 360 cortical regions. Contrasting 2-back with 0-back tasks isolated increased frontoparietal activity and reduced activity in parts of visual cortex, but did not establish the direction of information flow between regions.",
+      "tags": [
+        "neuroscience",
+        "fmri",
+        "memory"
+      ],
+      "category": "organizations",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/working-memory.png",
+      "tended": "2021-07-23",
+      "areas": [
+        "neuro"
+      ],
+      "status": "archived",
+      "start": "2021-07-01",
+      "end": "2021-07-28",
+      "short": "Working memory (fMRI)",
+      "context": "Neuromatch Academy summer school, July 2021",
+      "track": "neuro",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "itr-atlas",
+        "brainbraille",
+        "bcihub-tutorials",
+        "tongue-gestures-in-hwds",
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs"
+      ],
+      "similar_s": [
+        0.639,
+        0.611,
+        0.595,
+        0.592,
+        0.58
+      ],
+      "x": -0.205,
+      "y": -0.733,
+      "related_items": [
+        "itr-atlas"
+      ]
+    },
+    {
+      "id": "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+      "url": "/publications/2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller/",
+      "source": "_publications/2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Mobile, Hands-Free, Silent Speech Texting Using SilentSpeller",
+      "date": "2021-05-08",
+      "planted": "2021-11-02",
+      "git_modified": "2023-09-06",
+      "excerpt": "Voice control provides hands-free access to computing, but there are many situations where audible speech is not appropriate. Most unvoiced speech text entry systems can not be used while on-the-go due to movement artifacts. SilentSpeller enables mobile silent texting using a dental retainer with capacitive touch sensors to track tongue movement. Users type by spelling words without voicing. In of",
+      "tags": [
+        "sensing",
+        "subtle-interaction"
+      ],
+      "category": "demo",
+      "venue": "Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems",
+      "authors": "Naoki Kimura, Tan Gemicioglu, Jonathan Womack, Richard Li, Yuhui Zhao, Abdelkareem Bedri, Alex Olwal, Jun Rekimoto, Thad Starner",
+      "teaser": "/images/silentspeller-2.png",
+      "tended": "2021-05-08",
+      "track": "subtle",
+      "project": "silentspeller",
+      "areas": [
+        "subtle",
+        "access"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 1,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "silentspeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ],
+      "similar_s": [
+        0.955,
+        0.928,
+        0.77,
+        0.722,
+        0.69
+      ],
+      "x": 0.6699,
+      "y": 0.1586,
+      "related_items": [
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ]
+    },
+    {
+      "id": "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+      "url": "/publications/2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition/",
+      "source": "_publications/2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Passive Haptic Rehearsal for Accelerated Piano Skill Acquisition",
+      "date": "2022-04-30",
+      "planted": "2022-04-25",
+      "git_modified": "2023-09-06",
+      "excerpt": "Passive haptic learning (PHL) uses vibrotactile stimulation to train piano songs using repetition, even when the recipient of stimulation is focused on other tasks. However, many of the benefits of playing piano cannot be acquired without actively playing the instrument. In this position paper, we posit that passive haptic rehearsal, where active piano practice is assisted by separate sessions of ",
+      "tags": [
+        "haptics",
+        "piano"
+      ],
+      "category": "workshop",
+      "venue": "Intelligent Music Interfaces Workshop at the 2022 CHI Conference on Human Factors in Computing Systems",
+      "authors": "Tan Gemicioglu, Noah Teuscher, Brahmi Dwivedi, Soobin Park, Emerson Miller, Celeste Mason, Caitlyn Seim, Thad Starner",
+      "teaser": "/images/passivehapticlearning-2.jpg",
+      "tended": "2022-04-30",
+      "track": "phl",
+      "project": "passive-haptic-learning-piano",
+      "areas": [
+        "phl"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 1,
+          "len": 6
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche"
+      ],
+      "similar_s": [
+        0.923,
+        0.921,
+        0.875,
+        0.623,
+        0.607
+      ],
+      "x": -0.7227,
+      "y": 0.0928,
+      "related_items": [
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+      "url": "/publications/2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography/",
+      "source": "_publications/2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "SilentSpeller: Towards mobile, hands-free silent speech text entry using electropalatography",
+      "date": "2022-04-30",
+      "planted": "2021-11-16",
+      "git_modified": "2023-09-06",
+      "excerpt": "Speech is inappropriate in many situations, limiting when voice control can be used. Most unvoiced speech text entry systems can not be used while on-the-go due to movement artifacts. Using a dental retainer with capacitive touch sensors, SilentSpeller tracks tongue movement, enabling users to type by spelling words without voicing. SilentSpeller achieves an average 97% character accuracy in offli",
+      "tags": [
+        "sensing",
+        "subtle-interaction"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems",
+      "authors": "Naoki Kimura, Tan Gemicioglu, Jonathan Womack, Richard Li, Yuhui Zhao, Abdelkareem Bedri, Zixiong Su, Alex Olwal, Jun Rekimoto, Thad Starner",
+      "teaser": "/images/silentspeller.png",
+      "tended": "2022-04-30",
+      "track": "subtle",
+      "project": "silentspeller",
+      "areas": [
+        "subtle",
+        "access"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 2,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+      ],
+      "similar_s": [
+        0.96,
+        0.955,
+        0.776,
+        0.695,
+        0.693
+      ],
+      "x": 0.7887,
+      "y": 0.0904,
+      "related_items": [
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+      ]
+    },
+    {
+      "id": "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+      "url": "/publications/2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson/",
+      "source": "_publications/2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Learning Piano Songs with Passive Haptic Training: an Interactive Lesson",
+      "date": "2022-09-11",
+      "planted": "2022-08-29",
+      "git_modified": "2024-10-12",
+      "excerpt": "Passive haptic learning (PHL) is a method for learning piano pieces through repetition of haptic stimuli while a user is focused on other daily tasks. In combination with active practice techniques, this method is a powerful tool for users to learn piano pieces with less time spent in active practice while also reducing cognitive effort and increasing retention. We propose a demo combining these t",
+      "tags": [
+        "haptics",
+        "piano",
+        "learning"
+      ],
+      "category": "demo",
+      "venue": "Proceedings of the 2022 ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+      "authors": "Asha Bhandarkar, Tan Gemicioglu, Brahmi Dwivedi, Caitlyn Seim, Thad Starner",
+      "teaser": "/images/passivehapticlearning-3.jpg",
+      "tended": "2022-09-11",
+      "track": "phl",
+      "project": "passive-haptic-learning-piano",
+      "areas": [
+        "phl"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 2,
+          "len": 6
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche"
+      ],
+      "similar_s": [
+        0.923,
+        0.915,
+        0.872,
+        0.642,
+        0.594
+      ],
+      "x": -0.6846,
+      "y": 0.1923,
+      "related_items": [
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+      "url": "/publications/2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays/",
+      "source": "_publications/2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Tongue Gestures for Hands-Free Interaction in Head Worn Displays",
+      "date": "2022-09-11",
+      "planted": "2022-08-29",
+      "git_modified": "2023-09-06",
+      "excerpt": "Head worn displays are often used in situations where users’ hands may be occupied or otherwise unusable due to permanent or situational movement impairments. Hands-free interaction methods like voice recognition and gaze tracking allow accessible interaction with reduced limitations for user ability and environment. Tongue gestures offer an alternative method of private, hands-free and accessible",
+      "tags": [
+        "sensing",
+        "subtle-interaction",
+        "gesture"
+      ],
+      "category": "poster",
+      "venue": "Proceedings of the 2022 ACM International Joint Conference on Pervasive and Ubiquitous Computing",
+      "authors": "Tan Gemicioglu, Mike Winters, Yu-Te Wang, Ivan Tashev",
+      "teaser": "/images/tonguegestures.png",
+      "tended": "2022-09-11",
+      "track": "subtle",
+      "project": "tongue-gestures-in-hwds",
+      "areas": [
+        "subtle"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 4,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "tongue-gestures-in-hwds",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
+      ],
+      "similar_s": [
+        0.906,
+        0.882,
+        0.878,
+        0.698,
+        0.683
+      ],
+      "x": 0.4873,
+      "y": 0.3213,
+      "related_items": [
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
+      ]
+    },
+    {
+      "id": "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+      "url": "/publications/2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices/",
+      "source": "_publications/2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Gaze & Tongue: A Subtle Hands-Free Interaction for Head-worn Devices",
+      "date": "2023-09-11",
+      "planted": "2023-04-13",
+      "git_modified": "2025-06-03",
+      "excerpt": "Gaze tracking allows hands-free and voice-free interaction with computers, and has gained more use recently in virtual and augmented reality headsets. However, it traditionally uses dwell time for selection tasks, which suffers from the Midas Touch problem. Tongue gestures are subtle, accessible and can be sensed non-intrusively using an IMU at the back of the ear, PPG and EEG. We demonstrate a no",
+      "tags": [
+        "sensing",
+        "subtle-interaction",
+        "gaze",
+        "gesture"
+      ],
+      "category": "demo",
+      "venue": "Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems",
+      "authors": "Tan Gemicioglu, R. Michael Winters, Yu-Te Wang, Thomas M. Gable, Ann Paradiso, Ivan J. Tashev",
+      "teaser": "/images/tongue-games.png",
+      "tended": "2023-09-11",
+      "track": "subtle",
+      "project": "tongue-gestures-in-hwds",
+      "areas": [
+        "subtle"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 5,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "tongue-gestures-in-hwds",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
+      ],
+      "similar_s": [
+        0.882,
+        0.878,
+        0.866,
+        0.729,
+        0.722
+      ],
+      "x": 0.4093,
+      "y": 0.3814,
+      "related_items": [
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+        "silentspeller",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
+      ]
+    },
+    {
+      "id": "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+      "url": "/publications/2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs/",
+      "source": "_publications/2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Transitional Gestures for Enhancing ITR and Accuracy in Movement-based BCIs",
+      "date": "2023-06-06",
+      "planted": "2023-04-13",
+      "git_modified": "2023-09-06",
+      "excerpt": "BCIs using imagined or executed movement enable subjects to communicate by performing gestures in sequential patterns. Conventional interaction methods have a one-to-one mapping between movements and commands but new methods such as BrainBraille have instead used a pseudo-binary encoding where multiple body parts are tensed simultaneously. However, non-invasive BCI modalities such as EEG and fNIRS",
+      "tags": [
+        "brain-computer-interfaces",
+        "gesture"
+      ],
+      "category": "poster",
+      "venue": "Proceedings of the 10th International Brain-Computer Interface Meeting",
+      "authors": "Tan Gemicioglu, Yuhui Zhao, Melody Jackson, Thad Starner",
+      "teaser": "/images/brainbraille.jpg",
+      "tended": "2023-06-06",
+      "track": "bci",
+      "project": "brainbraille",
+      "areas": [
+        "bci",
+        "phl",
+        "access"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "measuring-bcis",
+          "pos": 1,
+          "len": 3
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "brainbraille",
+        "itr-atlas",
+        "bcihub-tutorials",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ],
+      "similar_s": [
+        0.8,
+        0.719,
+        0.696,
+        0.669,
+        0.661
+      ],
+      "x": -0.3569,
+      "y": -0.5952,
+      "related_items": [
+        "itr-atlas",
+        "bcihub-tutorials",
+        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+      ]
+    },
+    {
+      "id": "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
+      "url": "/publications/2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices/",
+      "source": "_publications/2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "TongueTap: Multimodal Tongue Gesture Recognition with Head-Worn Devices",
+      "date": "2023-10-09",
+      "planted": "2023-08-28",
+      "git_modified": "2024-10-24",
+      "excerpt": "Mouth-based interfaces are a promising new approach enabling silent, hands-free and eyes-free interaction with wearable devices. However, interfaces sensing mouth movements are traditionally custom-designed and placed near or within the mouth. TongueTap synchronizes multimodal EEG, PPG, IMU, eye tracking and head tracking data from two commercial headsets to facilitate tongue gesture recognition u",
+      "tags": [
+        "sensing",
+        "subtle-interaction",
+        "gesture"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the 25th International Conference on Multimodal Interaction",
+      "authors": "Tan Gemicioglu, R. Michael Winters, Yu-Te Wang, Thomas M. Gable, Ivan J. Tashev",
+      "teaser": "/images/tonguetap.png",
+      "tended": "2023-10-09",
+      "track": "subtle",
+      "project": "tongue-gestures-in-hwds",
+      "areas": [
+        "subtle"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 6,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "tongue-gestures-in-hwds",
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "silentspeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography"
+      ],
+      "similar_s": [
+        0.918,
+        0.878,
+        0.866,
+        0.723,
+        0.695
+      ],
+      "x": 0.2833,
+      "y": 0.2492,
+      "related_items": [
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
+        "silentspeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography"
+      ]
+    },
+    {
+      "id": "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
+      "url": "/publications/2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition/",
+      "source": "_publications/2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "FingerSpeller: Camera-Free Text Entry Using Smart Rings for American Sign Language Fingerspelling Recognition",
+      "date": "2023-10-22",
+      "planted": "2023-08-28",
+      "git_modified": "2023-09-06",
+      "excerpt": "Camera-based text entry using American Sign Language (ASL) fingerspelling has become more feasible due to recent advancements in recognition technology. However, there are numerous situations where camera-based text entry may not be ideal or acceptable. To address this, we present FingerSpeller, a solution that enables camera-free text entry using smart rings. FingerSpeller utilizes accelerometers",
+      "tags": [
+        "sensing",
+        "accessibility",
+        "subtle-interaction"
+      ],
+      "category": "poster",
+      "venue": "The 25th International ACM SIGACCESS Conference on Computers and Accessibility",
+      "authors": "David Martin, Zikang Leng, Tan Gemicioglu, Jon Womack, Jocelyn Heath, Bill Neubauer, Hyeokhyen Kwon, Thomas Plöetz, Thad Starner",
+      "teaser": "/images/fingerspeller.png",
+      "tended": "2023-10-22",
+      "areas": [
+        "subtle",
+        "access"
+      ],
+      "track": "subtle",
+      "members": [],
+      "series": [
+        {
+          "id": "silent-speech",
+          "pos": 7,
+          "len": 8
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "silentspeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+      ],
+      "similar_s": [
+        0.78,
+        0.776,
+        0.77,
+        0.683,
+        0.682
+      ],
+      "x": 0.7168,
+      "y": -0.0207,
+      "related_items": [
+        "silentspeller",
+        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
+        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+      ]
+    },
+    {
+      "id": "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+      "url": "/publications/2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild/",
+      "source": "_publications/2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Passive Haptic Rehearsal for Augmented Piano Learning in the Wild",
+      "date": "2024-12-01",
+      "planted": "2024-10-12",
+      "git_modified": "2025-02-06",
+      "excerpt": "Passive haptic learning (PHL) is a method for training motor skills via intensive repetition of haptic stimuli while a user is focused on other tasks. For the practical application of PHL to music education, we propose passive haptic rehearsal (PHR) where PHL is combined with deliberate active practice. We designed a piano teaching system that includes haptic gloves compatible with daily wear, a C",
+      "tags": [
+        "haptics",
+        "piano",
+        "learning",
+        "implicit-interfaces"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 8, Issue 4",
+      "authors": "Tan Gemicioglu, Elijah Hopper, Brahmi Dwivedi, Richa Kulkarni, Asha Bhandarkar, Priyanka Rajan, Nathan Eng, Adithya Ramanujam, Charles Ramey, Scott M. Gilliland, Celeste Mason, Caitlyn Seim, Thad Starner",
+      "teaser": "/images/passivehapticlearning-4.jpg",
+      "tended": "2024-12-01",
+      "track": "phl",
+      "project": "passive-haptic-learning-piano",
+      "areas": [
+        "phl"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "passive-haptics",
+          "pos": 3,
+          "len": 6
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche"
+      ],
+      "similar_s": [
+        0.921,
+        0.915,
+        0.914,
+        0.667,
+        0.638
+      ],
+      "x": -0.6173,
+      "y": 0.2655,
+      "related_items": [
+        "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "touche"
+      ]
+    },
+    {
+      "id": "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+      "url": "/publications/2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work/",
+      "source": "_publications/2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "BreathePulse: Peripheral Guided Breathing via Implicit Airflow Cues for Information Work",
+      "date": "2024-12-02",
+      "planted": "2024-10-24",
+      "git_modified": "2025-02-06",
+      "excerpt": "Workplace stress contributes to poor performance and adverse health outcomes, yet current stress management tools often fall short in the fast-paced modern workforce. Guided slow breathing is a promising intervention for stress and anxiety, with peripheral breathing guides being explored for concurrent task use. However, their need for explicit user engagement underscores the need for more seamles",
+      "tags": [
+        "respiration",
+        "entrainment",
+        "implicit-interfaces"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 8, Issue 4",
+      "authors": "Tan Gemicioglu, Thalia Viranda, Yiran Zhao, Olzhas Yessenbayev, Jatin Arora, Jane Wang, Pedro Lopes, Alexander T. Adams, Tanzeem Choudhury",
+      "teaser": "/images/breathepulse-2.jpg",
+      "tended": "2024-12-02",
+      "track": "therapeutics",
+      "project": "breathepulse",
+      "areas": [
+        "therapeutics"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "breathepulse",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+        "tvns-appetite-modulation",
+        "tongue-gestures-in-hwds"
+      ],
+      "similar_s": [
+        0.928,
+        0.659,
+        0.644,
+        0.634,
+        0.602
+      ],
+      "x": 0.1638,
+      "y": 0.5667,
+      "related_items": [
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+        "tvns-appetite-modulation"
+      ]
+    },
+    {
+      "id": "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
+      "url": "/publications/2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting/",
+      "source": "_publications/2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Master classes of the tenth international brain-computer interface meeting: showcasing the research of BCI trainees",
+      "date": "2025-02-06",
+      "planted": "2025-02-06",
+      "git_modified": "2025-02-07",
+      "excerpt": "The Tenth International Brain-Computer Interface (BCI) Meeting was held June 6-9, 2023 in the Sonian Forest in Brussels, Belgium. At that meeting, 21 master classes, organized by the BCI Society' s Postdoc & Student Committee, supported the Society' s goal of fostering learning opportunities and meaningful interactions for trainees in BCI-related fields. Master classes provide an informal environm",
+      "tags": [
+        "brain-computer-interfaces",
+        "review"
+      ],
+      "category": "full-paper",
+      "venue": "Journal of Neural Engineering",
+      "authors": "Stephanie L Cernera, Tan Gemicioglu, Julia Berezutskaya, Richard Csaky, Maxime Verwoert, Daniel Polyakov, Sotirios Papadopoulos, Valeria Spagnolo, Juliana Gonzalez-Astudillo, Satyam Kumar, Hussein Alawieh, Dion Kelly, Joanna R G Keough, Araz Minhas, Matthias Dold, Yiyuan Han, Alexander McClanahan, Mousa Mustafa, Juan Jose Gonzalez-Espana, Florencia Garro, Angela Vujic, Kriti Kacker, Christoph Kapeller, Simon H Geukes, Ceci Verbaarschot, Michael Wimmer, Mushfika Sultana, Sara Ahmadi, Christian Herff, Andreea Ioana Sburlea, Camille Jeunet, David E Thompson, Marianna Semprini, Richard A Andersen, Sergey Stavisky, Eli Kinney-Lang, Fabien Lotte, Jordy Thielen, Xing Chen, Victoria Peterson, Aysegul Gunduz, Theresa M Vaughan, Davide Valeriani",
+      "teaser": "/images/BCI-Meeting-2023.jpg",
+      "tended": "2025-02-06",
+      "track": "bci",
+      "related": [
+        "bcihub-tutorials"
+      ],
+      "areas": [
+        "bci"
+      ],
+      "members": [],
+      "series": [],
+      "links": [
+        "bcihub-tutorials"
+      ],
+      "backlinks": [],
+      "similar": [
+        "bcihub-tutorials",
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "brainbraille",
+        "itr-atlas",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.752,
+        0.669,
+        0.65,
+        0.637,
+        0.631
+      ],
+      "x": -0.0069,
+      "y": -0.6392,
+      "related_items": [
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
+        "brainbraille",
+        "itr-atlas",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    },
+    {
+      "id": "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+      "url": "/publications/2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes/",
+      "source": "_publications/2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Autonomic Interfaces for Augmenting Autonomic Processes",
+      "date": "2025-04-26",
+      "planted": "2025-06-03",
+      "git_modified": "2025-06-03",
+      "excerpt": "Autonomic processes are responsible for maintaining the most vital bodily functions, yet physiological interfaces have had limited success in continuously augmenting these functions. A new wave of wearable and ubiquitous devices have begun to sense and actuate autonomic processes of the human body while requiring little deliberate input from the user. In this position paper, we explore three examp",
+      "tags": [
+        "autonomic",
+        "implicit-interfaces"
+      ],
+      "category": "workshop",
+      "venue": "Sensorimotor Devices Workshop at the 2025 CHI Conference on Human Factors in Computing Systems",
+      "authors": "Tan Gemicioglu, Tanzeem Choudhury",
+      "teaser": "/images/autonomicinterfaces.png",
+      "tended": "2025-04-26",
+      "track": "therapeutics",
+      "areas": [
+        "therapeutics"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "breathepulse",
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+        "tvns-appetite-modulation"
+      ],
+      "similar_s": [
+        0.675,
+        0.672,
+        0.667,
+        0.659,
+        0.63
+      ],
+      "x": -0.0526,
+      "y": 0.5245,
+      "related_items": [
+        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "breathepulse",
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+        "tvns-appetite-modulation"
+      ]
+    },
+    {
+      "id": "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+      "url": "/publications/2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation/",
+      "source": "_publications/2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "Toward Everyday Perceptual and Physiological Augmentation",
+      "date": "2025-09-27",
+      "planted": "2025-10-07",
+      "git_modified": "2025-10-07",
+      "excerpt": "Human senses are fundamental to how we interpret and interact with the world. Computing devices are increasingly coupled with the human sensory system through interfaces such as smart glasses, earbuds, and wristbands. This opens up opportunities to dynamically mediate, modify, and augment perceptual experiences and physiological processes through multisensory stimulation. These devices go beyond a",
+      "tags": [
+        "augmentation",
+        "haptics",
+        "review"
+      ],
+      "category": "workshop",
+      "venue": "Adjunct Proceedings of the 38th Annual ACM Symposium on User Interface Software and Technology",
+      "authors": "Yujie Tao, Tan Gemicioglu, Sam Chin, Bingjian Huang, Jas Brooks, Sean Follmer, Pedro Lopes, Suranga Nanayakkara",
+      "teaser": "/images/augmentation-workshop2025.jpg",
+      "tended": "2025-09-27",
+      "track": "therapeutics",
+      "areas": [
+        "therapeutics"
+      ],
+      "members": [],
+      "series": [
+        {
+          "id": "implicit-augmentation",
+          "pos": 4,
+          "len": 5
+        }
+      ],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "touche",
+        "vts-for-lls",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "passive-haptic-learning-piano"
+      ],
+      "similar_s": [
+        0.736,
+        0.675,
+        0.672,
+        0.667,
+        0.667
+      ],
+      "x": -0.0774,
+      "y": 0.1897,
+      "related_items": [
+        "touche",
+        "vts-for-lls",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
+        "passive-haptic-learning-piano"
+      ]
+    },
+    {
+      "id": "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation",
+      "url": "/publications/2025-10-12-EchoForce-Continuous-Grip-Force-Estimation/",
+      "source": "_publications/2025-10-12-EchoForce-Continuous-Grip-Force-Estimation.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "EchoForce: Continuous Grip Force Estimation from Skin Deformation Using Active Acoustic Sensing on a Wristband",
+      "date": "2025-10-12",
+      "planted": "2025-07-24",
+      "git_modified": "2025-10-07",
+      "excerpt": "Grip force is commonly used as an overall health indicator in older adults and is valuable for tracking progress in physical training and rehabilitation. Existing methods for wearable grip force measurement are cumbersome and user-dependent, making them insufficient for practical, continuous grip force measurement. We introduce EchoForce, a novel wristband using acoustic sensing for low-cost, non-",
+      "tags": [
+        "sensing",
+        "ultrasound",
+        "muscle"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the 2025 ACM International Symposium on Wearable Computers",
+      "authors": "Kian Mahmoodi, Yudong Xie, Tan Gemicioglu, Chi-Jung Lee, Jiwan Kim, Cheng Zhang",
+      "teaser": "/images/echoforce.png",
+      "tended": "2025-10-12",
+      "track": "sensing",
+      "project": "echoforce",
+      "areas": [
+        "sensing"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "echoforce",
+        "touche",
+        "vts-for-lls",
+        "passive-haptic-learning-piano",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.961,
+        0.659,
+        0.634,
+        0.633,
+        0.618
+      ],
+      "x": -0.2162,
+      "y": 0.154,
+      "related_items": [
+        "touche",
+        "vts-for-lls",
+        "passive-haptic-learning-piano"
+      ]
+    },
+    {
+      "id": "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
+      "url": "/publications/2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior/",
+      "source": "_publications/2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior.md",
+      "kind": "paper",
+      "collection": "publications",
+      "title": "AppetiteCheck: Feasibility of Momentary Vagus Nerve Stimulation as an Implicit Intervention for Eating Behavior",
+      "date": "2026-09-01",
+      "planted": "2026-08-30",
+      "git_modified": "2026-08-30",
+      "excerpt": "Overeating and emotional eating are common health issues that affect people even without an eating disorder. The vagus nerve plays a critical role in the gut-brain axis, and implanted vagus nerve stimulators have been associated with reduced appetite. In this paper, we propose transcutaneous cervical vagus nerve stimulation (tcVNS) as a ubiquitous system to provide immediate, low-effort interventi",
+      "tags": [
+        "vagus-nerve-stimulation",
+        "eating-behavior",
+        "implicit-interfaces",
+        "health"
+      ],
+      "category": "full-paper",
+      "venue": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies, Volume 10, Issue 3",
+      "authors": "Tan Gemicioglu, Jas Brooks, Pedro Lopes, Tanzeem Choudhury",
+      "teaser": "/images/tvns-satiety.jpg",
+      "tended": "2026-09-01",
+      "track": "therapeutics",
+      "project": "tvns-appetite-modulation",
+      "areas": [
+        "therapeutics"
+      ],
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "tvns-appetite-modulation",
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "breathepulse",
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ],
+      "similar_s": [
+        0.914,
+        0.675,
+        0.658,
+        0.644,
+        0.633
+      ],
+      "x": 0.0593,
+      "y": 0.5159,
+      "related_items": [
+        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
+        "breathepulse",
+        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
+      ]
+    }
+  ]
+}

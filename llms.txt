@@ -10,6 +10,8 @@ This site contains research publications, project descriptions, software, essays
 - [Publications](https://tangemicioglu.com/publications/): Peer-reviewed papers and research outputs, with authors, venues, abstracts, DOI links, and PDFs where available.
 - [Projects](https://tangemicioglu.com/projects/): Research, software, independent work, and coursework, with methods, results, limitations, and primary sources.
 - [Writing](https://tangemicioglu.com/writing/): Essays and project notes.
+- [Timeline](https://tangemicioglu.com/timeline/): Project spans, papers, and writing grouped by research label.
+- [Map](https://tangemicioglu.com/map/): Semantic exploration and a text index of published work.
 - [Curriculum vitae](https://tangemicioglu.com/cv/): Browser page for the current CV.
 - [Curriculum vitae PDF](https://tangemicioglu.com/files/CV.pdf): Complete CV document.
 
@@ -31,6 +33,7 @@ This site contains research publications, project descriptions, software, essays
 
 - [XML sitemap](https://tangemicioglu.com/sitemap.xml): Complete index of public pages.
 - [Atom feed](https://tangemicioglu.com/feed.xml): Writing feed.
+- [Garden data](https://tangemicioglu.com/garden.json): Published items, canonical page URLs, labels, project membership, reading order, and relations.
 - [robots.txt](https://tangemicioglu.com/robots.txt): Crawler policy and sitemap location.
 
 ## Identity

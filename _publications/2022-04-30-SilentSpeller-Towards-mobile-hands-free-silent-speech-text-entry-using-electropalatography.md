@@ -13,4 +13,6 @@ links:
 - [doi, doi, https://doi.org/10.1145/3491102.3502015]
 - [paper, pdf, /files/papers/SilentSpeller_CHI_2022.pdf]
 - [video, video, https://youtu.be/W1NpJ_bwiEU]
+track: "subtle"
+project: "silentspeller"
 ---

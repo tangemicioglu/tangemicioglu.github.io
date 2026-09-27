@@ -1,0 +1,11 @@
+<details class="garden-index" open>
+  <summary>Browse all items by label</summary>
+  {% for label in site.data.tracks %}
+    <h2><a href="{{ '/projects/' | relative_url }}?label={{ label.id }}">{{ label.title }}</a></h2>
+    <ul>
+      {% for item in site.data.garden.items %}
+        {% if item.track == label.id %}<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a> <span class="garden-meta">{{ item.kind }} · {{ item.date | date: '%Y' }}</span></li>{% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</details>

@@ -1,0 +1,16 @@
+---
+layout: archive
+title: "Map"
+description: "Explore connections between Tan Gemicioglu's research projects, publications, and writing."
+schema_type: CollectionPage
+permalink: /map/
+author_profile: false
+garden: true
+---
+
+<p>Everything placed by what it's about. Scroll or pinch to zoom, drag to move, hover to see what connects, and select an item for details.</p>
+<div id="garden-map" data-garden-url="{{ '/garden.json' | relative_url }}"></div>
+{% include garden-index.html %}
+<script src="{{ '/assets/js/garden-common.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/garden-map.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/garden-map-init.js' | relative_url }}" defer></script>

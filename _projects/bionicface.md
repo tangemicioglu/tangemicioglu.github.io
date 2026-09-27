@@ -5,8 +5,10 @@ teaser: "/images/bionicface.png"
 date: "2026-07-28"
 collection: projects
 category: research
-tags: [ wearables, assistive technology, facial paralysis, ems, closed-loop systems ]
+tags: ["wearables", "assistive-technology", "facial paralysis", "ems", "closed-loop systems"]
 links:
+areas: ["therapeutics", "access"]
+status: "active"
 ---
 
 BionicFace is an early-stage wearable project for people with chronic unilateral facial paralysis caused by nerve damage. The aim is assistive: support facial symmetry while the device is being worn. It is not intended to repair the facial nerve, produce permanent recovery, infer emotion, or replace clinical treatment.

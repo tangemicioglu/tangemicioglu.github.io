@@ -8,6 +8,12 @@ category: coursework
 tags: [ social-computing, healthcare ]
 links:
 - [poster, slides, /files/slides/public_health_credibility.pptx]
+short: "Public-health credibility"
+track: "social"
+status: "archived"
+start: "2022-01-01"
+end: "2022-04-28"
+context: "Course project, PSYC 2015 Research Methods, Spring 2022"
 ---
 
 Public-health guidance is only useful when people consider it credible enough to act on. During the COVID-19 pandemic, the same message could appear on an agency website, in a social-media post, or without visible platform context. This course study examined whether perceived credibility changed with the institutional source of a message, the platform on which it appeared, or the interaction between the two.

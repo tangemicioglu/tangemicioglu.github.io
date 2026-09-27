@@ -8,6 +8,8 @@ category: independent
 tags: [ wearables, android, health, bluetooth, local-first ]
 links:
 - [code, code, https://github.com/tangemicioglu/openring-companion]
+areas: ["sensing"]
+status: "complete"
 ---
 
 Smart rings can collect detailed physiological signals, but access to the device does not always give a wearer meaningful access to their own data. OpenRing Companion is an independent Android application for Tsinghua HCI Lab's [Tau-Ring](https://arxiv.org/abs/2508.00778). It retains the ring and its published Bluetooth acquisition layer while replacing the original research-oriented interface with a local health dashboard.

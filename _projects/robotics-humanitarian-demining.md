@@ -9,6 +9,12 @@ tags: [ robotics, machine-learning, competition ]
 links:
 - [code, code, https://github.com/RCMakers/hratc2017_entry_rcmakers]
 - [Finalist Award, award, https://www.inf.ufrgs.br/hratc2017/HRATC2017/Welcome.html]
+short: "HRATC landmine detection"
+areas: ["robotics", "ml"]
+status: "archived"
+start: "2017-01-01"
+end: "2017-05-28"
+context: "High-school team RCMakers; finals May 2017 at ICRA (3rd place)"
 ---
 
 Humanitarian demining combines two difficult problems: detecting small buried objects reliably and moving through unknown terrain without endangering people or equipment. For the 2017 IEEE Robotics and Automation Society Humanitarian Robotics and Technologies Challenge, our high-school team adapted a low-cost mobile robot with a dual-coil metal detector, range sensing, and a ROS navigation stack.

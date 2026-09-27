@@ -7,6 +7,8 @@ tags:
   - ethics
   - privacy
   - wearables
+track: "sensing"
+stage: "evergreen"
 ---
 
 *I originally wrote this for a past iteration of CS3001: Computing and Society at Georgia Tech. I quite like it, and I think the issues are increasingly relevant, so I decided to put it up here.*

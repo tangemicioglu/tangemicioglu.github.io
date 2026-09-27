@@ -9,6 +9,9 @@ tags: [wearables, neural-interfaces, eating]
 links:
 - [InterfaceNeuro'25 poster, slides, /files/slides/VNS_InterfaceNeuro_Poster.pptx]
 - [IMWUT paper, paper, https://doi.org/10.1145/3831630]
+areas: ["therapeutics"]
+status: "active"
+start: "2024-02-03"
 ---
 
 Most interactive systems for eating behavior work through information or deliberate action: they ask a person to record food, notice a cue, interpret feedback, or consciously slow down. AppetiteCheck explored a complementary possibility: apply a brief physiological intervention during an eating episode, while attention remains on another activity.

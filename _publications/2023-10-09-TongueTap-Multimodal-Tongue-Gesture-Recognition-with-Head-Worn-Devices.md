@@ -13,4 +13,6 @@ links:
 - [doi, doi, https://doi.org/10.1145/3577190.3614120]
 - [paper, pdf, /files/papers/TongueTap_ICMI_2023.pdf]
 - [dataset, code, https://zenodo.org/record/8247217]
+track: "subtle"
+project: "tongue-gestures-in-hwds"
 ---

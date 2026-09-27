@@ -12,4 +12,6 @@ tags: [haptics, piano, learning, implicit-interfaces]
 links:
 - [doi, doi, https://doi.org/10.1145/3699748]
 - [paper, pdf, /files/papers/PHL_IMWUT_2024.pdf]
+track: "phl"
+project: "passive-haptic-learning-piano"
 ---

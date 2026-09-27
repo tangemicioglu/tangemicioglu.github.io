@@ -1,0 +1,92 @@
+/* Map styling ported from the approved Website-Garden mock. */
+:root {
+  --text: #494e52; --ink: #111; --gray: #687077; --light: #bdc1c4;
+  --rule: #f2f3f3; --bg: #fff; --tint: #f8f9f9;
+  --t-subtle: #4e79a7; --t-therapeutics: #59a14f; --t-phl: #e15759;
+  --t-bci: #b07aa1; --t-sensing: #f28e2b; --t-agents: #76b7b2;
+  --t-neuro: #6b5b95; --t-social: #edc948; --t-ml: #9c755f;
+  --t-robotics: #8c8c8c; --t-access: #ff9da7;
+}
+.garden-archive [hidden] { display: none !important; }
+.garden-archive { position: relative; }
+.garden-view-toggle { display: flex; justify-content: flex-end; gap: 0; margin: -3.1em 0 1em; }
+.garden-view-toggle button { border: 1px solid var(--light); padding: .4em .65em; background: var(--bg); color: var(--gray); cursor: pointer; }
+.garden-view-toggle button:first-child { border-radius: 4px 0 0 4px; }
+.garden-view-toggle button:last-child { border-left: 0; border-radius: 0 4px 4px 0; }
+.garden-view-toggle button[aria-pressed=true] { background: var(--rule); color: var(--ink); }
+.garden-filters details { margin: .5em 0; }
+.garden-filters summary { cursor: pointer; margin-bottom: .35em; }
+.garden-filters .page__taxonomy-item[aria-pressed=true] { background: #24748e; border-color: #24748e; color: #fff; }
+.garden-earlier { display: inline-block; margin: 0 .5em; color: var(--gray); }
+.garden-label-description p { margin: .8em 0; }
+.garden-year-items::after { content: ''; display: table; clear: both; }
+.garden-year .list__item { overflow: hidden; }
+.garden-year .list__item .garden-teaser { float: left; width: 30%; padding: 10px; }
+.garden-teaser img { width: 100%; height: auto; }
+.garden-archive.is-gallery .garden-year-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.4em; }
+.garden-archive.is-gallery .garden-year-items::after { display: none; }
+.garden-archive .grid__item { width: auto; float: none; margin: 0 0 1.4em; padding: 0; clear: none; min-width: 0; }
+.garden-archive .grid__item .archive__item { display: flex; flex-direction: column; }
+.garden-archive .grid__item .garden-teaser { order: -1; display: block; margin: .75em 0 .25em; }
+.garden-archive .grid__item .garden-teaser img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
+.garden-archive .grid__item .archive__item-excerpt { display: block; font-size: .85em; }
+.garden-archive .grid__item p { margin: .4em 0; }
+.garden-archive .grid__item .page__taxonomy { margin-top: .8em; }
+.garden-archive .grid__item .archive__item-title { font-size: 1em; }
+.garden-archive .grid__item details { font-size: .9em; }
+.garden-archive .garden-permalink { font-size: .75em; }
+.garden-also { clear: both; margin-top: 2em; border-top: 1px solid var(--rule); }
+.garden-meta { color: var(--gray); font-size: .85em; }
+.garden-dot { display: inline-block; width: .55em; height: .55em; border-radius: 50%; margin-right: .3em; }
+.garden-relations { margin-top: 2em; font-size: 1em; }
+.garden-relations section { border-top: 1px solid var(--rule); padding: 1em 0; }
+.garden-relations h2 { margin: 0 0 .6em; font-size: 1em; }
+.garden-relations ul { margin: 0; padding-left: 1.15em; }
+.garden-relations p { margin: .4em 0; }
+.garden-series-nav { display: flex; justify-content: space-between; gap: 1.5em; }
+.garden-series-nav span { flex: 1; }
+.garden-series-nav span:last-child { text-align: right; }
+.garden-relations .garden-hub { list-style: none; padding: 0; }
+.garden-hub li { display: grid; grid-template-columns: 5.5em 3em 1fr; gap: .6em; padding: .4em 0; }
+.garden-hub time { font-size: .85em; color: var(--gray); }
+.garden-timeline { max-width: 100%; overflow-x: auto; margin: 1em 0; }
+.garden-timeline svg { display: block; max-width: none; }
+.garden-timeline a:hover text, .garden-timeline a:focus text { text-decoration: underline; }
+.garden-timeline a:focus { outline: 2px solid var(--ink); }
+.garden-index { margin-top: 1.5em; }
+.garden-index summary { cursor: pointer; }
+.garden-index h2 { font-size: 1.1em; }
+.garden-index li { margin-bottom: .35em; }
+.smap .meta { color: var(--gray); font-size: .85em; }
+.smap .sm-label-select { display: none; }
+.smap .sm-close { float: right; border: 0; background: var(--bg); color: var(--ink); font: inherit; cursor: pointer; padding: 0 .25em; }
+.smap .sm-card .go { display: inline-block; margin: .35em 0; }
+@media (max-width: 760px) {
+  .garden-view-toggle { margin: 0 0 .8em; }
+  .garden-archive .grid__item .archive__item-excerpt { font-size: 1em; }
+  .garden-year .list__item .garden-teaser { float: none; display: block; width: 100%; padding: 8px 0; }
+  .garden-hub li { grid-template-columns: 5.5em 1fr; }
+  .garden-hub li > a { grid-column: 1 / -1; }
+  .smap .sm-label-select { display: block; width: 45%; min-width: 0; font-size: 13px; padding: 7px 4px; }
+  .smap .sm-top input { width: 55%; min-width: 0; }
+  .smap .sm-card { max-height: calc(100% - 125px); }
+}
+
+.smap { position: relative; height: 74vh; min-height: 460px; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.smap canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
+.sm-top { position: absolute; left: 12px; top: 12px; right: 12px; display: flex; gap: 10px; align-items: flex-start; pointer-events: none; }
+.sm-top > * { pointer-events: auto; } .sm-top input { width: 190px; padding: 6px 9px; border: 1px solid var(--light); border-radius: 5px; font: inherit; font-size: 14px; background: var(--bg); color: var(--text); }
+.sm-chips { display: flex; flex-wrap: wrap; gap: 5px; max-width: calc(100% - 420px); }
+.sm-chips button { font: inherit; font-size: 12.5px; padding: 3px 9px; border: 1px solid var(--light); border-radius: 12px; background: color-mix(in srgb, var(--bg) 88%, transparent); color: var(--text); cursor: pointer; }
+.sm-chips button i { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; } .sm-chips button.on { border-color: var(--ink); color: var(--ink); font-weight: 600; } .sm-chips .more { color: var(--gray); }
+.sm-zoom { position: absolute; right: 12px; bottom: 12px; display: flex; flex-direction: column; border: 1px solid var(--light); border-radius: 6px; overflow: hidden; background: var(--bg); }
+.sm-zoom button { width: 34px; height: 32px; border: 0; background: var(--bg); color: var(--ink); font-size: 18px; cursor: pointer; } .sm-zoom button + button { border-top: 1px solid var(--light); } .sm-zoom button:hover { background: var(--rule); }
+.sm-key { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: var(--gray); display: flex; gap: 12px; background: color-mix(in srgb, var(--bg) 85%, transparent); padding: 3px 8px; border-radius: 5px; }
+.sm-key i { display: inline-block; margin-right: 5px; vertical-align: -1px; } .k-proj { width: 11px; height: 11px; border-radius: 50%; background: var(--gray); }
+.k-paper { width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--gray); } .k-writ { width: 8px; height: 8px; background: var(--gray); transform: rotate(45deg); }
+.sm-tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--light); border-radius: 6px; padding: 6px 9px; font-size: 13px; max-width: 290px; box-shadow: 0 3px 12px rgba(0,0,0,.12); display: none; }
+.sm-card { position: absolute; right: 12px; top: 56px; width: 330px; max-height: calc(100% - 180px); overflow-y: auto; background: var(--bg); border: 1px solid var(--light); border-radius: 8px; padding: 12px 14px; box-shadow: 0 6px 22px rgba(0,0,0,.12); display: none; font-size: 14px; }
+.sm-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 5px; margin-bottom: 8px; } .sm-card h3 { margin: 2px 0 4px; font-size: 17px; line-height: 1.3; color: var(--ink); }
+.sm-card p { margin: 8px 0; } .sm-card .go { font-weight: 600; } .sm-card h4 { margin: 12px 0 4px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--gray); }
+.sm-card ul { list-style: none; padding: 0; margin: 0; } .sm-card li { padding: 2px 0; }
+@media (max-width: 760px) { .sm-chips { display: none; } .sm-card { left: 12px; width: auto; } }

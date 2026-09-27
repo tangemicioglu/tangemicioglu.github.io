@@ -9,6 +9,12 @@ tags: [ ubiquitous-computing, assistive-technology ]
 links:
 - [slides, slides, /files/slides/assistive_smart_stove.pdf]
 - [report, pdf, /files/misc_pdf/SmartStove_Report.pdf]
+short: "Assistive smart stove"
+areas: ["access"]
+status: "archived"
+start: "2022-01-01"
+end: "2022-04-28"
+context: "Course project, CS 3873, Spring 2022"
 ---
 
 Kitchen accessibility involves more than simplifying a control panel. A person may need to remember which burner is active, locate ingredients after an interruption, lift cookware, or reach into a low oven. We designed this coursework prototype around three sources of difficulty for older adults and people with cognitive or mobility impairments: memory lapses, unsafe reaching and bending, and the complexity of coordinating several cooking tasks at once.

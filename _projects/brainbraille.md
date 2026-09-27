@@ -11,6 +11,9 @@ links:
 - [BCI Meeting poster, paper, /files/papers/BrainBraille_BCIMeeting_2023_Poster.pdf]
 - [President's Undergraduate Research Award, award, https://undergradresearch.gatech.edu/content/presidents-undergraduate-research-awards]
 
+areas: ["bci", "phl", "access"]
+status: "complete"
+start: "2019-11-22"
 ---
 
 Many non-invasive brain-computer interfaces map one detectable brain response to one command. BrainBraille instead encodes characters through combinations of movements across six body regions, borrowing the compact structure of Braille. Its intended application is attempted-movement communication for people with little or no reliable muscle movement, while avoiding interfaces that require continuous visual attention.

@@ -12,4 +12,5 @@ tags: [autonomic,implicit-interfaces]
 links:
 - [paper, pdf, /files/papers/AutonomicInterfaces_SMD_at_CHI_2025.pdf]
 
+track: "therapeutics"
 ---

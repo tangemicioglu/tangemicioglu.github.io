@@ -6,6 +6,9 @@ date: "2023-01-24"
 collection: projects
 category: research
 tags: [ wearables, haptics, rehabilitation, clinical ]
+areas: ["therapeutics"]
+status: "complete"
+end: "2023-08-31"
 ---
 
 Post-stroke spasticity can leave the hand and arm persistently contracted, limiting comfort and everyday movement. Vibrotactile stimulation has shown promise as a way to reduce upper-limb symptoms, but clinic-sized apparatus cannot provide the long, repeated exposure that a person could receive during ordinary activity. Touché explores the wearable hardware needed to make that form of stimulation easier to use outside the clinic.

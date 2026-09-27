@@ -6,6 +6,9 @@ date: "2025-06-01"
 collection: projects
 category: research
 tags: [ clinical, haptics, rehabilitation, wearables]
+short: "VibroTone"
+areas: ["therapeutics"]
+status: "active"
 ---
 
 Lower-limb spasticity can persist long after stroke, tightening muscles around the hip, knee, ankle, and foot and making gait less predictable. Existing care often requires repeated access to rehabilitation specialists, medication, or injections. This project examines whether low-amplitude vibrotactile stimulation can be delivered through an adjustable wearable as a complement to those treatments, including during rest and gait training.

@@ -9,6 +9,10 @@ tags: [ education, brain-computer-interfaces ]
 links:
 - [tutorial repository, code, https://github.com/tangemicioglu/tutorial-bci-meeting]
 - [BCI Society, website, https://bcisociety.org/]
+areas: ["bci"]
+status: "complete"
+start: "2023-01-01"
+end: "2023-12-31"
 ---
 
 Brain-computer interface research draws on neuroscience, signal processing, machine learning, hardware, clinical practice, and human-computer interaction. That breadth makes the field productive, but it also makes entry difficult: a tutorial that assumes fluency in one discipline can be inaccessible to a student arriving from another.

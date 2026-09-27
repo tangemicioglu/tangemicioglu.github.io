@@ -12,6 +12,9 @@ links:
 - [CHI'21 Interactivity paper, paper, https://tangemicioglu.com/publications/#mobile-hands-free-silent-speech-texting-using-silentspeller]
 - [UROP Outstanding Oral Presentation Award, award, https://symposium.urop.gatech.edu/awards/]
 - [BuzzFeed, press, https://www.buzzfeednews.com/article/richardnieva/google-glass-creator-is-experimenting-with-a-smart-retainer]
+areas: ["subtle", "access"]
+status: "complete"
+start: "2019-11-24"
 ---
 
 Speech interfaces leave an important gap between typing and speaking aloud. Audible speech can be inappropriate in a shared office, impossible in a noisy setting, or undesirable when a message is private. SilentSpeller investigated whether tongue movement could provide fast, hands-free text entry without requiring the user to vocalize.

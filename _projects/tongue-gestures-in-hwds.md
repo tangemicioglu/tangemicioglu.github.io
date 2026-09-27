@@ -11,6 +11,10 @@ links:
 - [CHI'23 demo, paper, https://tangemicioglu.com/publications/#gaze-tongue-a-subtle-hands-free-interaction-for-head-worn-devices]
 - [UbiComp'22 poster, paper, https://tangemicioglu.com/publications/#tongue-gestures-for-hands-free-interaction-in-head-worn-displays]
 - [talk, video, https://www.microsoft.com/en-us/research/video/tongue-gesture-recognition-in-head-mounted-displays/]
+short: "Tongue gestures"
+track: "subtle"
+status: "complete"
+start: "2022-06-06"
 ---
 
 Head-worn displays are often used when the hands are occupied, fatigued, or unavailable. Voice is conspicuous and unreliable in noise, while gaze usually requires a dwell interval that slows selection and can trigger unintended actions. Tongue gestures offer another channel: they can be performed with the mouth closed, do not occupy vision or hearing, and preserve use of the hands.

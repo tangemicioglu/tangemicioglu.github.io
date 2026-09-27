@@ -9,8 +9,10 @@ abstract: "BCIs using imagined or executed movement enable subjects to communica
 pseudo-binary encoding where multiple body parts are tensed simultaneously. However, non-invasive BCI modalities such as EEG and fNIRS have limited spatial specificity, and have difficulty distinguishing simultaneous movements. We propose a new method using transitions in gesture sequences to combinatorially increase possible commands without simultaneous movements. We demonstrate the efficacy of transitional gestures in a pilot fNIRS study where accuracy increased from 81% to 92% when distinguishing transitions of two movements instead of two movements independently. We calculate ITR for a potential transitional version of BrainBraille, where ITR would increase from 143bpm to 218bpm."
 link: "/files/papers/BrainBraille_BCIMeeting_2023_Poster.pdf"
 category: poster
-tags: [brain-computer-interface, gesture]
+tags: ["brain-computer-interfaces", "gesture"]
 links:
 # - [doi, doi, https://doi.org/10.1145/3544793.3560363]
 - [paper, pdf, /files/papers/BrainBraille_BCIMeeting_2023_Poster.pdf]
+track: "bci"
+project: "brainbraille"
 ---

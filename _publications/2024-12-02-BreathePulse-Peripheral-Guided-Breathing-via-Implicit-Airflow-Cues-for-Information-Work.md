@@ -12,4 +12,6 @@ tags: [respiration, entrainment, implicit-interfaces]
 links:
 - [doi, doi, https://doi.org/10.1145/3702211]
 - [paper, pdf, /files/papers/BreathePulse_IMWUT_2024.pdf]
+track: "therapeutics"
+project: "breathepulse"
 ---

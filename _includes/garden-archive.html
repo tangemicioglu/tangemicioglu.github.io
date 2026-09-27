@@ -1,0 +1,51 @@
+{% assign entries = site[include.collection] | sort: 'date' | reverse %}
+{% assign categories = entries | map: 'category' | uniq | sort %}
+<div class="garden-archive" data-collection="{{ include.collection }}">
+  <div class="garden-view-toggle" role="group" aria-label="Archive view">
+    <button type="button" data-view="list" aria-label="List view" title="List view" aria-pressed="true"><i class="fas fa-list" aria-hidden="true"></i></button>
+    <button type="button" data-view="gallery" aria-label="Gallery view" title="Gallery view" aria-pressed="false"><i class="fas fa-th-large" aria-hidden="true"></i></button>
+  </div>
+  <div class="page__taxonomy garden-filters">
+    <details open>
+      <summary>Filter by category</summary>
+      {% for category in categories %}
+        <button type="button" class="page__taxonomy-item" data-category="{{ category | escape }}" aria-pressed="false">{{ category }}</button>
+      {% endfor %}
+    </details>
+    <details class="garden-label-filter">
+      <summary>Filter by label</summary>
+      {% assign earlier_started = false %}
+      {% for label in site.data.tracks %}
+        {% if label.era == 'earlier' and earlier_started == false %}<span class="garden-earlier">earlier:</span>{% assign earlier_started = true %}{% endif %}
+        <button type="button" class="page__taxonomy-item" data-label="{{ label.id }}" aria-pressed="false" data-blurb="{{ label.blurb | escape }}" data-title="{{ label.title | escape }}">{{ label.title }}</button>
+      {% endfor %}
+    </details>
+  </div>
+  <div class="garden-label-description" aria-live="polite"></div>
+  <p class="garden-empty" hidden>No entries match these filters. <button type="button" data-clear>Clear filters</button></p>
+  {% assign years = entries | group_by_exp: 'entry', 'entry.date | date: "%Y"' %}
+  {% for year in years %}
+    <section class="garden-year" aria-labelledby="{{ year.name }}">
+      <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
+      <div class="garden-year-items">
+        {% for post in year.items %}
+          {% assign garden_item = site.data.garden.items | where: 'url', post.url | first %}
+          {% include archive-single.html garden=garden_item %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+  {% if include.collection == 'projects' %}
+    <section class="garden-also" hidden aria-labelledby="garden-also-title">
+      <h2 id="garden-also-title">Also labelled <span></span></h2>
+      <ul>
+        {% for item in site.data.garden.items %}
+          {% if item.kind == 'essay' or item.kind == 'note' or item.kind == 'paper' and item.project == nil %}
+            <li data-also-areas="{{ item.areas | join: ',' }}"><a href="{{ item.url | relative_url }}">{{ item.title }}</a> <span class="garden-meta">{{ item.kind }} · {{ item.date | date: '%Y' }}</span></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</div>
+<script src="{{ '/assets/js/garden-archive.js' | relative_url }}" defer></script>

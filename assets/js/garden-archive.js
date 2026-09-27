@@ -1,0 +1,79 @@
+/* Shared archive controls; the articles remain readable without JavaScript. */
+(() => {
+  "use strict";
+  const root = document.querySelector('.garden-archive');
+  if (!root) return;
+  const cards = [...root.querySelectorAll('[data-garden-item]')];
+  const categories = [...root.querySelectorAll('button[data-category]')];
+  const labels = [...root.querySelectorAll('button[data-label]')];
+  const views = [...root.querySelectorAll('button[data-view]')];
+  const selected = new Set();
+  let category = '', legacyTags = [];
+  const storageKey = 'garden-archive-view';
+
+  function view(mode, remember = false) {
+    const gallery = mode === 'gallery';
+    root.classList.toggle('is-gallery', gallery);
+    cards.forEach(card => {
+      card.classList.toggle('grid__item', gallery);
+      card.classList.toggle('list__item', !gallery);
+    });
+    views.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.view === (gallery ? 'gallery' : 'list'))));
+    if (remember) { try { localStorage.setItem(storageKey, mode); } catch (_) { /* Private browsing can disable storage. */ } }
+  }
+
+  function update(writeURL = true) {
+    let count = 0;
+    cards.forEach(card => {
+      const areas = card.dataset.areas.split(',');
+      card.hidden = !!((category && category !== card.dataset.category)
+        || (selected.size && !areas.some(id => selected.has(id)))
+        || (legacyTags.length && !card.dataset.tags.split(',').some(tag => legacyTags.includes(tag))));
+      if (!card.hidden) count++;
+    });
+    root.querySelectorAll('.garden-year').forEach(year => { year.hidden = !year.querySelector('[data-garden-item]:not([hidden])'); });
+    root.querySelector('.garden-empty').hidden = count > 0;
+    categories.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
+    labels.forEach(button => button.setAttribute('aria-pressed', String(selected.has(button.dataset.label))));
+    const descriptions = root.querySelector('.garden-label-description');
+    descriptions.replaceChildren(...labels.filter(button => selected.has(button.dataset.label)).map(button => {
+      const p = document.createElement('p'); p.textContent = button.dataset.blurb; return p;
+    }));
+    const also = root.querySelector('.garden-also');
+    if (also) {
+      let matches = 0;
+      also.querySelectorAll('li').forEach(li => {
+        li.hidden = !li.dataset.alsoAreas.split(',').some(id => selected.has(id));
+        if (!li.hidden) matches++;
+      });
+      also.hidden = !selected.size || !matches;
+      also.querySelector('h2 span').textContent = labels.filter(b => selected.has(b.dataset.label)).map(b => b.dataset.title).join(' / ');
+    }
+    if (writeURL) {
+      const url = new URL(location.href);
+      ['category', 'label', 'tags'].forEach(key => url.searchParams.delete(key));
+      if (category) url.searchParams.set('category', category);
+      if (selected.size) url.searchParams.set('label', [...selected].join(','));
+      if (legacyTags.length) url.searchParams.set('tags', legacyTags.join(','));
+      history.replaceState(null, '', url);
+    }
+  }
+
+  function fromURL() {
+    const params = new URL(location.href).searchParams;
+    category = params.get('category') || '';
+    selected.clear();
+    (params.get('label') || '').split(',').forEach(id => { if (labels.some(b => b.dataset.label === id)) selected.add(id); });
+    legacyTags = (params.get('tags') || '').split(',').filter(Boolean);
+    if (selected.size) root.querySelector('.garden-label-filter').open = true;
+    update(false);
+  }
+  categories.forEach(button => button.addEventListener('click', () => { category = category === button.dataset.category ? '' : button.dataset.category; update(); }));
+  labels.forEach(button => button.addEventListener('click', () => { const id = button.dataset.label; selected.has(id) ? selected.delete(id) : selected.add(id); legacyTags = []; update(); }));
+  views.forEach(button => button.addEventListener('click', () => view(button.dataset.view, true)));
+  root.querySelector('[data-clear]').addEventListener('click', () => { category = ''; legacyTags = []; selected.clear(); update(); });
+  addEventListener('popstate', fromURL);
+  addEventListener('storage', event => { if (event.key === storageKey) view(event.newValue); });
+  try { view(localStorage.getItem(storageKey)); } catch (_) { view('list'); }
+  fromURL();
+})();

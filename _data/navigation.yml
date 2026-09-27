@@ -14,6 +14,12 @@ main:
         
   - title: "Writing"
     url: /writing/
+
+  - title: "Timeline"
+    url: /timeline/
+
+  - title: "Map"
+    url: /map/
     
   - title: "CV"
     url: /cv/

@@ -10,6 +10,12 @@ links:
 - [report, pdf, /files/misc_pdf/Team RCMakers Technical Report 2018.pdf]
 - [Finalist Award, award, https://www.robomaster.com/en-US/resource/pages/announcement/863]
 
+short: "RoboMaster AI Challenge"
+areas: ["robotics", "ml"]
+status: "archived"
+start: "2017-10-01"
+end: "2018-05-28"
+context: "High-school team RCMakers; finals May 2018 at ICRA, Brisbane"
 ---
 
 The 2018 DJI RoboMaster AI Challenge required autonomous robots to localize, avoid obstacles, identify opponents, aim, and make tactical decisions in a fast two-on-two match. Team RCMakers entered with a small high-school team and a limited hardware budget, which made simulation and compact learning methods central to our approach.

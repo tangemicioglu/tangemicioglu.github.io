@@ -8,6 +8,9 @@ category: research
 tags: [ wearables, sensing, force, muscle]
 links:
 - [ISWC'25 paper, paper, https://tangemicioglu.com/publications/#echoforce-continuous-grip-force-estimation-from-skin-deformation-using-active-acoustic-sensing-on-a-wristband]
+areas: ["sensing"]
+status: "complete"
+start: "2024-08-07"
 ---
 
 Grip force is useful in rehabilitation, physical training, and assessment of strength in older adults, but it is usually measured with an instrument that must be actively held. Wearable alternatives often depend on tight placement, individual calibration, or sensors embedded in the object being grasped. EchoForce investigates whether force can instead be inferred continuously from the way forearm tissue changes during gripping.

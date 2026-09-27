@@ -13,6 +13,9 @@ links:
 - [CHI'22 IMI abstract, paper, https://tangemicioglu.com/publications/#passive-haptic-rehearsal-for-accelerated-piano-skill-acquisition]
 - [UbiComp'22 Best Demo Award, award, https://ubicomp.org/ubicomp2022/cfp/posters-demos-6/]
 - [UROP Outstanding Oral Presentation Award, award, https://symposium.urop.gatech.edu/awards/]
+short: "Passive haptic piano"
+areas: ["phl"]
+status: "complete"
 ---
 
 Passive haptic learning uses repeated tactile cues to teach a motor sequence while the learner is attending to something else. Earlier studies showed that vibration motors on the fingers could teach piano melodies, but passive exposure cannot replace the timing, force, and coordination learned by actively playing an instrument. We therefore reframed the technique as *passive haptic rehearsal*: tactile repetition supplements deliberate practice between sessions rather than serving as a complete lesson.

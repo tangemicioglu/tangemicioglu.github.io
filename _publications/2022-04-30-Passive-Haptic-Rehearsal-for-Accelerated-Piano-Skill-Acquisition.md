@@ -13,4 +13,6 @@ links:
 - [doi, doi, https://doi.org/10.48550/arXiv.2203.12749]
 - [paper, pdf, /files/papers/PHL_IMI_at_CHI_2022.pdf]
 - [slides, slides, /files/slides/Passive Haptic Rehearsal for CHI 2022.pptx]
+track: "phl"
+project: "passive-haptic-learning-piano"
 ---

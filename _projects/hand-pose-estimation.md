@@ -8,6 +8,12 @@ category: coursework
 tags: [ machine-learning, computer-vision ]
 links:
 - [slides, slides, /files/slides/hand_pose_slides.pptx]
+short: "Stereo hand pose"
+track: "ml"
+status: "archived"
+start: "2020-08-01"
+end: "2020-12-28"
+context: "Course project, CS 4476 Computer Vision, Fall 2020"
 ---
 
 Hand-pose estimation is commonly performed from a single color image or from a color-and-depth camera. A single view makes depth ambiguous, while dedicated depth hardware adds cost and constrains deployment. In this computer-vision course project, we examined whether two synchronized color images could provide the missing depth information through a learned stereo-fusion model.

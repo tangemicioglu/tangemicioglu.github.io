@@ -5,10 +5,12 @@ teaser: "/images/itr-atlas.png"
 date: "2026-06-24"
 collection: projects
 category: independent
-tags: [ bci, hci, communication, metrics, visualization ]
+tags: ["brain-computer-interfaces", "hci", "communication", "metrics", "visualization"]
 links:
 - [project site, writeup, https://tangemicioglu.com/itr-atlas/]
 - [code, code, https://github.com/tangemicioglu/itr-atlas]
+areas: ["bci"]
+status: "active"
 ---
 
 Information transfer rate (ITR) and throughput are widely used throughout HCI and BCI to summarize how quickly a person can communicate with or control a system. Expressing performance in bits per second appears to provide a common basis for comparing interfaces as different as a mouse, a gaze keyboard, and an intracortical speech decoder. However, these comparisons depend strongly on how the bits are defined and which assumptions the calculation makes. I built ITR Atlas after encountering a chart of invasive BCI performance and finding that the underlying scores were difficult to audit on a consistent basis.

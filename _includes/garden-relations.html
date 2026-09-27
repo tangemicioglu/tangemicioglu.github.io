@@ -1,0 +1,41 @@
+{% if garden_page %}
+<aside class="garden-relations" aria-label="Explore related work">
+  <p class="garden-labels"><strong>Labels:</strong>
+    {% for area in garden_page.areas %}
+      {% assign label = site.data.tracks | where: 'id', area | first %}
+      <a href="{{ '/projects/' | relative_url }}?label={{ area }}"><span class="garden-dot" style="background: var(--t-{{ area }})" aria-hidden="true"></span>{{ label.title }}</a>{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  </p>
+  {% if garden_page.context %}<p class="garden-context">{{ garden_page.context }}</p>{% endif %}
+  {% if garden_page.project %}
+    {% assign parent = site.data.garden.items | where: 'id', garden_page.project | first %}
+    <section><h2>Part of project</h2><p><a href="{{ parent.url | relative_url }}">{{ parent.title }}</a></p></section>
+  {% endif %}
+  {% if garden_page.members.size > 0 %}
+    <section><h2>Everything in this project</h2>
+      <ul class="garden-hub">
+        {% for member in garden_page.members %}
+          {% assign work = site.data.garden.items | where: 'id', member | first %}
+          <li><time datetime="{{ work.date }}">{{ work.date | date: '%b %Y' }}</time><span class="garden-meta">{{ work.kind }}</span><a href="{{ work.url | relative_url }}">{{ work.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+  {% for membership in garden_page.series %}
+    {% assign thread = site.data.series | where: 'id', membership.id | first %}
+    {% assign previous_position = membership.pos | minus: 1 %}
+    {% assign next_position = membership.pos | plus: 1 %}
+    <section>
+      <h2>{{ thread.title }}</h2>
+      <p class="garden-meta">Reading order · {{ next_position }} of {{ membership.len }}</p>
+      <nav class="garden-series-nav" aria-label="{{ thread.title | escape }} reading order">
+        <span>{% if previous_position >= 0 %}{% assign previous_id = thread.items[previous_position] %}{% assign previous = site.data.garden.items | where: 'id', previous_id | first %}<a href="{{ previous.url | relative_url }}">← {{ previous.short | default: previous.title }}</a>{% endif %}</span>
+        <span>{% if next_position < membership.len %}{% assign next_id = thread.items[next_position] %}{% assign next = site.data.garden.items | where: 'id', next_id | first %}<a href="{{ next.url | relative_url }}">{{ next.short | default: next.title }} →</a>{% endif %}</span>
+      </nav>
+    </section>
+  {% endfor %}
+  {% if garden_page.links.size > 0 %}<section><h2>See also</h2>{% include garden-links.html ids=garden_page.links %}</section>{% endif %}
+  {% if garden_page.backlinks.size > 0 %}<section><h2>Linked from</h2>{% include garden-links.html ids=garden_page.backlinks %}</section>{% endif %}
+  {% if garden_page.related_items.size > 0 %}<section><h2>Related</h2>{% include garden-links.html ids=garden_page.related_items %}</section>{% endif %}
+</aside>
+{% endif %}

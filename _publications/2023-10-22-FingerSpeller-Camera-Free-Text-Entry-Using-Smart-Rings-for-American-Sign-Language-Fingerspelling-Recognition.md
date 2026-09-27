@@ -12,4 +12,5 @@ tags: [sensing, accessibility, subtle-interaction]
 links:
 - [doi, doi, https://doi.org/10.1145/3597638.3614491]
 - [paper, pdf, /files/papers/FingerSpeller_ASSETS_2023_Poster.pdf]
+areas: ["subtle", "access"]
 ---

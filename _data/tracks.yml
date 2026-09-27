@@ -1,0 +1,42 @@
+# Proposed areas: hand-named labels, in Tan's 2026 vocabulary ("implicit augmentation", "brain–computer interfaces" (not "neural interfaces", which read too broad here);
+# "closed-loop health" kept for the bio only, since VTS/Touché are not closed-loop; "autonomic interfaces" and "passive wearable therapeutics" retired).
+# An item lists one or more (`areas: [home, ...]`); the first is its home. Order = display order.
+# `era: earlier` groups past areas together without making "early" an area of its own.
+- id: therapeutics
+  title: Wearable therapeutics
+  blurb: Wearables that work on the body's own processes without needing your attention, from pacing your breathing and vibrotactile therapy for spasticity to vagus nerve stimulation during meals and restoring facial expression.
+- id: bci
+  title: Brain–computer interfaces
+  blurb: Passively learnable BCIs, how fast any interface can carry information, and teaching the BCI community.
+- id: agents
+  title: AI agents
+  blurb: Working alongside AI agents, and building the environment they work in. Wardian, and essays on what changes.
+- id: sensing
+  title: Wearable sensing
+  blurb: Sensing force, motion and health on the body, and keeping that data with the person it describes.
+- id: phl
+  title: Passive haptic learning
+  blurb: Learning motor skills such as piano through tactile cues, without active practice.
+- id: subtle
+  title: Subtle interaction
+  blurb: Hands-free, eyes-free input. Silent speech, tongue and gaze, fingerspelling.
+- id: access
+  title: Accessibility
+  era: earlier
+  blurb: Designing with and for people with disabilities, from silent speech and ASL to facial paralysis and safer kitchens.
+- id: social
+  title: Social computing
+  era: earlier
+  blurb: Studies of online communities in social VR and of how people judge public-health messages.
+- id: ml
+  title: Machine learning & vision
+  era: earlier
+  blurb: Learning from video, stereo images and telescope time series.
+- id: neuro
+  title: Neuroscience
+  era: earlier
+  blurb: Localizing working memory with task fMRI, at Neuromatch Academy.
+- id: robotics
+  title: Robotics
+  era: earlier
+  blurb: Autonomous robots for humanitarian demining and competition, before switching to augmentation in undergrad.

@@ -13,4 +13,5 @@ links:
 - [paper, pdf, /files/papers/EverydayAugmentation_UIST_2025.pdf]
 - [doi, doi, https://doi.org/10.1145/3746058.3758471]
 
+track: "therapeutics"
 ---

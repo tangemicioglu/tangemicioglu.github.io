@@ -9,6 +9,10 @@ tags: [ machine-learning, computer-vision, head-worn-displays ]
 links:
 - [ICASSPW'23 paper, paper, https://alexanderyang.me/documents/papers/23-aits-icassp-workshop.pdf]
 - [code, code, https://github.com/czming/ai-through-symbiosis]
+short: "AI through Symbiosis"
+areas: ["ml", "subtle"]
+status: "complete"
+start: "2020-02-02"
 ---
 
 Most computer-vision systems are trained on datasets that were collected and labeled before deployment. This project explored a different model: a wearable computer observes a person performing a repetitive task, uses the structure of that task as weak supervision, and gradually learns enough about the environment to assist the person doing the work. We studied this idea in warehouse order picking, where an error-detection system would need to recognize what a worker picked without adding another scanning or labeling step.

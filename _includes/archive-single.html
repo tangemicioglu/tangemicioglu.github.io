@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item" data-title="{{ post.title | escape }}" id="{{ post.title | slugify }}" data-year="{{ post.date | date: "%Y" }}">
+<div class="{{ include.type | default: "list" }}__item" data-title="{{ post.title | escape }}" id="{{ post.title | slugify }}" data-year="{{ post.date | date: "%Y" }}"{% if include.garden %} data-garden-item data-category="{{ post.category | escape }}" data-areas="{{ include.garden.areas | join: ',' }}" data-tags="{{ post.tags | join: ',' | escape }}"{% endif %}>
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -27,7 +27,9 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if post.collection == 'publications' %}
+      {% if include.garden and post.collection == 'publications' %}
+        <a href="{{ post.link }}">{{ title }}</a> <a class="garden-permalink" href="{{ post.url | relative_url }}" rel="permalink" aria-label="About {{ post.title | escape }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+      {% elsif post.collection == 'publications' %}
         <a href="{{ post.link }}">{{ title }}</a>
       {% elsif post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -37,7 +39,11 @@
     </h2>
     
     {% if post.collection == 'projects' or post.collection == 'publications' %}
+      {% if include.garden %}
+        {% if post.teaser %}<a class="garden-teaser" href="{{ post.url | relative_url }}"><img src="{{ post.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy"></a>{% endif %}
+      {% else %}
       <img src="{{ post.teaser }}" alt="{{ post.title }}" style="float: left; padding: 10px; width: 30%;">
+      {% endif %}
     {% endif %}
     
     {% if post.read_time %}
@@ -90,11 +96,18 @@
       {% endif %}
       <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i></strong>
       <span itemprop="keywords">
+      {% if include.garden %}
+        {% for area in include.garden.areas %}
+          {% assign label = site.data.tracks | where: 'id', area | first %}
+          <a href="?label={{ area }}" class="page__taxonomy-item">{{ label.title }}</a>
+        {% endfor %}
+      {% else %}
       {% for hash in tag_hashes %}
         {% assign keyValue = hash | split: '#' %}
         {% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}
         <a href="?tags={{ tag_word | url_encode }}" style="text-decoration: none" class="page__taxonomy-item">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
       {% endfor %}
+      {% endif %}
       </span>
       {% for link in post.links %}
         <a href="{{ link[2] | replace: ' ', '%20' }}" style="text-decoration: none" class="page__taxonomy-item">

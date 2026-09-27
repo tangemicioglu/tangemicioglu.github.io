@@ -9,6 +9,12 @@ tags: [ neuroscience, fmri, memory ]
 links:
 - [code, code, https://colab.research.google.com/drive/1XkjX9aF_FztIpzAETZ0UhufWfHd3lty4]
 - [slides, slides, /files/slides/working_memory.pptx]
+short: "Working memory (fMRI)"
+areas: ["neuro"]
+status: "archived"
+start: "2021-07-01"
+end: "2021-07-28"
+context: "Neuromatch Academy summer school, July 2021"
 ---
 
 Working memory temporarily holds information needed for an ongoing task. The N-back paradigm varies this demand by asking a participant to compare the current stimulus with one shown either immediately or several trials earlier. In a Neuromatch Academy collaboration, we used task-based functional MRI from the Human Connectome Project to examine how activity changes between 0-back and 2-back conditions.
