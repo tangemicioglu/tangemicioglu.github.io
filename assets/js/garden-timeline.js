@@ -48,5 +48,7 @@ function drawTimeline(data) {
     axis += `<line x1="${x}" x2="${x}" y1="24" y2="${y}" stroke="var(--rule)"/><text x="${x + 3}" y="16" font-size="12" fill="var(--gray)">${year}</text>`;
   }
   timelineHost.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y + 10}" width="${W}" height="${y + 10}" role="group" aria-label="Projects, explorations, publications, and writing across time">${axis}${svg}</svg>`;
+  // Start narrow viewports at recent work; earlier years remain scrollable.
+  timelineHost.scrollLeft = timelineHost.scrollWidth - timelineHost.clientWidth;
 }
 loadGarden(timelineHost).then(drawTimeline).catch(() => gardenUnavailable(timelineHost));

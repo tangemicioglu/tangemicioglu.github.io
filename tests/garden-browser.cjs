@@ -114,6 +114,14 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
           assert.equal(await page.locator('#garden-timeline svg a').count(), data.items.length + new Set(data.items.map(item => item.track)).size, 'All items and primary label links');
           assert.ok(!(await page.locator('#garden-timeline').textContent()).includes('EARLIER WORK'));
           assert.equal(await page.locator('#garden-timeline a[href$="/explorations/cyoaif/"] rect').count(), 1, 'Exploration has a timeline marker');
+          const timeline = page.locator('#garden-timeline');
+          const initial = await timeline.evaluate(el => ({left: el.scrollLeft, max: el.scrollWidth - el.clientWidth}));
+          assert.ok(Math.abs(initial.left - initial.max) <= 1, 'Timeline initially shows the latest years');
+          if (width === 375) {
+            assert.ok(initial.max > 0, 'Mobile timeline scrolls horizontally');
+            await timeline.evaluate(el => { el.scrollLeft = 0; });
+            assert.equal(await timeline.evaluate(el => el.scrollLeft), 0, 'Earlier years remain reachable');
+          }
         }
         assert.equal(await page.locator('.garden-earlier, [data-l="__earlier"]').count(), 0, 'Labels have no earlier split');
         if (path === '/timeline/' || path === '/map/') {
