@@ -3,7 +3,13 @@
     "built": "2026-09-27",
     "epoch": "2026-09-27",
     "input_digest": "5d9b297527226c2d6d67fcea01fc99642e105817c1d2047a75edbc7bda058661",
-    "model": "Alibaba-NLP/gte-modernbert-base"
+    "model": "Alibaba-NLP/gte-modernbert-base",
+    "layout": {
+      "name": "primary-groups-v1",
+      "primary_only": true,
+      "cluster_spacing": 0.94
+    },
+    "related_similarity_min": 0.7
   },
   "tracks": [
     {
@@ -197,8 +203,8 @@
         0.491,
         0.491
       ],
-      "x": -0.2454,
-      "y": -0.7944,
+      "x": 0.677,
+      "y": -0.6032,
       "related_items": []
     },
     {
@@ -247,12 +253,9 @@
         0.6,
         0.591
       ],
-      "x": 0.1177,
-      "y": 0.2482,
-      "related_items": [
-        "echoforce",
-        "openring-companion"
-      ]
+      "x": 0.3561,
+      "y": 0.6145,
+      "related_items": []
     },
     {
       "id": "ai-through-symbiosis",
@@ -303,14 +306,9 @@
         0.598,
         0.595
       ],
-      "x": 0.0874,
-      "y": -0.2416,
-      "related_items": [
-        "hand-pose-estimation",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "bionicface",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
-      ]
+      "x": 0.7671,
+      "y": -0.46,
+      "related_items": []
     },
     {
       "id": "assistive-interface-smart-stove",
@@ -359,15 +357,9 @@
         0.641,
         0.629
       ],
-      "x": 0.0623,
-      "y": -0.0355,
-      "related_items": [
-        "silentspeller",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
-        "brainbraille",
-        "passive-haptic-learning-piano"
-      ]
+      "x": -0.0837,
+      "y": 0.7519,
+      "related_items": []
     },
     {
       "id": "bcihub-tutorials",
@@ -416,13 +408,10 @@
         0.67,
         0.632
       ],
-      "x": -0.3847,
-      "y": -0.4422,
+      "x": -0.3591,
+      "y": -0.0603,
       "related_items": [
-        "brainbraille",
-        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
-        "itr-atlas",
-        "hand-pose-estimation"
+        "brainbraille"
       ]
     },
     {
@@ -483,15 +472,9 @@
         0.641,
         0.637
       ],
-      "x": 0.2941,
-      "y": -0.0241,
-      "related_items": [
-        "brainbraille",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
-        "touche",
-        "silentspeller",
-        "echoforce"
-      ]
+      "x": 0.0896,
+      "y": -0.2187,
+      "related_items": []
     },
     {
       "id": "brainbraille",
@@ -551,13 +534,10 @@
         0.662,
         0.662
       ],
-      "x": -0.4767,
-      "y": -0.311,
+      "x": -0.4237,
+      "y": 0.0304,
       "related_items": [
-        "bcihub-tutorials",
-        "touche",
-        "itr-atlas",
-        "tongue-gestures-in-hwds"
+        "bcihub-tutorials"
       ]
     },
     {
@@ -616,14 +596,9 @@
         0.662,
         0.658
       ],
-      "x": 0.4182,
-      "y": 0.6525,
-      "related_items": [
-        "tvns-appetite-modulation",
-        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
-        "tongue-gestures-in-hwds",
-        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
-      ]
+      "x": 0.0872,
+      "y": -0.0536,
+      "related_items": []
     },
     {
       "id": "echoforce",
@@ -675,14 +650,9 @@
         0.662,
         0.649
       ],
-      "x": -0.0178,
-      "y": 0.3852,
-      "related_items": [
-        "touche",
-        "vts-for-lls",
-        "passive-haptic-learning-piano",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
-      ]
+      "x": 0.2846,
+      "y": 0.6817,
+      "related_items": []
     },
     {
       "id": "exoplanet-discovery",
@@ -731,8 +701,8 @@
         0.53,
         0.528
       ],
-      "x": -0.1547,
-      "y": -0.5021,
+      "x": -0.2365,
+      "y": -0.5885,
       "related_items": []
     },
     {
@@ -782,13 +752,9 @@
         0.614,
         0.609
       ],
-      "x": 0.0,
-      "y": -0.4346,
-      "related_items": [
-        "bcihub-tutorials",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "ai-through-symbiosis"
-      ]
+      "x": -0.0689,
+      "y": -0.5154,
+      "related_items": []
     },
     {
       "id": "horizon-worlds-community-study",
@@ -837,8 +803,8 @@
         0.599,
         0.596
       ],
-      "x": -0.1453,
-      "y": -0.2559,
+      "x": -0.7477,
+      "y": 0.5793,
       "related_items": []
     },
     {
@@ -895,14 +861,10 @@
         0.639,
         0.637
       ],
-      "x": -0.5366,
-      "y": -0.6825,
+      "x": -0.4664,
+      "y": -0.2348,
       "related_items": [
-        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
-        "bcihub-tutorials",
-        "brainbraille",
-        "working-memory-localization",
-        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting"
+        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs"
       ]
     },
     {
@@ -954,14 +916,9 @@
         0.592,
         0.591
       ],
-      "x": 0.3568,
-      "y": 0.3389,
-      "related_items": [
-        "2021-12-01-health-tracking-privacy",
-        "echoforce",
-        "tongue-gestures-in-hwds",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
-      ]
+      "x": 0.4607,
+      "y": 0.6673,
+      "related_items": []
     },
     {
       "id": "passive-haptic-learning-piano",
@@ -1023,12 +980,9 @@
         0.685,
         0.674
       ],
-      "x": -0.3837,
-      "y": 0.5254,
-      "related_items": [
-        "touche",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
-      ]
+      "x": 0.8382,
+      "y": 0.2042,
+      "related_items": []
     },
     {
       "id": "public-health-credibility",
@@ -1077,8 +1031,8 @@
         0.543,
         0.54
       ],
-      "x": 0.2651,
-      "y": 0.3441,
+      "x": -0.6444,
+      "y": 0.7303,
       "related_items": []
     },
     {
@@ -1128,8 +1082,8 @@
         0.591,
         0.583
       ],
-      "x": 0.1148,
-      "y": -0.8018,
+      "x": 0.4108,
+      "y": -0.6581,
       "related_items": [
         "robotics-humanitarian-demining",
         "robomaster"
@@ -1184,8 +1138,8 @@
         0.589,
         0.586
       ],
-      "x": -0.2003,
-      "y": -0.9712,
+      "x": 0.219,
+      "y": -0.7613,
       "related_items": [
         "robojackets-igvc",
         "robotics-humanitarian-demining"
@@ -1240,8 +1194,8 @@
         0.565,
         0.559
       ],
-      "x": -0.0218,
-      "y": -0.894,
+      "x": 0.3277,
+      "y": -0.7143,
       "related_items": [
         "robojackets-igvc",
         "robomaster"
@@ -1305,8 +1259,8 @@
         0.729,
         0.723
       ],
-      "x": 0.6309,
-      "y": -0.0567,
+      "x": -0.3233,
+      "y": 0.2956,
       "related_items": [
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
@@ -1372,11 +1326,10 @@
         0.716,
         0.69
       ],
-      "x": 0.642,
-      "y": 0.32,
+      "x": -0.3096,
+      "y": 0.5211,
       "related_items": [
-        "silentspeller",
-        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
+        "silentspeller"
       ]
     },
     {
@@ -1435,14 +1388,12 @@
         0.694,
         0.685
       ],
-      "x": -0.1851,
-      "y": 0.2173,
+      "x": -0.0423,
+      "y": -0.1682,
       "related_items": [
         "vts-for-lls",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "echoforce",
-        "passive-haptic-learning-piano"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ]
     },
     {
@@ -1502,14 +1453,9 @@
         0.662,
         0.658
       ],
-      "x": 0.6413,
-      "y": 0.5784,
-      "related_items": [
-        "breathepulse",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
-      ]
+      "x": 0.2196,
+      "y": -0.0681,
+      "related_items": []
     },
     {
       "id": "vts-for-lls",
@@ -1573,14 +1519,10 @@
         0.655,
         0.651
       ],
-      "x": -0.2624,
-      "y": 0.3435,
+      "x": -0.0942,
+      "y": -0.0836,
       "related_items": [
-        "touche",
-        "echoforce",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "2025-10-12-EchoForce-Continuous-Grip-Force-Estimation",
-        "passive-haptic-learning-piano"
+        "touche"
       ]
     },
     {
@@ -1631,8 +1573,8 @@
         0.583,
         0.567
       ],
-      "x": 0.0781,
-      "y": -0.9275,
+      "x": 0.7678,
+      "y": -0.6406,
       "related_items": []
     },
     {
@@ -1683,11 +1625,9 @@
         0.592,
         0.58
       ],
-      "x": -0.5829,
-      "y": -0.6225,
-      "related_items": [
-        "itr-atlas"
-      ]
+      "x": -0.8382,
+      "y": -0.3605,
+      "related_items": []
     },
     {
       "id": "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
@@ -1741,13 +1681,12 @@
         0.722,
         0.69
       ],
-      "x": 0.823,
-      "y": -0.0709,
+      "x": -0.2274,
+      "y": 0.2751,
       "related_items": [
         "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
       ]
     },
     {
@@ -1802,13 +1741,11 @@
         0.623,
         0.607
       ],
-      "x": -0.5402,
-      "y": 0.4914,
+      "x": 0.7233,
+      "y": 0.1834,
       "related_items": [
         "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
-        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "vts-for-lls"
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild"
       ]
     },
     {
@@ -1863,13 +1800,11 @@
         0.695,
         0.693
       ],
-      "x": 0.8657,
-      "y": -0.0507,
+      "x": -0.1378,
+      "y": 0.3152,
       "related_items": [
         "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
-        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
       ]
     },
     {
@@ -1925,13 +1860,11 @@
         0.642,
         0.602
       ],
-      "x": -0.6046,
-      "y": 0.4123,
+      "x": 0.658,
+      "y": 0.1079,
       "related_items": [
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
-        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
+        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild"
       ]
     },
     {
@@ -1986,13 +1919,11 @@
         0.698,
         0.683
       ],
-      "x": 0.8491,
-      "y": 0.2094,
+      "x": -0.1841,
+      "y": 0.4445,
       "related_items": [
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
-        "silentspeller",
-        "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
+        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
       ]
     },
     {
@@ -2048,8 +1979,8 @@
         0.729,
         0.722
       ],
-      "x": 0.8387,
-      "y": 0.3394,
+      "x": -0.1919,
+      "y": 0.5428,
       "related_items": [
         "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
         "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
@@ -2110,13 +2041,10 @@
         0.669,
         0.661
       ],
-      "x": -0.6329,
-      "y": -0.4492,
+      "x": -0.5351,
+      "y": -0.0683,
       "related_items": [
-        "itr-atlas",
-        "bcihub-tutorials",
-        "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
-        "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
+        "itr-atlas"
       ]
     },
     {
@@ -2171,13 +2099,12 @@
         0.723,
         0.695
       ],
-      "x": 0.5992,
-      "y": 0.161,
+      "x": -0.3354,
+      "y": 0.4254,
       "related_items": [
         "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
-        "silentspeller",
-        "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography"
+        "silentspeller"
       ]
     },
     {
@@ -2232,14 +2159,12 @@
         0.683,
         0.682
       ],
-      "x": 0.7185,
-      "y": -0.2239,
+      "x": -0.2669,
+      "y": 0.1853,
       "related_items": [
         "silentspeller",
         "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
-        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
-        "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
-        "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices"
+        "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller"
       ]
     },
     {
@@ -2296,13 +2221,11 @@
         0.667,
         0.638
       ],
-      "x": -0.6451,
-      "y": 0.5302,
+      "x": 0.6284,
+      "y": 0.2089,
       "related_items": [
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
-        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "touche"
+        "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson"
       ]
     },
     {
@@ -2350,14 +2273,9 @@
         0.634,
         0.602
       ],
-      "x": 0.649,
-      "y": 0.8175,
-      "related_items": [
-        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
-        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
-        "tvns-appetite-modulation",
-        "tongue-gestures-in-hwds"
-      ]
+      "x": 0.2429,
+      "y": 0.0653,
+      "related_items": []
     },
     {
       "id": "2025-02-06-Master-classes-of-the-tenth-international-brain-computer-interface-meeting",
@@ -2406,14 +2324,9 @@
         0.637,
         0.631
       ],
-      "x": -0.3414,
-      "y": -0.5636,
-      "related_items": [
-        "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs",
-        "brainbraille",
-        "itr-atlas",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
-      ]
+      "x": -0.326,
+      "y": -0.1529,
+      "related_items": []
     },
     {
       "id": "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
@@ -2457,15 +2370,9 @@
         0.659,
         0.63
       ],
-      "x": 0.3871,
-      "y": 0.8155,
-      "related_items": [
-        "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "breathepulse",
-        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
-      ]
+      "x": 0.0966,
+      "y": 0.0846,
+      "related_items": []
     },
     {
       "id": "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
@@ -2518,14 +2425,11 @@
         0.667,
         0.667
       ],
-      "x": -0.098,
-      "y": 0.0901,
+      "x": 0.437,
+      "y": 0.3437,
       "related_items": [
         "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "touche",
-        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
-        "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild",
-        "passive-haptic-learning-piano"
+        "touche"
       ]
     },
     {
@@ -2573,14 +2477,9 @@
         0.633,
         0.621
       ],
-      "x": -0.1044,
-      "y": 0.4991,
-      "related_items": [
-        "touche",
-        "vts-for-lls",
-        "passive-haptic-learning-piano",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
-      ]
+      "x": 0.2272,
+      "y": 0.7613,
+      "related_items": []
     },
     {
       "id": "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior",
@@ -2630,14 +2529,9 @@
         0.644,
         0.633
       ],
-      "x": 0.5555,
-      "y": 0.7316,
-      "related_items": [
-        "2025-04-24-Autonomic-Interfaces-for-Augmenting-Autonomic-Processes",
-        "breathepulse",
-        "2024-12-02-BreathePulse-Peripheral-Guided-Breathing-via-Implicit-Airflow-Cues-for-Information-Work",
-        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation"
-      ]
+      "x": 0.1613,
+      "y": 0.0108,
+      "related_items": []
     },
     {
       "id": "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
@@ -2686,14 +2580,11 @@
         0.655,
         0.641
       ],
-      "x": -0.2797,
-      "y": 0.0,
+      "x": 0.2732,
+      "y": 0.2625,
       "related_items": [
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "touche",
-        "passive-haptic-learning-piano",
-        "assistive-interface-smart-stove",
-        "echoforce"
+        "touche"
       ]
     }
   ]

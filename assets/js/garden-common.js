@@ -14,7 +14,7 @@ async function loadGarden(host) {
   const response = await fetch(host.dataset.gardenUrl);
   if (!response.ok) throw new Error('Garden data unavailable');
   G = await response.json();
-  G.base = host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
+  G.base = host.dataset.gardenBase ?? host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
   G.items.forEach(item => { item.url = G.base + item.url; if (item.teaser && item.teaser.startsWith('/')) item.teaser = G.base + item.teaser; });
   G.by = Object.fromEntries(G.items.map(item => [item.id, item]));
   G.track = Object.fromEntries(G.tracks.map(track => [track.id, track]));
@@ -26,7 +26,7 @@ function gardenUnavailable(host) {
   const message = document.createElement('p');
   message.className = 'garden-fallback';
   message.textContent = 'This view could not load. ';
-  const base = host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
+  const base = host.dataset.gardenBase ?? host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
   [['Projects', 'projects'], ['Publications', 'publications'], ['Writing', 'writing']].forEach(([name, path], index) => {
     if (index) message.append(' · ');
     const link = document.createElement('a');

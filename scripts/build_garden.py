@@ -19,6 +19,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 COLLECTIONS = {"_projects": "project", "_explorations": "exploration", "_publications": "paper", "_posts": "essay"}
+RELATED_SIMILARITY_MIN = .70
+LAYOUT_VERSION = "primary-groups-v1"
 FIELDS = ("areas", "track", "project", "status", "start", "end", "short", "context", "stage", "related", "teaser_position")
 
 
@@ -149,11 +151,11 @@ def relate(items, tracks, series):
         item["backlinks"] = [i["id"] for i in items if item["id"] in i["links"]]
 
 
-def related_ids(item, by):
-    """Apply the reviewed similarity threshold without duplicating explicit relations."""
-    excluded = set(item["members"] + item["links"] + item["backlinks"] + [item.get("project")])
+def related_ids(item):
+    """Keep strong inferred matches separate from authored relationships."""
+    excluded = set(item["members"] + item["links"] + item["backlinks"] + [item.get("project"), item["id"]])
     return [iid for iid, score in zip(item["similar"], item["similar_s"])
-            if iid not in excluded and (score >= .62 or (score >= .57 and set(item["areas"]) & set(by[iid]["areas"])))]
+            if iid not in excluded and score >= RELATED_SIMILARITY_MIN]
 
 
 def build(root=ROOT, check=False):
@@ -165,31 +167,33 @@ def build(root=ROOT, check=False):
     old = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
     if check:
         ids = {i["id"] for i in items}
-        if old.get("meta", {}).get("input_digest") != digest or ids != {i["id"] for i in old.get("items", [])}:
+        if (old.get("meta", {}).get("input_digest") != digest or ids != {i["id"] for i in old.get("items", [])}
+                or old.get("meta", {}).get("layout", {}).get("name") != LAYOUT_VERSION
+                or old.get("meta", {}).get("related_similarity_min") != RELATED_SIMILARITY_MIN):
             raise ValueError("garden.json is missing or stale; run python scripts/build_garden.py locally and commit its output")
         print(f"Garden data current: {len(items)} published items; labels and references valid.")
         return
     os.environ.setdefault("LOKY_MAX_CPU_COUNT", "8")
     import numpy as np
     from garden_embed import embeddings
-    from garden_layout import positions
+    from garden_layout import primary_group_positions, CLUSTER_SPACING
     texts = [f"{i['title']}\n{' '.join(i['tags'])}\n{i['excerpt']}\n{i['text']}"[:3000] for i in items]
     vectors = embeddings(texts, root / ".garden-cache")
     similarity = vectors @ vectors.T
     np.fill_diagonal(similarity, -1)
-    xy = positions(vectors)
-    by = {i["id"]: i for i in items}
+    xy = primary_group_positions(vectors, items, tracks)
     for k, item in enumerate(items):
         neighbors = np.argsort(-similarity[k], kind="stable")[:min(5, len(items) - 1)]
         item["similar"] = [items[j]["id"] for j in neighbors]
         item["similar_s"] = [round(float(similarity[k, j]), 3) for j in neighbors]
         item["x"], item["y"] = [round(float(x), 4) for x in xy[k]]
         item.pop("text")
-    for item in items:
-        item["related_items"] = related_ids(item, by)
+        item["related_items"] = related_ids(item)
     today = dt.date.today().isoformat()
     meta = {"built": today, "epoch": today,
-            "input_digest": digest, "model": "Alibaba-NLP/gte-modernbert-base"}
+            "input_digest": digest, "model": "Alibaba-NLP/gte-modernbert-base",
+            "layout": {"name": LAYOUT_VERSION, "primary_only": True, "cluster_spacing": CLUSTER_SPACING},
+            "related_similarity_min": RELATED_SIMILARITY_MIN}
     out.write_text(json.dumps({"meta": meta, "tracks": tracks, "series": series, "items": items}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Built {len(items)} items, {len(series)} series, {len(tracks)} labels; recomputed all map positions.")
 

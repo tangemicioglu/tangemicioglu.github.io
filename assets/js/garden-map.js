@@ -6,8 +6,10 @@
 class SiteMap {
   constructor(host, G, { onOpen } = {}) {
     this.G = G; this.onOpen = onOpen;
+    this.primaryOnly = (G.meta?.preview_layout ?? G.meta?.layout)?.primary_only === true;
+    this.tracks = G.tracks;
     host.innerHTML = `<div class="smap"><canvas aria-label="Map of projects, explorations, papers, and writing. Use arrow keys to pan, plus and minus to zoom." tabindex="0"></canvas>
-      <div class="sm-top"><input type="search" placeholder="Search titles…" aria-label="Search map titles"><div class="sm-chips"></div><select class="sm-label-select" aria-label="Filter map by label"><option value="">All labels</option>${G.tracks.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('')}</select></div>
+      <div class="sm-top"><input type="search" placeholder="Search titles…" aria-label="Search map titles"><div class="sm-chips"></div><select class="sm-label-select" aria-label="Filter map by label"><option value="">All labels</option>${this.tracks.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('')}</select></div>
       <div class="sm-zoom"><button data-z="in" title="Zoom in" aria-label="Zoom in">+</button><button data-z="out" title="Zoom out" aria-label="Zoom out">−</button><button data-z="fit" title="Show everything" aria-label="Show everything">⤢</button></div>
       <div class="sm-key"><span><i class="k-proj"></i>project</span><span><i class="k-explore"></i>exploration</span><span><i class="k-paper"></i>paper</span><span><i class="k-writ"></i>writing</span></div>
       <div class="sm-help">Drag to move · scroll or pinch to zoom · select for details</div>
@@ -18,29 +20,29 @@ class SiteMap {
     const css = getComputedStyle(document.documentElement);
     this.col = Object.fromEntries(G.tracks.map(t => [t.id, css.getPropertyValue(`--t-${t.id}`).trim() || "#888"]));
     this.ink = css.getPropertyValue("--ink").trim(); this.bg = css.getPropertyValue("--bg").trim(); this.gray = css.getPropertyValue("--gray").trim();
-    // neighbours shown on hover: project <-> members, series order, explicit links, strong similarity
+    // Inferred edges use the same stronger cutoff as the Related suggestions.
     this.nb = this.items.map(it => {
       const s = new Set([...(it.members || []), ...(it.project ? [it.project] : []), ...(it.links || []), ...(it.backlinks || [])]);
-      (it.similar || []).forEach((j, k) => { if (it.similar_s[k] >= .66) s.add(j); });
+      (it.related_items || []).forEach(j => s.add(j));
       return [...s].filter(j => this.idx.has(j)).map(j => this.idx.get(j));
     });
     this.imgs = new Map();
     for (const it of this.items) if (it.kind === "project" && it.teaser) { const im = new Image(); im.onload = () => this.request(); im.src = it.teaser; this.imgs.set(it.id, im); }
-    // territories: centroid of each area's home items
-    this.terr = G.tracks.map(t => { const m = this.items.filter(i => i.track === t.id); return m.length ? { t, x: m.reduce((a, i) => a + i.x, 0) / m.length, y: m.reduce((a, i) => a + i.y, 0) / m.length, n: m.length } : null; }).filter(Boolean);
+    // Primary labels organize the overview; filters always include all members.
+    this.terr = this.tracks.map(t => { const m = this.items.filter(i => this.primaryOnly ? i.track === t.id : this.inLabel(i, t.id)); return m.length ? { t, x: m.reduce((a, i) => a + i.x, 0) / m.length, y: m.reduce((a, i) => a + i.y, 0) / m.length, n: m.length } : null; }).filter(Boolean);
     this.hover = -1; this.focus = -1; this.label = null; this.q = "";
     this.chips(); this.bind();
     new ResizeObserver(() => this.resize()).observe(this.cv); this.resize();
   }
   chips() {
     const box = this.el.querySelector(".sm-chips");
-    box.innerHTML = this.G.tracks.map(t => `<button data-l="${t.id}"><i style="background:${this.col[t.id]}"></i>${t.title}</button>`).join("");
+    box.innerHTML = this.tracks.map(t => `<button data-l="${t.id}"><i style="background:${this.col[t.id]}"></i>${t.title}</button>`).join("");
     box.addEventListener("click", e => {
       const b = e.target.closest("button"); if (!b) return;
       this.label = this.label === b.dataset.l ? null : b.dataset.l;
       box.querySelectorAll("button").forEach(x => { x.classList.toggle("on", x.dataset.l === this.label); x.setAttribute('aria-pressed', String(x.dataset.l === this.label)); });
       this.el.querySelector('select').value = this.label || '';
-      if (this.label) this.fitTo(this.items.map((it, k) => it.areas.includes(this.label) ? k : -1).filter(k => k >= 0)); else this.request();
+      if (this.label) this.fitTo(this.items.map((it, k) => this.inLabel(it, this.label) ? k : -1).filter(k => k >= 0)); else this.request();
     });
     this.el.querySelector("input").addEventListener("input", e => { this.q = e.target.value.trim().toLowerCase(); this.request(); this.el.querySelector('[role=status]').textContent = this.items.filter((_, k) => this.lit(k)).length + ' matching items'; });
     this.el.querySelector('select').addEventListener('change', e => {
@@ -49,9 +51,12 @@ class SiteMap {
       if (this.label) this.fitTo(this.items.map((_, k) => this.lit(k) ? k : -1).filter(k => k >= 0)); else this.request();
     });
   }
+  inLabel(item, label) {
+    return item.areas.includes(label);
+  }
   lit(k) { // passes the label filter and search
     const it = this.items[k];
-    return (!this.label || it.areas.includes(this.label)) && (!this.q || it.title.toLowerCase().includes(this.q) || (it.short || "").toLowerCase().includes(this.q));
+    return (!this.label || this.inLabel(it, this.label)) && (!this.q || it.title.toLowerCase().includes(this.q) || (it.short || "").toLowerCase().includes(this.q));
   }
   // ---- camera
   fit() {
@@ -147,7 +152,7 @@ class SiteMap {
     const it = this.items[k], G = this.G, row = j => { const m = G.by[j]; return m ? `<li><a href="${esc(m.url)}" data-k="${this.idx.get(j)}">${esc(nm(m))}</a> <span class="meta">${m.kind} · ${m.date.slice(0, 4)}</span></li>` : ""; };
     const sec = (t, ids) => ids.length ? `<h4>${t}</h4><ul>${ids.map(row).join("")}</ul>` : "";
     const ser = it.series.map(s => G.ser[s.id]).map(S => sec(`${esc(S.title)} · in order`, S.items)).join("");
-    const rel = it.related_items.slice(0, 4);
+    const rel = (it.related_items || []).slice(0, 4);
     const resources = (it.resource_links || []).map(link => `<a class="page__taxonomy-item" href="${esc(link[2])}"><i class="fa fa-fw far fa-link" aria-hidden="true"></i> ${esc(link[0])}</a>`).join(' ');
     card.innerHTML = `<button class="sm-close" aria-label="Close item details">×</button>${it.teaser ? `<img src="${esc(it.teaser)}" style="object-position: ${esc(it.teaser_position || 'center')}" alt="">` : ""}<div class="meta">${KIND[it.kind]} · ${it.kind === "project" ? span(it) : fmt(it.date)}</div>
       <h3>${esc(clean(it.title))}</h3><div class="meta">${areaDots(it)}</div><p>${esc(plain(it.excerpt).slice(0, 260))}${plain(it.excerpt).length > 260 ? "…" : ""}</p>
@@ -165,7 +170,7 @@ class SiteMap {
     // 1. territories: soft colour pools around each area's items
     ctx.globalCompositeOperation = "multiply";
     for (let k = 0; k < this.n; k++) { const it = I[k], [sx, sy] = this.toScreen(it.x, it.y), R = (it.kind === "project" ? 95 : 60) * Math.sqrt(z);
-      const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, R), c = this.col[it.track];
+      const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, R), c = this.col[this.label && this.inLabel(it, this.label) ? this.label : it.track];
       const a = filtering && !this.lit(k) ? 0.03 : 0.16; g.addColorStop(0, hexA(c, a)); g.addColorStop(1, hexA(c, 0));
       ctx.fillStyle = g; ctx.fillRect(sx - R, sy - R, 2 * R, 2 * R); }
     ctx.globalCompositeOperation = "source-over";

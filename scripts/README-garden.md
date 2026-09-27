@@ -47,7 +47,34 @@ builds reuse text-hashed vectors in ignored `.garden-cache/`. Every build
 recomputes the full map, so additions, removals, and text revisions can move
 existing entries. A fixed random seed makes unchanged inputs repeatable within
 the same dependency environment. `--relayout` remains accepted for compatibility
-but is no longer needed. Labels do not apply attraction forces.
+but is no longer needed.
+
+The map uses primary memberships for group positions and overview headings.
+Papers keep independent positions and remain visible at overview scale. Project
+membership supplies connecting lines, not satellite placement.
+Selecting any label highlights and fits all its members,
+including secondary memberships. All labels remain available in the filters;
+labels with no primary members have no overview heading. Group centres
+are jointly fitted to member-to-member semantic affinities and non-overlap
+constraints, using deterministic multiple-start optimization. Each group's members
+find their best matches in the other group; the two directional averages receive
+equal weight. Distances are normalized within each group's neighbour range, then
+averaged symmetrically, so a group with generally lower similarity scores does not
+become globally isolated. These relative distances set desired centre distances;
+stronger neighbours receive more weight. A two-axis mean-embedding projection only
+initializes the fit. There is no repulsion pass after the semantic fit. Group area
+scales with item count; the accepted local item
+arrangement stays fixed apart from group translations and a shared display scale.
+This improves density balance at the cost of treating map distances as navigational
+spacing rather than literal semantic distances. It does not assign importance or
+centrality to larger groups. Group centres are then brought 6% closer together
+uniformly, with a minimum boundary gap, preserving their relative ordering and
+the arrangement of items inside each group. Generated layout metadata selects the
+rendering mode; the freshness check also guards the selected layout version.
+
+Automatic Related suggestions require cosine similarity of at least 0.70,
+regardless of shared labels. Map edges reuse the same filtered suggestions.
+Explicit page links, project membership and curated reading orders are preserved.
 
 The three uncommitted 2026 writing drafts remain unpublished. When Tan publishes
 the ITR Atlas introduction, add its ID to the end of `measuring-bcis` in
