@@ -27,7 +27,7 @@ function gardenUnavailable(host) {
   message.className = 'garden-fallback';
   message.textContent = 'This view could not load. ';
   const base = host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
-  [['Work', 'projects'], ['Publications', 'publications'], ['Writing', 'writing']].forEach(([name, path], index) => {
+  [['Projects', 'projects'], ['Publications', 'publications'], ['Writing', 'writing']].forEach(([name, path], index) => {
     if (index) message.append(' · ');
     const link = document.createElement('a');
     link.href = base + '/' + path + '/';

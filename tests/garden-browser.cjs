@@ -13,7 +13,7 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
     const visit = async path => { await page.goto(base + path, {waitUntil: 'domcontentloaded'}); };
     await visit('/projects/');
     assert.deepEqual(await page.locator('button[data-category]').allTextContents(), ['research', 'independent', 'organizations', 'coursework']);
-    assert.equal(await page.getByRole('heading', {name: 'Work', exact: true}).count(), 1);
+    assert.equal(await page.getByRole('heading', {name: 'Projects', exact: true}).count(), 1);
     assert.equal(await page.locator('[data-garden-item]').count(), 25);
     const cyoaif = page.locator('[data-garden-item][data-kind="exploration"]');
     assert.equal(await cyoaif.count(), 1);

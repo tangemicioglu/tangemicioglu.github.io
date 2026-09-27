@@ -4,7 +4,7 @@ The archive labels, project hubs, reading orders, Timeline, and Map use the
 approved Website-Garden data and presentation. Jekyll only reads generated
 JSON; no custom plugin or model download is needed by GitHub Pages.
 
-The Work archive at `/projects/` combines `_projects/` and `_explorations/`,
+The Projects archive at `/projects/` combines `_projects/` and `_explorations/`,
 with a kind filter for each. Explorations are self-contained interactive essays,
 small tools, and experiments; they are not a project maturity or quality level.
 Use a short introduction, `teaser`, `date`, `areas`, and the existing `links`

@@ -8,7 +8,7 @@ This site contains research publications, project descriptions, software, essays
 
 - [About](https://tangemicioglu.com/): Current research focus, affiliation, background, and news.
 - [Publications](https://tangemicioglu.com/publications/): Peer-reviewed papers and research outputs, with authors, venues, abstracts, DOI links, and PDFs where available.
-- [Work](https://tangemicioglu.com/projects/): Projects and explorations. Projects cover research, software, and coursework; explorations are self-contained interactive essays, small tools, and experiments.
+- [Projects](https://tangemicioglu.com/projects/): Projects and explorations. Projects cover research, software, and coursework; explorations are self-contained interactive essays, small tools, and experiments.
 - [Writing](https://tangemicioglu.com/writing/): Essays and project notes.
 - [Timeline](https://tangemicioglu.com/timeline/): Project spans, explorations, papers, and writing grouped by research label.
 - [Map](https://tangemicioglu.com/map/): A spatial view of published projects, explorations, papers, and writing.
