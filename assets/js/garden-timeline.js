@@ -15,16 +15,12 @@ function drawTimeline(data) {
       ? `<circle cx="${x}" cy="${y}" r="5" fill="var(--bg)" stroke="${color}" stroke-width="1.8"/>`
       : `<rect x="${x - 4}" y="${y - 4}" width="8" height="8" transform="rotate(45 ${x} ${y})" fill="${color}"/>`);
   };
-  let svg = '', y = 34, earlier = false;
+  let svg = '', y = 34;
   for (const track of data.tracks) {
     const color = `var(--t-${track.id})`;
     const projects = data.items.filter(item => item.track === track.id && item.kind === 'project').sort((a, b) => a.start.localeCompare(b.start));
     const loose = data.items.filter(item => item.track === track.id && item.kind !== 'project' && !item.project);
     if (!projects.length && !loose.length) continue;
-    if (track.era === 'earlier' && !earlier) {
-      svg += `<text x="6" y="${y + 14}" font-size="11" letter-spacing=".07em" font-weight="600" fill="var(--gray)">EARLIER WORK</text>`;
-      y += 30; earlier = true;
-    }
     const rows = [];
     const spans = projects.map(item => {
       const a = X(item.start), b = Math.max(X(item.end), a + 4);
@@ -52,6 +48,5 @@ function drawTimeline(data) {
     axis += `<line x1="${x}" x2="${x}" y1="24" y2="${y}" stroke="var(--rule)"/><text x="${x + 3}" y="16" font-size="12" fill="var(--gray)">${year}</text>`;
   }
   timelineHost.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y + 10}" width="${W}" height="${y + 10}" role="group" aria-label="Projects and publications across time">${axis}${svg}</svg>`;
-  document.querySelector('.garden-index').open = false;
 }
 loadGarden(timelineHost).then(drawTimeline).catch(() => gardenUnavailable(timelineHost));

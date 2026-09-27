@@ -43,7 +43,8 @@ the ITR Atlas introduction, add its ID to the end of `measuring-bcis` in
 `_data/series.yml`. Keep unfinished drafts out of local Jekyll preview builds
 as well; Jekyll itself does not know which files are committed.
 
-Map and Timeline include server-rendered links to every item for keyboard,
-screen-reader, JavaScript-disabled, and crawler access. Positions indicate
+Map fills the viewport below the site navigation. Map and Timeline link to the
+regular archives when JavaScript is unavailable. The archives, sitemap, and
+garden JSON provide access to the complete collection. Positions indicate
 semantic similarity; explicit project membership and reading order provide
 the authored connections.

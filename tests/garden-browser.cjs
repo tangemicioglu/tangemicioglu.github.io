@@ -46,8 +46,25 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
         if (path === '/timeline/') {
           await page.locator('#garden-timeline svg').waitFor();
           assert.equal(await page.locator('#garden-timeline svg a').count(), 52, 'All 41 items and 11 label links');
+          assert.ok(!(await page.locator('#garden-timeline').textContent()).includes('EARLIER WORK'));
         }
-        if (path === '/map/') await page.waitForFunction(() => !!window.gardenMap);
+        assert.equal(await page.locator('.garden-earlier, [data-l="__earlier"]').count(), 0, 'Labels have no earlier split');
+        if (path === '/timeline/' || path === '/map/') {
+          assert.equal(await page.getByText('Browse all items by label', {exact: true}).count(), 0);
+        }
+        if (path === '/map/') {
+          await page.waitForFunction(() => !!window.gardenMap);
+          assert.equal(await page.locator('.sm-chips button').count(), data.tracks.length, 'Every map label is available directly');
+          const geometry = await page.evaluate(() => {
+            const map = document.querySelector('.smap').getBoundingClientRect();
+            const nav = document.querySelector('.masthead').getBoundingClientRect();
+            return {left: map.left, right: map.right, top: map.top, bottom: map.bottom, navBottom: nav.bottom, width: innerWidth, height: innerHeight, scrollHeight: document.documentElement.scrollHeight};
+          });
+          assert.ok(Math.abs(geometry.left) < 1 && Math.abs(geometry.right - geometry.width) < 1, 'Map spans the full viewport width');
+          assert.ok(Math.abs(geometry.top - geometry.navBottom) < 1 && Math.abs(geometry.bottom - geometry.height) < 1, 'Map fills remaining height below navigation');
+          assert.ok(geometry.scrollHeight <= geometry.height + 1, 'No page scroll around the map');
+          assert.equal(await page.locator('.page__footer').count(), 0);
+        }
         assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${path} overflows at ${width}px`);
         if (process.env.GARDEN_SHOTS) await page.screenshot({path: `${process.env.GARDEN_SHOTS}/${path.replaceAll('/', '')}-${width}.png`, animations: 'disabled', fullPage: path !== '/projects/' && path !== '/publications/'});
         if (path === '/projects/' || path === '/publications/') {
@@ -93,6 +110,14 @@ const base = process.env.GARDEN_URL || 'http://127.0.0.1:8779';
     await cdp.send('Input.dispatchTouchEvent', {type: 'touchMove', touchPoints: [{x: x + 40, y: y + 10, id: 3}]});
     await cdp.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []});
     assert.notEqual(await mobile.evaluate(() => window.gardenMap.cam.x), touchX, 'Touch drag pans');
+    const originalView = await mobile.evaluate(() => ({x: window.gardenMap.cam.x, y: window.gardenMap.cam.y, zoom: window.gardenMap.z()}));
+    await mobile.setViewportSize({width: 850, height: 375});
+    await mobile.waitForFunction(() => window.gardenMap.width === 850);
+    const rotated = await mobile.evaluate(() => ({x: window.gardenMap.cam.x, y: window.gardenMap.cam.y, zoom: window.gardenMap.z(), bottom: document.querySelector('.smap').getBoundingClientRect().bottom}));
+    assert.equal(rotated.x, originalView.x);
+    assert.equal(rotated.y, originalView.y);
+    assert.ok(Math.abs(rotated.zoom - originalView.zoom) < .0001);
+    assert.ok(Math.abs(rotated.bottom - 375) < 1, 'Landscape map fits viewport');
     assert.deepEqual(errors, []);
     console.log('PASS: archives, filters, shared preference, relations, 41 URLs, mobile widths, map search, pan, zoom and touch gestures.');
   } finally { await browser.close(); }

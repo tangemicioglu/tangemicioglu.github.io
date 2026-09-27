@@ -6,10 +6,11 @@
 class SiteMap {
   constructor(host, G, { onOpen } = {}) {
     this.G = G; this.onOpen = onOpen;
-    host.innerHTML = `<div class="smap"><canvas aria-label="Map of projects, papers, and writing. A text index is available below." tabindex="0"></canvas>
+    host.innerHTML = `<div class="smap"><canvas aria-label="Map of projects, papers, and writing. Use arrow keys to pan, plus and minus to zoom." tabindex="0"></canvas>
       <div class="sm-top"><input type="search" placeholder="Search titles…" aria-label="Search map titles"><div class="sm-chips"></div><select class="sm-label-select" aria-label="Filter map by label"><option value="">All labels</option>${G.tracks.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('')}</select></div>
       <div class="sm-zoom"><button data-z="in" title="Zoom in" aria-label="Zoom in">+</button><button data-z="out" title="Zoom out" aria-label="Zoom out">−</button><button data-z="fit" title="Show everything" aria-label="Show everything">⤢</button></div>
       <div class="sm-key"><span><i class="k-proj"></i>project</span><span><i class="k-paper"></i>paper</span><span><i class="k-writ"></i>writing</span></div>
+      <div class="sm-help">Drag to move · scroll or pinch to zoom · select for details</div>
       <div class="sm-tip"></div><div class="sm-card" aria-label="Selected item"></div><p class="sr-only" role="status"></p></div>`;
     this.el = host.querySelector(".smap"); this.cv = this.el.querySelector("canvas"); this.ctx = this.cv.getContext("2d");
     this.items = G.items; this.n = this.items.length;
@@ -33,11 +34,9 @@ class SiteMap {
   }
   chips() {
     const box = this.el.querySelector(".sm-chips");
-    box.innerHTML = this.G.tracks.filter(t => t.era !== "earlier").map(t => `<button data-l="${t.id}"><i style="background:${this.col[t.id]}"></i>${t.title}</button>`).join("")
-      + `<button data-l="__earlier" class="more">earlier…</button>`;
+    box.innerHTML = this.G.tracks.map(t => `<button data-l="${t.id}"><i style="background:${this.col[t.id]}"></i>${t.title}</button>`).join("");
     box.addEventListener("click", e => {
       const b = e.target.closest("button"); if (!b) return;
-      if (b.dataset.l === "__earlier") { box.innerHTML = box.innerHTML.replace(/<button data-l="__earlier"[^>]*>earlier…<\/button>/, this.G.tracks.filter(t => t.era === "earlier").map(t => `<button data-l="${t.id}"><i style="background:${this.col[t.id]}"></i>${t.title}</button>`).join("")); return; }
       this.label = this.label === b.dataset.l ? null : b.dataset.l;
       box.querySelectorAll("button").forEach(x => { x.classList.toggle("on", x.dataset.l === this.label); x.setAttribute('aria-pressed', String(x.dataset.l === this.label)); });
       this.el.querySelector('select').value = this.label || '';
@@ -81,7 +80,19 @@ class SiteMap {
   z() { return this.cam.s / this.s0; }
   toScreen(x, y) { return [(x - this.cam.x) * this.cam.s + this.cv.clientWidth / 2, (y - this.cam.y) * this.cam.s + this.cv.clientHeight / 2]; }
   toWorld(px, py) { return [(px - this.cv.clientWidth / 2) / this.cam.s + this.cam.x, (py - this.cv.clientHeight / 2) / this.cam.s + this.cam.y]; }
-  resize() { const d = devicePixelRatio || 1; this.cv.width = this.cv.clientWidth * d; this.cv.height = this.cv.clientHeight * d; this.dpr = d; if (!this.cam) this.fit(); this.request(); }
+  resize() {
+    const d = devicePixelRatio || 1, w = this.cv.clientWidth, h = this.cv.clientHeight;
+    if (!w || !h) return;
+    const previous = this.cam && { x: this.cam.x, y: this.cam.y, zoom: this.z() };
+    this.cv.width = w * d; this.cv.height = h * d; this.dpr = d;
+    if (!this.cam || w !== this.width || h !== this.height) {
+      this.fit();
+      // Keep the user's location and relative zoom when the viewport changes.
+      if (previous) this.cam = { x: previous.x, y: previous.y, s: this.s0 * previous.zoom };
+    }
+    this.width = w; this.height = h;
+    this.request();
+  }
   request() { if (!this.pending) { this.pending = true; requestAnimationFrame(() => { this.pending = false; this.draw(); }); } }
   radius(k) { const it = this.items[k], z = Math.sqrt(this.z()); return it.kind === "project" ? Math.min(30, 8 * z + (this.z() > 1.7 ? 6 : 0)) : it.kind === "paper" ? 4.2 * Math.min(1.8, z) : 5 * Math.min(1.8, z); }
   nearest(px, py) {
@@ -201,7 +212,7 @@ class SiteMap {
     for (const k of near) if (k !== act) { const it = I[k], [sx, sy] = this.toScreen(it.x, it.y); put(nm(it), sx, sy - this.radius(k) - 7, `12.5px ${F}`, this.ink); }
     const fade = Math.max(0, Math.min(1, (2.3 - z) / 0.8));
     if (fade > 0 && act < 0) for (const T of this.terr) { const [sx, sy] = this.toScreen(T.x, T.y);
-      put(T.t.title.toUpperCase(), sx, sy + 4, `700 ${T.t.era === "earlier" ? 11 : 13}px ${F}`, hexA(this.col[T.t.id], (filtering && T.t.id !== this.label ? .25 : .95) * fade)); }
+      put(T.t.title.toUpperCase(), sx, sy + 4, `700 13px ${F}`, hexA(this.col[T.t.id], (filtering && T.t.id !== this.label ? .25 : .95) * fade)); }
     const labs = [...I.keys()].filter(k => on(k) && !near.has(k) && (I[k].kind === "project" ? z > 0.85 : z > 2.1)).sort((a, b) => (I[b].kind === "project") - (I[a].kind === "project") || (I[b].status === "active") - (I[a].status === "active"));
     for (const k of labs) { const it = I[k], [sx, sy] = this.toScreen(it.x, it.y), r = this.radius(k);
       put(nm(it), sx, sy + r + 14, `${it.kind === "project" ? "600 12.5px" : (it.kind === "paper" ? "11.5px" : "italic 11.5px")} ${F}`, it.kind === "project" ? this.ink : this.gray); }

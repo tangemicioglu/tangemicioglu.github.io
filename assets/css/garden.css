@@ -17,7 +17,6 @@
 .garden-filters details { margin: .5em 0; }
 .garden-filters summary { cursor: pointer; margin-bottom: .35em; }
 .garden-filters .page__taxonomy-item[aria-pressed=true] { background: #24748e; border-color: #24748e; color: #fff; }
-.garden-earlier { display: inline-block; margin: 0 .5em; color: var(--gray); }
 .garden-label-description p { margin: .8em 0; }
 .garden-year-items::after { content: ''; display: table; clear: both; }
 .garden-year .list__item { overflow: hidden; }
@@ -53,15 +52,20 @@
 .garden-timeline svg { display: block; max-width: none; }
 .garden-timeline a:hover text, .garden-timeline a:focus text { text-decoration: underline; }
 .garden-timeline a:focus { outline: 2px solid var(--ink); }
-.garden-index { margin-top: 1.5em; }
-.garden-index summary { cursor: pointer; }
-.garden-index h2 { font-size: 1.1em; }
-.garden-index li { margin-bottom: .35em; }
+.map-page { display: flex; flex-direction: column; height: 100vh; height: 100dvh; min-height: 0; padding: 0; overflow: hidden; }
+.map-page .masthead { flex: 0 0 auto; width: 100%; }
+.map-page #main.garden-map-page { flex: 1 1 0; min-height: 0; width: 100%; max-width: none; margin: 0; padding: 0; position: relative; }
+.garden-map-page #garden-map { position: absolute; inset: 0; }
+.garden-map-page .smap { height: 100%; min-height: 0; border: 0; border-radius: 0; }
+.garden-fallback { margin: 0; padding: 1.5em; }
+.garden-map-page noscript { position: relative; }
+.sm-help { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); color: var(--gray); font-size: 12px; padding: 3px 8px; background: var(--bg); border-radius: 5px; pointer-events: none; }
 .smap .meta { color: var(--gray); font-size: .85em; }
 .smap .sm-label-select { display: none; }
 .smap .sm-close { float: right; border: 0; background: var(--bg); color: var(--ink); font: inherit; cursor: pointer; padding: 0 .25em; }
 .smap .sm-card .go { display: inline-block; margin: .35em 0; }
 @media (max-width: 760px) {
+  .sm-help { display: none; }
   .garden-view-toggle { margin: 0 0 .8em; }
   .garden-archive .grid__item .archive__item-excerpt { font-size: 1em; }
   .garden-year .list__item .garden-teaser { float: none; display: block; width: 100%; padding: 8px 0; }

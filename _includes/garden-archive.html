@@ -14,9 +14,7 @@
     </details>
     <details class="garden-label-filter">
       <summary>Filter by label</summary>
-      {% assign earlier_started = false %}
       {% for label in site.data.tracks %}
-        {% if label.era == 'earlier' and earlier_started == false %}<span class="garden-earlier">earlier:</span>{% assign earlier_started = true %}{% endif %}
         <button type="button" class="page__taxonomy-item" data-label="{{ label.id }}" aria-pressed="false" data-blurb="{{ label.blurb | escape }}" data-title="{{ label.title | escape }}">{{ label.title }}</button>
       {% endfor %}
     </details>

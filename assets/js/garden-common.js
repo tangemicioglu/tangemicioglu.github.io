@@ -24,6 +24,15 @@ async function loadGarden(host) {
 
 function gardenUnavailable(host) {
   const message = document.createElement('p');
-  message.textContent = 'This view could not load. Browse the complete collection by label below.';
+  message.className = 'garden-fallback';
+  message.textContent = 'This view could not load. ';
+  const base = host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
+  ['Projects', 'Publications', 'Writing'].forEach((name, index) => {
+    if (index) message.append(' · ');
+    const link = document.createElement('a');
+    link.href = base + '/' + name.toLowerCase() + '/';
+    link.textContent = name;
+    message.append(link);
+  });
   host.replaceChildren(message);
 }
