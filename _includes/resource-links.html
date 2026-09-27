@@ -1,0 +1,26 @@
+{% for link in include.links %}
+  <a href="{{ link[2] | replace: ' ', '%20' | escape }}" style="text-decoration: none" class="page__taxonomy-item">
+    {% case link[1] %}
+      {% when "video" %}
+        <i class="fa fa-fw fab fa-youtube"></i>
+      {% when "slides" %}
+        <i class="fa fa-fw far fa-file-powerpoint"></i>
+      {% when "pdf" %}
+        <i class="fa fa-fw far fa-file-pdf"></i>
+      {% when "paper" %}
+        <i class="fa fa-fw far fa-scroll"></i>
+      {% when "writeup" %}
+        <i class="fa fa-fw far fa-pen-nib"></i>
+      {% when "code" %}
+        <i class="fa fa-fw far fa-code"></i>
+      {% when "doi" %}
+        <i class="fa fa-fw fas fa-quote-right"></i>
+      {% when "award" %}
+        <i class="fa fa-fw far fa-award"></i>
+      {% when "press" %}
+        <i class="fa fa-fw fal fa-newspaper"></i>
+      {% else %}
+        <i class="fa fa-fw far fa-link"></i>
+    {% endcase %}
+    {{ link[0] }}</a>
+{% endfor %}

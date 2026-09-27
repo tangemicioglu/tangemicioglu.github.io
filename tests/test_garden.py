@@ -67,7 +67,7 @@ class GardenTests(unittest.TestCase):
             template = '---\ntitle: Test\ndate: 2020-01-01\n{extra}---\nBody'
             (root / "_posts/2020-01-01-public.md").write_text(template.format(extra=''))
             (root / "_posts/2020-01-01-hidden.md").write_text(template.format(extra='published: false\n'))
-            (root / "_explorations/interactive.md").write_text(template.format(extra='areas: [a]\nexternal_url: https://example.test/\n'))
+            (root / "_explorations/interactive.md").write_text(template.format(extra='areas: [a]\nlinks: [[website, website, https://example.test/]]\n'))
             (root / "_explorations/hidden.md").write_text(template.format(extra='published: false\n'))
             git("add", ".")
             git("-c", "user.name=Test", "-c", "user.email=test@example.com", "commit", "-m", "Fixture")
@@ -80,7 +80,7 @@ class GardenTests(unittest.TestCase):
             exploration = items[0]
             self.assertEqual(exploration["kind"], "exploration")
             self.assertEqual(exploration["url"], "/explorations/interactive/")
-            self.assertEqual(exploration["external_url"], "https://example.test/")
+            self.assertEqual(exploration["resource_links"], [["website", "website", "https://example.test/"]])
             self.assertEqual(exploration["areas"], ["a"])
 
 

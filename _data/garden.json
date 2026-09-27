@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "140499641781990ad3549968a7f2576cc184bbc741cd265af7be87798adadd49",
+    "input_digest": "df49d14139a3fec3544d3b663b5f834daa1ea58950223ffda096057083c7319c",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -165,12 +165,18 @@
       "authors": null,
       "teaser": "/images/cyoaif.webp",
       "tended": "2026-09-27",
+      "resource_links": [
+        [
+          "website",
+          "website",
+          "https://www.cyoaif.com/"
+        ]
+      ],
       "areas": [
         "agents",
         "augmentation"
       ],
       "short": "CYOAIF",
-      "external_url": "https://www.cyoaif.com/",
       "teaser_position": "right",
       "track": "agents",
       "members": [],
@@ -182,14 +188,14 @@
         "bcihub-tutorials",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "horizon-worlds-community-study"
+        "itr-atlas"
       ],
       "similar_s": [
-        0.549,
-        0.506,
-        0.504,
-        0.49,
-        0.487
+        0.551,
+        0.509,
+        0.501,
+        0.491,
+        0.491
       ],
       "x": 0.2129,
       "y": -0.9027,

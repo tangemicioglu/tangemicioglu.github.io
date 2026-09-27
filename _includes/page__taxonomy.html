@@ -1,5 +1,9 @@
 {% include base_path %}
 
+{% if page.collection == 'explorations' and page.links.size > 0 %}
+  <p class="page__taxonomy">{% include resource-links.html links=page.links %}</p>
+{% endif %}
+
 {% if site.category_archive.type and page.categories[0] %}
   {% include category-list.html %}
 {% endif %}

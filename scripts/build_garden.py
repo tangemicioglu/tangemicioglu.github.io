@@ -19,7 +19,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 COLLECTIONS = {"_projects": "project", "_explorations": "exploration", "_publications": "paper", "_posts": "essay"}
-FIELDS = ("areas", "track", "project", "status", "start", "end", "short", "context", "stage", "related", "external_url", "teaser_position")
+FIELDS = ("areas", "track", "project", "status", "start", "end", "short", "context", "stage", "related", "teaser_position")
 
 
 def plain(text):
@@ -80,6 +80,8 @@ def read_items(root):
             "internal_links": re.findall(r"\]\(([^)\s]+)\)", body) + re.findall(r'href=[\"\x27]([^\"\x27]+)', body),
             "tended": str(fm.get("tended") or date)[:10],
         }
+        if col == "explorations":
+            item["resource_links"] = fm.get("links") or []
         for key in FIELDS:
             if key in fm:
                 item[key] = fm[key]

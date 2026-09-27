@@ -148,9 +148,10 @@ class SiteMap {
     const sec = (t, ids) => ids.length ? `<h4>${t}</h4><ul>${ids.map(row).join("")}</ul>` : "";
     const ser = it.series.map(s => G.ser[s.id]).map(S => sec(`${esc(S.title)} · in order`, S.items)).join("");
     const rel = it.related_items.slice(0, 4);
+    const resources = (it.resource_links || []).map(link => `<a class="page__taxonomy-item" href="${esc(link[2])}"><i class="fa fa-fw far fa-link" aria-hidden="true"></i> ${esc(link[0])}</a>`).join(' ');
     card.innerHTML = `<button class="sm-close" aria-label="Close item details">×</button>${it.teaser ? `<img src="${esc(it.teaser)}" style="object-position: ${esc(it.teaser_position || 'center')}" alt="">` : ""}<div class="meta">${KIND[it.kind]} · ${it.kind === "project" ? span(it) : fmt(it.date)}</div>
       <h3>${esc(clean(it.title))}</h3><div class="meta">${areaDots(it)}</div><p>${esc(plain(it.excerpt).slice(0, 260))}${plain(it.excerpt).length > 260 ? "…" : ""}</p>
-      ${it.kind === 'exploration' && it.external_url ? `<a class="go" href="${esc(it.external_url)}">Explore →</a> · <a href="${esc(it.url)}">About this exploration</a>` : `<a class="go" href="${esc(it.url)}">Open page →</a>`}${it.project ? sec("Part of", [it.project]) : ""}${sec("In this project", it.members)}${ser}${sec("See also", it.links)}${sec("Linked from", it.backlinks)}${sec("Related", rel)}`;
+      <a class="go" href="${esc(it.url)}">Open page →</a>${resources ? `<p class="page__taxonomy">${resources}</p>` : ''}${it.project ? sec("Part of", [it.project]) : ""}${sec("In this project", it.members)}${ser}${sec("See also", it.links)}${sec("Linked from", it.backlinks)}${sec("Related", rel)}`;
     card.style.display = "block";
     if (fly) { const ts = Math.max(this.cam.s, this.s0 * 2.2); this.animate({ x: it.x + 175 / ts, y: it.y, s: ts }); } // keep the item clear of the card
     this.request();
