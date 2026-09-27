@@ -7,7 +7,7 @@ collection: projects
 category: independent
 tags: ["brain-computer-interfaces", "hci", "communication", "metrics", "visualization"]
 links:
-- [project site, writeup, https://tangemicioglu.com/itr-atlas/]
+- [project site, website, https://tangemicioglu.com/itr-atlas/]
 - [code, code, https://github.com/tangemicioglu/itr-atlas]
 areas: ["bci"]
 status: "active"
