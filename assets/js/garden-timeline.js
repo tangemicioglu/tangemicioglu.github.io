@@ -13,7 +13,7 @@ function drawTimeline(data) {
     const x = X(item.date);
     return link(item, item.kind === 'paper'
       ? `<circle cx="${x}" cy="${y}" r="5" fill="var(--bg)" stroke="${color}" stroke-width="1.8"/>`
-      : `<rect x="${x - 4}" y="${y - 4}" width="8" height="8" transform="rotate(45 ${x} ${y})" fill="${color}"/>`);
+      : `<rect x="${x - 4}" y="${y - 4}" width="8" height="8" ${item.kind === 'exploration' ? '' : `transform="rotate(45 ${x} ${y})"`} fill="${color}"/>`);
   };
   let svg = '', y = 34;
   for (const track of data.tracks) {
@@ -47,6 +47,6 @@ function drawTimeline(data) {
     const x = X(`${year}-01`);
     axis += `<line x1="${x}" x2="${x}" y1="24" y2="${y}" stroke="var(--rule)"/><text x="${x + 3}" y="16" font-size="12" fill="var(--gray)">${year}</text>`;
   }
-  timelineHost.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y + 10}" width="${W}" height="${y + 10}" role="group" aria-label="Projects and publications across time">${axis}${svg}</svg>`;
+  timelineHost.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${y + 10}" width="${W}" height="${y + 10}" role="group" aria-label="Projects, explorations, publications, and writing across time">${axis}${svg}</svg>`;
 }
 loadGarden(timelineHost).then(drawTimeline).catch(() => gardenUnavailable(timelineHost));

@@ -12,7 +12,7 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div class="{{ include.type | default: "list" }}__item" data-title="{{ post.title | escape }}" id="{{ post.title | slugify }}" data-year="{{ post.date | date: "%Y" }}"{% if include.garden %} data-garden-item data-category="{{ post.category | escape }}" data-areas="{{ include.garden.areas | join: ',' }}" data-tags="{{ post.tags | join: ',' | escape }}"{% endif %}>
+<div class="{{ include.type | default: "list" }}__item" data-title="{{ post.title | escape }}" id="{{ post.title | slugify }}" data-year="{{ post.date | date: "%Y" }}"{% if include.garden %} data-garden-item data-kind="{{ include.garden.kind }}" data-category="{{ post.category | escape }}" data-areas="{{ include.garden.areas | join: ',' }}" data-tags="{{ post.tags | join: ',' | escape }}"{% endif %}>
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -38,14 +38,15 @@
       {% endif %}
     </h2>
     
-    {% if post.collection == 'projects' or post.collection == 'publications' %}
+    {% if post.collection == 'projects' or post.collection == 'publications' or post.collection == 'explorations' %}
       {% if include.garden %}
-        {% if post.teaser %}<a class="garden-teaser" href="{{ post.url | relative_url }}"><img src="{{ post.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy"></a>{% endif %}
+        {% if post.teaser %}<a class="garden-teaser" href="{{ post.url | relative_url }}"><img src="{{ post.teaser | relative_url }}" alt="{{ post.title | escape }}" loading="lazy"{% if post.teaser_position %} style="object-position: {{ post.teaser_position | escape }}"{% endif %}></a>{% endif %}
       {% else %}
       <img src="{{ post.teaser }}" alt="{{ post.title }}" style="float: left; padding: 10px; width: 30%;">
       {% endif %}
     {% endif %}
     
+    {% if post.collection == 'projects' %}<p class="garden-work-kind">Project</p>{% elsif post.collection == 'explorations' %}<p class="garden-work-kind">Exploration</p>{% endif %}
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -73,6 +74,7 @@
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
     {% endif %}
     
+    {% if post.collection == 'explorations' and post.external_url %}<p class="garden-explore"><a href="{{ post.external_url | escape }}">Explore →</a></p>{% endif %}
     {% if post.citation and post.paperurl %}
       <p>{{ post.citation }} <a href="{{ post.paperurl | replace: ' ', '%20' }}">{{ post.paperurl }}</a></p>
     {% elsif post.citation %}
@@ -87,7 +89,7 @@
     {% capture post_tags %}{% for tag in post.tags %}{{ tag | downcase }}#{{ tag }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
     {% assign tag_hashes = (post_tags | split: ',' | sort:0) %}
     <p class="page__taxonomy">
-      {% if post.collection == 'projects' or post.collection == 'publications' %}
+      {% if post.collection == 'projects' or post.collection == 'publications' or post.collection == 'explorations' %}
         <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i></strong>
         <span itemprop="keywords">
         {% for hash in category_hashes %}

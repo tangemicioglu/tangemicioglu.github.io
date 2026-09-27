@@ -1,4 +1,8 @@
-{% assign entries = site[include.collection] | sort: 'date' | reverse %}
+{% if include.collection == 'work' %}
+  {% assign entries = site.projects | concat: site.explorations | sort: 'date' | reverse %}
+{% else %}
+  {% assign entries = site[include.collection] | sort: 'date' | reverse %}
+{% endif %}
 {% assign categories = entries | map: 'category' | uniq | sort %}
 <div class="garden-archive" data-collection="{{ include.collection }}">
   <div class="garden-view-toggle" role="group" aria-label="Archive view">
@@ -6,6 +10,13 @@
     <button type="button" data-view="gallery" aria-label="Gallery view" title="Gallery view" aria-pressed="false"><i class="fas fa-th-large" aria-hidden="true"></i></button>
   </div>
   <div class="page__taxonomy garden-filters">
+    {% if include.collection == 'work' %}
+    <div class="garden-kind-filter" role="group" aria-label="Kind of work">
+      <button type="button" class="page__taxonomy-item" data-kind="" aria-pressed="true">All work</button>
+      <button type="button" class="page__taxonomy-item" data-kind="project" aria-pressed="false">Projects</button>
+      <button type="button" class="page__taxonomy-item" data-kind="exploration" aria-pressed="false">Explorations</button>
+    </div>
+    {% endif %}
     <details open>
       <summary>Filter by category</summary>
       {% for category in categories %}
@@ -33,7 +44,7 @@
       </div>
     </section>
   {% endfor %}
-  {% if include.collection == 'projects' %}
+  {% if include.collection == 'work' %}
     <section class="garden-also" hidden aria-labelledby="garden-also-title">
       <h2 id="garden-also-title">Also labelled <span></span></h2>
       <ul>

@@ -18,8 +18,8 @@ from urllib.parse import unquote, urljoin, urlsplit
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-COLLECTIONS = {"_projects": "project", "_publications": "paper", "_posts": "essay"}
-FIELDS = ("areas", "track", "project", "status", "start", "end", "short", "context", "stage", "related")
+COLLECTIONS = {"_projects": "project", "_explorations": "exploration", "_publications": "paper", "_posts": "essay"}
+FIELDS = ("areas", "track", "project", "status", "start", "end", "short", "context", "stage", "related", "external_url", "teaser_position")
 
 
 def plain(text):

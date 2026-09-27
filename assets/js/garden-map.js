@@ -6,10 +6,10 @@
 class SiteMap {
   constructor(host, G, { onOpen } = {}) {
     this.G = G; this.onOpen = onOpen;
-    host.innerHTML = `<div class="smap"><canvas aria-label="Map of projects, papers, and writing. Use arrow keys to pan, plus and minus to zoom." tabindex="0"></canvas>
+    host.innerHTML = `<div class="smap"><canvas aria-label="Map of projects, explorations, papers, and writing. Use arrow keys to pan, plus and minus to zoom." tabindex="0"></canvas>
       <div class="sm-top"><input type="search" placeholder="Search titles…" aria-label="Search map titles"><div class="sm-chips"></div><select class="sm-label-select" aria-label="Filter map by label"><option value="">All labels</option>${G.tracks.map(t => `<option value="${t.id}">${esc(t.title)}</option>`).join('')}</select></div>
       <div class="sm-zoom"><button data-z="in" title="Zoom in" aria-label="Zoom in">+</button><button data-z="out" title="Zoom out" aria-label="Zoom out">−</button><button data-z="fit" title="Show everything" aria-label="Show everything">⤢</button></div>
-      <div class="sm-key"><span><i class="k-proj"></i>project</span><span><i class="k-paper"></i>paper</span><span><i class="k-writ"></i>writing</span></div>
+      <div class="sm-key"><span><i class="k-proj"></i>project</span><span><i class="k-explore"></i>exploration</span><span><i class="k-paper"></i>paper</span><span><i class="k-writ"></i>writing</span></div>
       <div class="sm-help">Drag to move · scroll or pinch to zoom · select for details</div>
       <div class="sm-tip"></div><div class="sm-card" aria-label="Selected item"></div><p class="sr-only" role="status"></p></div>`;
     this.el = host.querySelector(".smap"); this.cv = this.el.querySelector("canvas"); this.ctx = this.cv.getContext("2d");
@@ -148,9 +148,9 @@ class SiteMap {
     const sec = (t, ids) => ids.length ? `<h4>${t}</h4><ul>${ids.map(row).join("")}</ul>` : "";
     const ser = it.series.map(s => G.ser[s.id]).map(S => sec(`${esc(S.title)} · in order`, S.items)).join("");
     const rel = it.related_items.slice(0, 4);
-    card.innerHTML = `<button class="sm-close" aria-label="Close item details">×</button>${it.teaser ? `<img src="${esc(it.teaser)}" alt="">` : ""}<div class="meta">${KIND[it.kind]} · ${it.kind === "project" ? span(it) : fmt(it.date)}</div>
+    card.innerHTML = `<button class="sm-close" aria-label="Close item details">×</button>${it.teaser ? `<img src="${esc(it.teaser)}" style="object-position: ${esc(it.teaser_position || 'center')}" alt="">` : ""}<div class="meta">${KIND[it.kind]} · ${it.kind === "project" ? span(it) : fmt(it.date)}</div>
       <h3>${esc(clean(it.title))}</h3><div class="meta">${areaDots(it)}</div><p>${esc(plain(it.excerpt).slice(0, 260))}${plain(it.excerpt).length > 260 ? "…" : ""}</p>
-      <a class="go" href="${esc(it.url)}">Open page →</a>${it.project ? sec("Part of", [it.project]) : ""}${sec("In this project", it.members)}${ser}${sec("See also", it.links)}${sec("Linked from", it.backlinks)}${sec("Related", rel)}`;
+      ${it.kind === 'exploration' && it.external_url ? `<a class="go" href="${esc(it.external_url)}">Explore →</a> · <a href="${esc(it.url)}">About this exploration</a>` : `<a class="go" href="${esc(it.url)}">Open page →</a>`}${it.project ? sec("Part of", [it.project]) : ""}${sec("In this project", it.members)}${ser}${sec("See also", it.links)}${sec("Linked from", it.backlinks)}${sec("Related", rel)}`;
     card.style.display = "block";
     if (fly) { const ts = Math.max(this.cam.s, this.s0 * 2.2); this.animate({ x: it.x + 175 / ts, y: it.y, s: ts }); } // keep the item clear of the card
     this.request();
@@ -183,7 +183,7 @@ class SiteMap {
       for (const j of this.nb[act]) { if (I[act].members.includes(I[j].id) || I[act].project === I[j].id) continue; const [bx, by] = this.toScreen(I[j].x, I[j].y);
         ctx.strokeStyle = hexA(this.gray, .8); ctx.lineWidth = 1.2; ctx.setLineDash([2, 3]); ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke(); ctx.setLineDash([]); }
     }
-    // 3. nodes: projects as medallions (image once zoomed in), papers as rings, writing as diamonds
+    // Distinct shapes keep explorations identifiable alongside papers and writing.
     const order = [...I.keys()].sort((a, b) => (I[a].kind === "project") - (I[b].kind === "project"));
     for (const k of order) { const it = I[k], [sx, sy] = this.toScreen(it.x, it.y), r = this.radius(k), c = this.col[it.track];
       if (sx < -40 || sx > w + 40 || sy < -40 || sy > h + 40) continue;
@@ -195,6 +195,7 @@ class SiteMap {
           const s = Math.max((2 * r) / im.naturalWidth, (2 * r) / im.naturalHeight); ctx.drawImage(im, sx - im.naturalWidth * s / 2, sy - im.naturalHeight * s / 2, im.naturalWidth * s, im.naturalHeight * s); ctx.restore(); }
         if (it.status === "active") { ctx.strokeStyle = c; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(sx, sy, r + 4, 0, 6.2832); ctx.stroke(); }
       } else if (it.kind === "paper") { ctx.beginPath(); ctx.arc(sx, sy, r, 0, 6.2832); ctx.fillStyle = this.bg; ctx.fill(); ctx.strokeStyle = c; ctx.lineWidth = 2.2; ctx.stroke(); }
+      else if (it.kind === "exploration") { ctx.fillStyle = c; ctx.fillRect(sx - r, sy - r, r * 2, r * 2); }
       else { ctx.beginPath(); ctx.moveTo(sx, sy - r * 1.2); ctx.lineTo(sx + r, sy); ctx.lineTo(sx, sy + r * 1.2); ctx.lineTo(sx - r, sy); ctx.closePath(); ctx.fillStyle = c; ctx.fill(); }
       if (k === act) { ctx.strokeStyle = this.ink; ctx.lineWidth = 2.5; ctx.beginPath(); ctx.arc(sx, sy, r + (it.kind === "project" ? 7 : 5), 0, 6.2832); ctx.stroke(); }
     }

@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "3b757e666af73928ac91eecf8d50e470a7446c14ccb3d5c8eccc9100b2bb5072",
+    "input_digest": "140499641781990ad3549968a7f2576cc184bbc741cd265af7be87798adadd49",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -144,6 +144,57 @@
     }
   ],
   "items": [
+    {
+      "id": "cyoaif",
+      "url": "/explorations/cyoaif/",
+      "source": "_explorations/cyoaif.md",
+      "kind": "exploration",
+      "collection": "explorations",
+      "title": "Choose your own AI future",
+      "date": "2026-09-27",
+      "planted": "2026-09-27",
+      "git_modified": "2026-09-27",
+      "excerpt": "An interactive essay about possible AI futures and how they change when human capabilities advance too. Follow a series of choices about AI, then compare illustrated worlds shaped by different distributions of capability, power, and agency.",
+      "tags": [
+        "artificial-intelligence",
+        "human-augmentation",
+        "interactive-essay"
+      ],
+      "category": "independent",
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/cyoaif.webp",
+      "tended": "2026-09-27",
+      "areas": [
+        "agents",
+        "augmentation"
+      ],
+      "short": "CYOAIF",
+      "external_url": "https://www.cyoaif.com/",
+      "teaser_position": "right",
+      "track": "agents",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robomaster",
+        "bcihub-tutorials",
+        "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
+        "horizon-worlds-community-study"
+      ],
+      "similar_s": [
+        0.549,
+        0.506,
+        0.504,
+        0.49,
+        0.487
+      ],
+      "x": 0.2129,
+      "y": -0.9027,
+      "related_items": []
+    },
     {
       "id": "2021-12-01-health-tracking-privacy",
       "url": "/posts/health-tracking-privacy/",

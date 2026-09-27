@@ -7,6 +7,7 @@ category: independent
 areas: ["agents", "augmentation"]
 tags: [artificial-intelligence, human-augmentation, interactive-essay]
 teaser: "/images/cyoaif.webp"
+teaser_position: right
 excerpt: "An interactive essay about possible AI futures and how they change when human capabilities advance too. Follow a series of choices about AI, then compare illustrated worlds shaped by different distributions of capability, power, and agency."
 external_url: "https://www.cyoaif.com/"
 ---

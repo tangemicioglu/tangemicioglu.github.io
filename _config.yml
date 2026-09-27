@@ -200,6 +200,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  explorations:
+    output: true
+    permalink: /:collection/:path/
   talks:
     output: true
     permalink: /:collection/:path/
@@ -248,6 +251,13 @@ defaults:
       type: projects
     values:
       layout: single
+  # _explorations
+  - scope:
+      path: ""
+      type: explorations
+    values:
+      layout: single
+      author_profile: false
   # _talks
   - scope:
       path: ""

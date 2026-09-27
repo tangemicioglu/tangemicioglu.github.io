@@ -3,7 +3,7 @@
 const esc = text => String(text ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
 const clean = text => text;
 const plain = text => String(text ?? '');
-const KIND = {project: 'Project', paper: 'Paper', essay: 'Essay', note: 'Note'};
+const KIND = {project: 'Project', exploration: 'Exploration', paper: 'Paper', essay: 'Essay', note: 'Note'};
 const nm = item => item.short || (item.title.split(/:\s/)[0].length > 44 ? item.title.split(/:\s/)[0].slice(0, 42) + '…' : item.title.split(/:\s/)[0]);
 const fmt = date => new Date(date + 'T00:00:00').toLocaleDateString('en-US', {month: 'short', year: 'numeric'});
 const span = item => `${item.start.slice(0, 4)}${item.status === 'active' ? '–now' : item.end.slice(0, 4) !== item.start.slice(0, 4) ? '–' + item.end.slice(0, 4) : ''}`;
@@ -27,10 +27,10 @@ function gardenUnavailable(host) {
   message.className = 'garden-fallback';
   message.textContent = 'This view could not load. ';
   const base = host.dataset.gardenUrl.replace(/\/garden\.json$/, '');
-  ['Projects', 'Publications', 'Writing'].forEach((name, index) => {
+  [['Work', 'projects'], ['Publications', 'publications'], ['Writing', 'writing']].forEach(([name, path], index) => {
     if (index) message.append(' · ');
     const link = document.createElement('a');
-    link.href = base + '/' + name.toLowerCase() + '/';
+    link.href = base + '/' + path + '/';
     link.textContent = name;
     message.append(link);
   });

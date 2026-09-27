@@ -5,10 +5,11 @@
   if (!root) return;
   const cards = [...root.querySelectorAll('[data-garden-item]')];
   const categories = [...root.querySelectorAll('button[data-category]')];
+  const kinds = [...root.querySelectorAll('button[data-kind]')];
   const labels = [...root.querySelectorAll('button[data-label]')];
   const views = [...root.querySelectorAll('button[data-view]')];
   const selected = new Set();
-  let category = '', legacyTags = [];
+  let category = '', kind = '', legacyTags = [];
   const storageKey = 'garden-archive-view';
 
   // A full-width reading surface keeps long abstracts out of narrow gallery cards.
@@ -71,6 +72,7 @@
     cards.forEach(card => {
       const areas = card.dataset.areas.split(',');
       card.hidden = !!((category && category !== card.dataset.category)
+        || (kind && kind !== card.dataset.kind)
         || (selected.size && !areas.some(id => selected.has(id)))
         || (legacyTags.length && !card.dataset.tags.split(',').some(tag => legacyTags.includes(tag))));
       if (!card.hidden) count++;
@@ -78,6 +80,7 @@
     root.querySelectorAll('.garden-year').forEach(year => { year.hidden = !year.querySelector('[data-garden-item]:not([hidden])'); });
     root.querySelector('.garden-empty').hidden = count > 0;
     categories.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
+    kinds.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.kind === kind)));
     labels.forEach(button => button.setAttribute('aria-pressed', String(selected.has(button.dataset.label))));
     const descriptions = root.querySelector('.garden-label-description');
     descriptions.replaceChildren(...labels.filter(button => selected.has(button.dataset.label)).map(button => {
@@ -95,8 +98,9 @@
     }
     if (writeURL) {
       const url = new URL(location.href);
-      ['category', 'label', 'tags'].forEach(key => url.searchParams.delete(key));
+      ['category', 'kind', 'label', 'tags'].forEach(key => url.searchParams.delete(key));
       if (category) url.searchParams.set('category', category);
+      if (kind) url.searchParams.set('kind', kind);
       if (selected.size) url.searchParams.set('label', [...selected].join(','));
       if (legacyTags.length) url.searchParams.set('tags', legacyTags.join(','));
       history.replaceState(null, '', url);
@@ -106,6 +110,7 @@
   function fromURL() {
     const params = new URL(location.href).searchParams;
     category = params.get('category') || '';
+    kind = kinds.some(button => button.dataset.kind === params.get('kind')) ? params.get('kind') : '';
     selected.clear();
     (params.get('label') || '').split(',').forEach(id => { if (labels.some(b => b.dataset.label === id)) selected.add(id); });
     legacyTags = (params.get('tags') || '').split(',').filter(Boolean);
@@ -113,9 +118,10 @@
     update(false);
   }
   categories.forEach(button => button.addEventListener('click', () => { category = category === button.dataset.category ? '' : button.dataset.category; update(); }));
+  kinds.forEach(button => button.addEventListener('click', () => { kind = button.dataset.kind; update(); }));
   labels.forEach(button => button.addEventListener('click', () => { const id = button.dataset.label; selected.has(id) ? selected.delete(id) : selected.add(id); legacyTags = []; update(); }));
   views.forEach(button => button.addEventListener('click', () => view(button.dataset.view, true)));
-  root.querySelector('[data-clear]').addEventListener('click', () => { category = ''; legacyTags = []; selected.clear(); update(); });
+  root.querySelector('[data-clear]').addEventListener('click', () => { category = ''; kind = ''; legacyTags = []; selected.clear(); update(); });
   addEventListener('popstate', fromURL);
   addEventListener('storage', event => { if (event.key === storageKey) view(event.newValue); });
   try { view(localStorage.getItem(storageKey)); } catch (_) { view('list'); }

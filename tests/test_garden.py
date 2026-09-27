@@ -60,18 +60,28 @@ class GardenTests(unittest.TestCase):
                 subprocess.run(["git", "-C", tmp, *args], check=True, capture_output=True)
             git("init")
             (root / "_posts").mkdir()
+            (root / "_explorations").mkdir()
             (root / "_data").mkdir()
             for name in ["tracks.yml", "series.yml"]:
                 (root / "_data" / name).write_text("[]")
             template = '---\ntitle: Test\ndate: 2020-01-01\n{extra}---\nBody'
             (root / "_posts/2020-01-01-public.md").write_text(template.format(extra=''))
             (root / "_posts/2020-01-01-hidden.md").write_text(template.format(extra='published: false\n'))
+            (root / "_explorations/interactive.md").write_text(template.format(extra='areas: [a]\nexternal_url: https://example.test/\n'))
+            (root / "_explorations/hidden.md").write_text(template.format(extra='published: false\n'))
             git("add", ".")
             git("-c", "user.name=Test", "-c", "user.email=test@example.com", "commit", "-m", "Fixture")
             (root / "_posts/2020-01-01-draft.md").write_text(template.format(extra=''))
             git("add", "_posts/2020-01-01-draft.md")
+            (root / "_explorations/draft.md").write_text(template.format(extra=''))
+            git("add", "_explorations/draft.md")
             items, _ = read_items(root)
-            self.assertEqual([i["id"] for i in items], ["2020-01-01-public"])
+            self.assertEqual([i["id"] for i in items], ["interactive", "2020-01-01-public"])
+            exploration = items[0]
+            self.assertEqual(exploration["kind"], "exploration")
+            self.assertEqual(exploration["url"], "/explorations/interactive/")
+            self.assertEqual(exploration["external_url"], "https://example.test/")
+            self.assertEqual(exploration["areas"], ["a"])
 
 
 if __name__ == "__main__":

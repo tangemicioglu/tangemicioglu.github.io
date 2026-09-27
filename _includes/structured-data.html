@@ -35,7 +35,7 @@
       "sameAs": {{ structured_doi | jsonify }}{% endif %}
     }
   </script>
-{% elsif page.collection == "projects" %}
+{% elsif page.collection == "projects" or page.collection == "explorations" %}
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
