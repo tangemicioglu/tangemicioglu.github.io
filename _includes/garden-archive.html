@@ -4,6 +4,10 @@
   {% assign entries = site[include.collection] | sort: 'date' | reverse %}
 {% endif %}
 {% assign categories = entries | map: 'category' | uniq | sort %}
+{% if include.collection == 'work' %}
+  {% assign preferred_categories = 'research,independent,organizations,coursework' | split: ',' %}
+  {% assign categories = preferred_categories | concat: categories | uniq %}
+{% endif %}
 <div class="garden-archive" data-collection="{{ include.collection }}">
   <div class="garden-view-toggle" role="group" aria-label="Archive view">
     <button type="button" data-view="list" aria-label="List view" title="List view" aria-pressed="true"><i class="fas fa-list" aria-hidden="true"></i></button>
