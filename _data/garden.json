@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-09-27",
     "epoch": "2026-09-27",
-    "input_digest": "df49d14139a3fec3544d3b663b5f834daa1ea58950223ffda096057083c7319c",
+    "input_digest": "2083f06ebfb30ce1b481a8f19b001302a04ed90bc3c6b91972186d85b1d859ff",
     "model": "Alibaba-NLP/gte-modernbert-base"
   },
   "tracks": [
@@ -15,6 +15,11 @@
       "id": "bci",
       "title": "Brain–computer interfaces",
       "blurb": "Passively learnable BCIs, how fast any interface can carry information, and teaching the BCI community."
+    },
+    {
+      "id": "augmentation",
+      "title": "Human augmentation",
+      "blurb": "Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention."
     },
     {
       "id": "agents",
@@ -45,11 +50,6 @@
       "id": "wearables",
       "title": "Wearables",
       "blurb": "Body-worn sensing, stimulation, and input systems, from smart rings and head-worn devices to haptic gloves and therapeutic wraps."
-    },
-    {
-      "id": "augmentation",
-      "title": "Human augmentation",
-      "blurb": "Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention."
     },
     {
       "id": "neural-stimulation",

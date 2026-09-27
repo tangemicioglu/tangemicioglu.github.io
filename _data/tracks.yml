@@ -8,6 +8,9 @@
 - id: bci
   title: Brain–computer interfaces
   blurb: Passively learnable BCIs, how fast any interface can carry information, and teaching the BCI community.
+- id: augmentation
+  title: Human augmentation
+  blurb: Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention.
 - id: agents
   title: Artificial intelligence
   blurb: Systems that learn from human activity and support work, from weakly supervised visual learning to persistent AI agents.
@@ -26,9 +29,6 @@
 - id: wearables
   title: Wearables
   blurb: Body-worn sensing, stimulation, and input systems, from smart rings and head-worn devices to haptic gloves and therapeutic wraps.
-- id: augmentation
-  title: Human augmentation
-  blurb: Interfaces that extend or restore human abilities through new input methods, passive skill learning, and physiological intervention.
 - id: neural-stimulation
   title: Neural stimulation
   blurb: Peripheral electrical stimulation for physiological intervention, including vagus nerve stimulation during eating and facial muscle stimulation for symmetry.
