@@ -97,7 +97,7 @@
         {% endfor %}
         </span>
         {% if post.collection == 'explorations' %}<a href="{{ '/projects/' | relative_url }}?kind=exploration" class="page__taxonomy-item">exploration</a>{% endif %}
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="archive-taxonomy-gap">&nbsp;&nbsp;&nbsp;&nbsp;</span>
       {% endif %}
       <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i></strong>
       <span itemprop="keywords">

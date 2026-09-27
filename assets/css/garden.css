@@ -33,7 +33,10 @@
 .garden-archive .grid__item .garden-teaser img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
 .garden-archive .grid__item .archive__item-excerpt { display: block; font-size: .85em; }
 .garden-archive .grid__item p { margin: .4em 0; }
-.garden-archive .grid__item .page__taxonomy { margin-top: .8em; }
+.garden-archive .grid__item .page__taxonomy { margin-top: .8em; font-size: max(14px, .8em); line-height: 1.5; }
+.garden-archive .grid__item .page__taxonomy-item { margin: 0 3px 4px 0; padding: 2px 6px; }
+.garden-archive .grid__item .page__taxonomy strong { margin-right: 3px; }
+.garden-archive .grid__item .archive-taxonomy-gap { display: none; }
 .garden-archive .grid__item .archive__item-title { font-size: 1em; }
 .garden-archive .grid__item details { font-size: .9em; }
 .garden-archive .garden-permalink { font-size: .75em; }
