@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built": "2026-09-27",
-    "epoch": "2026-09-27",
-    "input_digest": "5d9b297527226c2d6d67fcea01fc99642e105817c1d2047a75edbc7bda058661",
+    "built": "2026-10-28",
+    "epoch": "2026-10-28",
+    "input_digest": "2711218d0f9d4562dee9b67649940a80a4b58c95500c64e608bcbeeb214d00f8",
     "model": "Alibaba-NLP/gte-modernbert-base",
     "layout": {
       "name": "primary-groups-v1",
@@ -448,7 +448,7 @@
       "track": "therapeutics",
       "members": [],
       "start": "2026-07-28",
-      "end": "2026-09-27",
+      "end": "2026-10-28",
       "series": [
         {
           "id": "implicit-augmentation",
@@ -837,7 +837,7 @@
       "track": "bci",
       "members": [],
       "start": "2026-06-24",
-      "end": "2026-09-27",
+      "end": "2026-10-28",
       "series": [
         {
           "id": "measuring-bcis",
@@ -1429,7 +1429,7 @@
       "members": [
         "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
       ],
-      "end": "2026-09-27",
+      "end": "2026-10-28",
       "series": [
         {
           "id": "implicit-augmentation",
@@ -1490,7 +1490,7 @@
       "track": "therapeutics",
       "members": [],
       "start": "2025-06-01",
-      "end": "2026-09-27",
+      "end": "2026-10-28",
       "series": [
         {
           "id": "passive-haptics",
@@ -1555,7 +1555,7 @@
       ],
       "members": [],
       "start": "2026-02-24",
-      "end": "2026-09-27",
+      "end": "2026-10-28",
       "series": [],
       "links": [],
       "backlinks": [],
