@@ -7,6 +7,7 @@ collection: projects
 category: research
 tags: [wearables, neural-interfaces, eating]
 links:
+- [UbiComp 2026 slides (PDF), slides, /files/slides/AppetiteCheck_UbiComp_2026_Slides.pdf]
 - [InterfaceNeuro'25 poster, slides, /files/slides/VNS_InterfaceNeuro_Poster.pptx]
 - [IMWUT paper, paper, https://doi.org/10.1145/3831630]
 areas: ["therapeutics", "wearables", "augmentation", "neural-stimulation"]
