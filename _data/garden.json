@@ -2,7 +2,7 @@
   "meta": {
     "built": "2026-10-28",
     "epoch": "2026-10-28",
-    "input_digest": "2711218d0f9d4562dee9b67649940a80a4b58c95500c64e608bcbeeb214d00f8",
+    "input_digest": "084bed7bd4ededa8dc37b130909359fe7fa2a72b067aef7f4007efb3c021065a",
     "model": "Alibaba-NLP/gte-modernbert-base",
     "layout": {
       "name": "primary-groups-v1",
