@@ -10,7 +10,7 @@ description: >-
   Even among people with equal knowledge, they aren't necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the "efficiency" aspect of intelligence.
 excerpt: >-
   <img src="/images/intelligence-inferential-efficiency.png" alt="Comparison of inferential efficiency at equal levels of knowledge" width="280" loading="lazy"><br>
-  Even among people with equal knowledge, they aren&#39;t necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the &quot;efficiency&quot; aspect of intelligence.
+  Even among people with equal knowledge, they aren&apos;t necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the &quot;efficiency&quot; aspect of intelligence.
 ---
 
 <figure>
@@ -98,6 +98,7 @@ Viewing intelligence as inferential reach instead of cross-domain capability als
 
 <figure>
   <img src="{{ '/images/intelligence-jagged-frontier.gif' | relative_url }}" alt="Animated illustration of the jagged frontier of AI capabilities">
+  <figcaption>The jagged frontier is the result of combining aspects of both the agent and the environment, which work together to improve performance.</figcaption>
 </figure>
 
 A good way to determine when superhuman inferential reach is achieved is what's been described as the [Einstein test](https://www.nature.com/articles/d41586-026-02804-x) by Demis Hassabis. For an AI to discover general relativity using only knowledge from before 1911, it needs to make leaps in logic that require substantial inferential reach. The eventual inference is both highly unlikely (as other physicists did not discover it) and highly useful. The test is still not perfect, as the AI would have more knowledge than Einstein did, and likely benefit from stochasticity by making more total attempts at inferences, but it's close enough.
