@@ -6,10 +6,11 @@ header:
   teaser: /images/intelligence-inferential-efficiency.png
 tags: [artificial-intelligence, intelligence, inference]
 areas: [agents]
-description: "If one of these agents is more intelligent, they will be more likely to make inferences that are useful for its goals, and that others would be unlikely to do."
+description: >-
+  Even among people with equal knowledge, they aren't necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the "efficiency" aspect of intelligence.
 excerpt: >-
   <img src="/images/intelligence-inferential-efficiency.png" alt="Comparison of inferential efficiency at equal levels of knowledge" width="280" loading="lazy"><br>
-  If one of these agents is more intelligent, they will be more likely to make inferences that are useful for its goals, and that others would be unlikely to do.
+  Even among people with equal knowledge, they aren&#39;t necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the &quot;efficiency&quot; aspect of intelligence.
 ---
 
 <figure>
