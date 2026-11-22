@@ -1,8 +1,8 @@
 {
   "meta": {
-    "built": "2026-10-28",
-    "epoch": "2026-10-28",
-    "input_digest": "084bed7bd4ededa8dc37b130909359fe7fa2a72b067aef7f4007efb3c021065a",
+    "built": "2026-11-22",
+    "epoch": "2026-11-22",
+    "input_digest": "4b6de65955ee9ad147986fd5f9e598cc6616dae298ad723423b1901dee98e016",
     "model": "Alibaba-NLP/gte-modernbert-base",
     "layout": {
       "name": "primary-groups-v1",
@@ -190,21 +190,21 @@
       "links": [],
       "backlinks": [],
       "similar": [
+        "2026-11-22-intelligence-as-useful-and-unlikely-inference",
         "robomaster",
         "bcihub-tutorials",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
-        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
-        "itr-atlas"
+        "2026-09-27-Workshop-on-Augmenting-Human-Dexterity"
       ],
       "similar_s": [
+        0.57,
         0.551,
         0.509,
         0.501,
-        0.491,
         0.491
       ],
-      "x": 0.677,
-      "y": -0.6032,
+      "x": -0.2712,
+      "y": -0.8878,
       "related_items": []
     },
     {
@@ -253,8 +253,55 @@
         0.6,
         0.591
       ],
-      "x": 0.3561,
-      "y": 0.6145,
+      "x": -0.1714,
+      "y": 0.8261,
+      "related_items": []
+    },
+    {
+      "id": "2026-11-22-intelligence-as-useful-and-unlikely-inference",
+      "url": "/posts/intelligence-as-useful-and-unlikely-inference/",
+      "source": "_posts/2026-11-22-intelligence-as-useful-and-unlikely-inference.md",
+      "kind": "essay",
+      "collection": "posts",
+      "title": "Intelligence as Useful and Unlikely Inference",
+      "date": "2026-11-22",
+      "planted": "2026-11-22",
+      "git_modified": "2026-11-22",
+      "excerpt": "If one of these agents is more intelligent, they will be more likely to make inferences that are useful for its goals, and that others would be unlikely to do.",
+      "tags": [
+        "artificial-intelligence",
+        "intelligence",
+        "inference"
+      ],
+      "category": null,
+      "venue": null,
+      "authors": null,
+      "teaser": "/images/intelligence-inferential-efficiency.png",
+      "tended": "2026-11-22",
+      "areas": [
+        "agents"
+      ],
+      "track": "agents",
+      "members": [],
+      "series": [],
+      "links": [],
+      "backlinks": [],
+      "similar": [
+        "robomaster",
+        "cyoaif",
+        "itr-atlas",
+        "bcihub-tutorials",
+        "wardian"
+      ],
+      "similar_s": [
+        0.577,
+        0.57,
+        0.564,
+        0.562,
+        0.544
+      ],
+      "x": -0.355,
+      "y": -0.8344,
       "related_items": []
     },
     {
@@ -306,8 +353,8 @@
         0.598,
         0.595
       ],
-      "x": 0.7671,
-      "y": -0.46,
+      "x": -0.4292,
+      "y": -0.7069,
       "related_items": []
     },
     {
@@ -357,8 +404,8 @@
         0.641,
         0.629
       ],
-      "x": -0.0837,
-      "y": 0.7519,
+      "x": 0.2834,
+      "y": 0.7207,
       "related_items": []
     },
     {
@@ -408,8 +455,8 @@
         0.67,
         0.632
       ],
-      "x": -0.3591,
-      "y": -0.0603,
+      "x": 0.2062,
+      "y": -0.1652,
       "related_items": [
         "brainbraille"
       ]
@@ -448,7 +495,7 @@
       "track": "therapeutics",
       "members": [],
       "start": "2026-07-28",
-      "end": "2026-10-28",
+      "end": "2026-11-22",
       "series": [
         {
           "id": "implicit-augmentation",
@@ -472,8 +519,8 @@
         0.641,
         0.637
       ],
-      "x": 0.0896,
-      "y": -0.2187,
+      "x": -0.2451,
+      "y": -0.1521,
       "related_items": []
     },
     {
@@ -534,8 +581,8 @@
         0.662,
         0.662
       ],
-      "x": -0.4237,
-      "y": 0.0304,
+      "x": 0.4086,
+      "y": 0.0275,
       "related_items": [
         "bcihub-tutorials"
       ]
@@ -596,8 +643,8 @@
         0.662,
         0.658
       ],
-      "x": 0.0872,
-      "y": -0.0536,
+      "x": -0.3659,
+      "y": 0.1262,
       "related_items": []
     },
     {
@@ -650,8 +697,8 @@
         0.662,
         0.649
       ],
-      "x": 0.2846,
-      "y": 0.6817,
+      "x": -0.2917,
+      "y": 0.8585,
       "related_items": []
     },
     {
@@ -691,18 +738,18 @@
         "hand-pose-estimation",
         "bcihub-tutorials",
         "brainbraille",
-        "passive-haptic-learning-piano",
-        "2021-12-01-health-tracking-privacy"
+        "2026-11-22-intelligence-as-useful-and-unlikely-inference",
+        "passive-haptic-learning-piano"
       ],
       "similar_s": [
         0.56,
         0.552,
         0.54,
-        0.53,
-        0.528
+        0.539,
+        0.53
       ],
-      "x": -0.2365,
-      "y": -0.5885,
+      "x": 0.09,
+      "y": -0.4737,
       "related_items": []
     },
     {
@@ -752,8 +799,8 @@
         0.614,
         0.609
       ],
-      "x": -0.0689,
-      "y": -0.5154,
+      "x": -0.0898,
+      "y": -0.4301,
       "related_items": []
     },
     {
@@ -803,8 +850,8 @@
         0.599,
         0.596
       ],
-      "x": -0.7477,
-      "y": 0.5793,
+      "x": 0.8048,
+      "y": 0.3863,
       "related_items": []
     },
     {
@@ -837,7 +884,7 @@
       "track": "bci",
       "members": [],
       "start": "2026-06-24",
-      "end": "2026-10-28",
+      "end": "2026-11-22",
       "series": [
         {
           "id": "measuring-bcis",
@@ -861,8 +908,8 @@
         0.639,
         0.637
       ],
-      "x": -0.4664,
-      "y": -0.2348,
+      "x": 0.4009,
+      "y": -0.2166,
       "related_items": [
         "2023-06-06-Transitional-Gestures-for-Enhancing-ITR-and-Accuracy-in-Movement-based-BCIs"
       ]
@@ -916,8 +963,8 @@
         0.592,
         0.591
       ],
-      "x": 0.4607,
-      "y": 0.6673,
+      "x": -0.2155,
+      "y": 0.7371,
       "related_items": []
     },
     {
@@ -980,8 +1027,8 @@
         0.685,
         0.674
       ],
-      "x": 0.8382,
-      "y": 0.2042,
+      "x": -0.6376,
+      "y": 0.3484,
       "related_items": []
     },
     {
@@ -1031,8 +1078,8 @@
         0.543,
         0.54
       ],
-      "x": -0.6444,
-      "y": 0.7303,
+      "x": 0.8212,
+      "y": 0.5706,
       "related_items": []
     },
     {
@@ -1082,8 +1129,8 @@
         0.591,
         0.583
       ],
-      "x": 0.4108,
-      "y": -0.6581,
+      "x": -0.7287,
+      "y": -0.5157,
       "related_items": [
         "robotics-humanitarian-demining",
         "robomaster"
@@ -1138,8 +1185,8 @@
         0.589,
         0.586
       ],
-      "x": 0.219,
-      "y": -0.7613,
+      "x": -0.5247,
+      "y": -0.5474,
       "related_items": [
         "robojackets-igvc",
         "robotics-humanitarian-demining"
@@ -1194,8 +1241,8 @@
         0.565,
         0.559
       ],
-      "x": 0.3277,
-      "y": -0.7143,
+      "x": -0.6233,
+      "y": -0.4244,
       "related_items": [
         "robojackets-igvc",
         "robomaster"
@@ -1259,8 +1306,8 @@
         0.729,
         0.723
       ],
-      "x": -0.3233,
-      "y": 0.2956,
+      "x": 0.101,
+      "y": 0.2513,
       "related_items": [
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
@@ -1326,8 +1373,8 @@
         0.716,
         0.69
       ],
-      "x": -0.3096,
-      "y": 0.5211,
+      "x": -0.0899,
+      "y": 0.3909,
       "related_items": [
         "silentspeller"
       ]
@@ -1388,8 +1435,8 @@
         0.694,
         0.685
       ],
-      "x": -0.0423,
-      "y": -0.1682,
+      "x": -0.4331,
+      "y": -0.0603,
       "related_items": [
         "vts-for-lls",
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
@@ -1405,7 +1452,7 @@
       "title": "AppetiteCheck: Momentary Vagus Nerve Stimulation During Eating",
       "date": "2025-03-01",
       "planted": "2025-07-24",
-      "git_modified": "2026-09-27",
+      "git_modified": "2026-11-15",
       "excerpt": "AppetiteCheck examines momentary, non-invasive vagus nerve stimulation as a low-attention intervention during eating. In a controlled study, participants ate less and more slowly under stimulation than under sham while reporting similar post-snacking satiety.",
       "tags": [
         "wearables",
@@ -1429,7 +1476,7 @@
       "members": [
         "2026-09-01-AppetiteCheck-Feasibility-of-Momentary-Vagus-Nerve-Stimulation-as-an-Implicit-Intervention-for-Eating-Behavior"
       ],
-      "end": "2026-10-28",
+      "end": "2026-11-22",
       "series": [
         {
           "id": "implicit-augmentation",
@@ -1453,8 +1500,8 @@
         0.662,
         0.658
       ],
-      "x": 0.2196,
-      "y": -0.0681,
+      "x": -0.2477,
+      "y": -0.0497,
       "related_items": []
     },
     {
@@ -1490,7 +1537,7 @@
       "track": "therapeutics",
       "members": [],
       "start": "2025-06-01",
-      "end": "2026-10-28",
+      "end": "2026-11-22",
       "series": [
         {
           "id": "passive-haptics",
@@ -1519,8 +1566,8 @@
         0.655,
         0.651
       ],
-      "x": -0.0942,
-      "y": -0.0836,
+      "x": -0.5194,
+      "y": -0.0101,
       "related_items": [
         "touche"
       ]
@@ -1555,7 +1602,7 @@
       ],
       "members": [],
       "start": "2026-02-24",
-      "end": "2026-10-28",
+      "end": "2026-11-22",
       "series": [],
       "links": [],
       "backlinks": [],
@@ -1573,8 +1620,8 @@
         0.583,
         0.567
       ],
-      "x": 0.7678,
-      "y": -0.6406,
+      "x": -0.4455,
+      "y": -0.8753,
       "related_items": []
     },
     {
@@ -1625,8 +1672,8 @@
         0.592,
         0.58
       ],
-      "x": -0.8382,
-      "y": -0.3605,
+      "x": 0.6997,
+      "y": -0.4558,
       "related_items": []
     },
     {
@@ -1681,8 +1728,8 @@
         0.722,
         0.69
       ],
-      "x": -0.2274,
-      "y": 0.2751,
+      "x": 0.1731,
+      "y": 0.3196,
       "related_items": [
         "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition",
@@ -1741,8 +1788,8 @@
         0.623,
         0.607
       ],
-      "x": 0.7233,
-      "y": 0.1834,
+      "x": -0.8212,
+      "y": 0.3108,
       "related_items": [
         "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild"
@@ -1800,8 +1847,8 @@
         0.695,
         0.693
       ],
-      "x": -0.1378,
-      "y": 0.3152,
+      "x": 0.2575,
+      "y": 0.2674,
       "related_items": [
         "2021-05-08-Mobile-Hands-Free-Silent-Speech-Texting-Using-SilentSpeller",
         "2023-10-22-FingerSpeller-Camera-Free-Text-Entry-Using-Smart-Rings-for-American-Sign-Language-Fingerspelling-Recognition"
@@ -1860,8 +1907,8 @@
         0.642,
         0.602
       ],
-      "x": 0.658,
-      "y": 0.1079,
+      "x": -0.7662,
+      "y": 0.4931,
       "related_items": [
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
         "2024-12-01-Passive-Haptic-Rehearsal-for-Augmented-Piano-Learning-in-the-Wild"
@@ -1919,8 +1966,8 @@
         0.698,
         0.683
       ],
-      "x": -0.1841,
-      "y": 0.4445,
+      "x": 0.0689,
+      "y": 0.4003,
       "related_items": [
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
         "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices"
@@ -1979,8 +2026,8 @@
         0.729,
         0.722
       ],
-      "x": -0.1919,
-      "y": 0.5428,
+      "x": -0.0092,
+      "y": 0.4625,
       "related_items": [
         "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
         "2023-10-09-TongueTap-Multimodal-Tongue-Gesture-Recognition-with-Head-Worn-Devices",
@@ -2041,8 +2088,8 @@
         0.669,
         0.661
       ],
-      "x": -0.5351,
-      "y": -0.0683,
+      "x": 0.4006,
+      "y": -0.0715,
       "related_items": [
         "itr-atlas"
       ]
@@ -2099,8 +2146,8 @@
         0.723,
         0.695
       ],
-      "x": -0.3354,
-      "y": 0.4254,
+      "x": 0.0004,
+      "y": 0.3283,
       "related_items": [
         "2022-09-11-Tongue-Gestures-for-Hands-Free-Interaction-in-Head-Worn-Displays",
         "2023-04-23-Gaze-and-Tongue-A-Subtle-Hands-Free-Interaction-for-Head-worn-Devices",
@@ -2159,8 +2206,8 @@
         0.683,
         0.682
       ],
-      "x": -0.2669,
-      "y": 0.1853,
+      "x": 0.2273,
+      "y": 0.4028,
       "related_items": [
         "silentspeller",
         "2022-04-30-SilentSpeller-Towards-mobile-hands-free-silent-speech-text-entry-using-electropalatography",
@@ -2221,8 +2268,8 @@
         0.667,
         0.638
       ],
-      "x": 0.6284,
-      "y": 0.2089,
+      "x": -0.8207,
+      "y": 0.4101,
       "related_items": [
         "2022-04-30-Passive-Haptic-Rehearsal-for-Accelerated-Piano-Skill-Acquisition",
         "2022-09-11-Learning-Piano-Songs-with-Passive-Haptic-Training-an-Interactive-Lesson"
@@ -2273,8 +2320,8 @@
         0.634,
         0.602
       ],
-      "x": 0.2429,
-      "y": 0.0653,
+      "x": -0.239,
+      "y": 0.1199,
       "related_items": []
     },
     {
@@ -2324,8 +2371,8 @@
         0.637,
         0.631
       ],
-      "x": -0.326,
-      "y": -0.1529,
+      "x": 0.2573,
+      "y": -0.0505,
       "related_items": []
     },
     {
@@ -2370,8 +2417,8 @@
         0.659,
         0.63
       ],
-      "x": 0.0966,
-      "y": 0.0846,
+      "x": -0.3938,
+      "y": 0.0309,
       "related_items": []
     },
     {
@@ -2425,8 +2472,8 @@
         0.667,
         0.667
       ],
-      "x": 0.437,
-      "y": 0.3437,
+      "x": -0.2788,
+      "y": 0.5172,
       "related_items": [
         "2026-09-27-Workshop-on-Augmenting-Human-Dexterity",
         "touche"
@@ -2477,8 +2524,8 @@
         0.633,
         0.621
       ],
-      "x": 0.2272,
-      "y": 0.7613,
+      "x": -0.3867,
+      "y": 0.8878,
       "related_items": []
     },
     {
@@ -2490,7 +2537,7 @@
       "title": "AppetiteCheck: Feasibility of Momentary Vagus Nerve Stimulation as an Implicit Intervention for Eating Behavior",
       "date": "2026-09-01",
       "planted": "2026-08-30",
-      "git_modified": "2026-09-27",
+      "git_modified": "2026-10-28",
       "excerpt": "Overeating and emotional eating are common health issues that affect people even without an eating disorder. The vagus nerve plays a critical role in the gut-brain axis, and implanted vagus nerve stimulators have been associated with reduced appetite. In this paper, we propose transcutaneous cervical vagus nerve stimulation (tcVNS) as a ubiquitous system to provide immediate, low-effort interventi",
       "tags": [
         "vagus-nerve-stimulation",
@@ -2529,8 +2576,8 @@
         0.644,
         0.633
       ],
-      "x": 0.1613,
-      "y": 0.0108,
+      "x": -0.2948,
+      "y": 0.0377,
       "related_items": []
     },
     {
@@ -2580,8 +2627,8 @@
         0.655,
         0.641
       ],
-      "x": 0.2732,
-      "y": 0.2625,
+      "x": -0.4104,
+      "y": 0.3872,
       "related_items": [
         "2025-09-27-Toward-Everyday-Perceptual-and-Physiological-Augmentation",
         "touche"
