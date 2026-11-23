@@ -7,10 +7,10 @@ header:
 tags: [artificial-intelligence, intelligence, inference]
 areas: [agents]
 description: >-
-  Even among people with equal knowledge, they aren't necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the "efficiency" aspect of intelligence.
+  Typically, the people we consider intelligent are those who come up with unexpected, highly impactful insights. Why should AI be any different?
 excerpt: >-
   <img src="/images/intelligence-inferential-efficiency.png" alt="Comparison of inferential efficiency at equal levels of knowledge" width="280" loading="lazy"><br>
-  Even among people with equal knowledge, they aren&apos;t necessarily equal in what ideas they come up with based on that knowledge. Capturing this lets us measure the &quot;efficiency&quot; aspect of intelligence.
+  Typically, the people we consider intelligent are those who come up with unexpected, highly impactful insights. Why should AI be any different?
 ---
 
 <figure>
